@@ -1,12 +1,13 @@
 import pandas as pd
 import numpy as np
+import os
 from datetime import date
+from allstocks import AllStocks
 
 
 class KeyLevels:
-    def __init__(self, symbol):
+    def __init__(self):
         pass
-        self.symbol = symbol
 
     def getSupport(self, df, i):
         supportPrice = 0
@@ -58,7 +59,35 @@ class KeyLevels:
         return sr_lines
 
 
-class NearKeyLevel:
-    def __init__(self, symbol):
-        pass
-        self.symbol = symbol
+class FilterKeyLevels:
+    def __init__(self):
+        self.keyLevelTolerance = float(os.environ.get(
+            'FILTER_KEY_LEVEL_TOLERANCE', '0.02'))
+
+    def filterKeyLevels(self, levels, lastPrice):
+        for level in levels:
+            priceLevel = level[2]
+            priceDelta = abs(lastPrice * self.keyLevelTolerance)
+            if lastPrice >= (priceLevel - priceDelta) and lastPrice <= (priceLevel + priceDelta):
+                return True
+        return False
+
+    def Run(self, symbol):
+        # isLoaded, df = GetDailyStockData(symbol)
+        isLoaded, df = AllStocks.GetWeeklyStockData(symbol)
+        if isLoaded:
+            qpp = KeyLevels()
+            levels = qpp.Run(df)
+            lastPrice = df['Close'][0]
+            isNearKeyLevel = self.filterKeyLevels(levels, lastPrice)
+            if isNearKeyLevel:
+                print('keylevel: {} {}'.format(symbol, lastPrice))
+            return isNearKeyLevel
+        else:
+            return False
+
+
+if __name__ == '__main__':
+    filter = FilterKeyLevels()
+    result = filter.Run('AAPL')
+    print(result)

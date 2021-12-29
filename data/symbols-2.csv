@@ -1,38 +1,69 @@
+AAPL,Apple Inc. - Common Stock
 ABNB,Airbnb
 AFRM,Affirm Holdings
+ALNY,Alnylam Pharmaceuticals
+AMAT,Applied Materials
+AMD,Advanced Micro Devices
+APA,APA Corporation - Common Stock
 ATVI,Activision Blizzard
+BIDU,Baidu
+BILI,Bilibili Inc. - American Depositary Shares
 BND,Vanguard Total Bond Market ETF
+BNDX,Vanguard Total International Bond ETF
 CERN,Cerner Corporation - Common Stock
 CMCSA,Comcast Corporation - Class A Common Stock
+COIN,Coinbase Global
+CROX,Crocs
 CRWD,CrowdStrike Holdings
+CSCO,Cisco Systems
 CSX,CSX Corporation - Common Stock
 DDOG,Datadog
+DISCA,Discovery
+DKNG,DraftKings Inc. - Class A Common Stock
+DOCU,DocuSign
 DRNA,Dicerna Pharmaceuticals
 EBAY,eBay Inc. - Common Stock
 FB,Meta Platforms
 FISV,Fiserv
+FUTU,Futu Holdings Limited - American Depositary Shares
 GILD,Gilead Sciences
+HTZ,Hertz Global Holdings
 ICLN,iShares S&P Global Clean Energy Index Fund
 IEF,iShares 7-10 Year Treasury Bond ETF
 INTC,Intel Corporation - Common Stock
 JD,JD.com
 KHC,The Kraft Heinz Company - Common Stock
+LCID,Lucid Group
 LI,Li Auto Inc. - American Depositary Shares
 LYFT,Lyft
+MARA,Marathon Digital Holdings
 MCHI,iShares MSCI China ETF
 MDLZ,Mondelez International
+MRNA,Moderna
 MRVL,Marvell Technology
 MSFT,Microsoft Corporation - Common Stock
+MTTR,Matterport
 MU,Micron Technology
 NVAX,Novavax
 NVDA,NVIDIA Corporation - Common Stock
 OCDX,Ortho Clinical Diagnostics Holdings plc - Ordinary Shares
+ON,ON Semiconductor Corporation - Common Stock
+PDD,Pinduoduo Inc. - American Depositary Shares
+PENN,Penn National Gaming
 PFF,iShares Preferred and Income Securities ETF
+PLUG,Plug Power
+PTON,Peloton Interactive
 PYPL,PayPal Holdings
 QCOM,QUALCOMM Incorporated - Common Stock
 QQQ,Invesco QQQ Trust
 QYLD,Global X NASDAQ-100 Covered Call ETF
+RIOT,Riot Blockchain
+RIVN,Rivian Automotive
+ROKU,Roku
+RUN,Sunrun Inc. - Common Stock
+SAVA,Cassava Sciences
 SBUX,Starbucks Corporation - Common Stock
+SFIX,Stitch Fix
 SMH,VanEck Semiconductor ETF
 TCOM,Trip.com Group Limited - American Depositary Shares
 TLT,iShares 20+ Year Treasury Bond ETF
@@ -41,26 +72,48 @@ UAL,United Airlines Holdings
 UPST,Upstart Holdings
 VCSH,Vanguard Short-Term Corporate Bond ETF
 VGSH,Vanguard Short-Term Treasury ETF
+VIAC,ViacomCBS Inc. - Class B Common Stock
 VTIP,Vanguard Short-Term Inflation-Protected Securities Index Fund
 VXUS,Vanguard Total International Stock ETF
+WYNN,Wynn Resorts
+Z,Zillow Group
+ZI,ZoomInfo Technologies Inc. - Class A Common Stock
+ZM,Zoom Video Communications
+AA,Alcoa Corporation Common Stock 
+ABBV,AbbVie Inc. Common Stock
 ABT,Abbott Laboratories Common Stock
 AEO,American Eagle Outfitters
 AGG,iShares Core U.S. Aggregate Bond ETF
+AI,C3.ai
+AMC,AMC Entertainment Holdings
+ARKG,ARK Genomic Revolution ETF
 ARKK,ARK Innovation ETF
 BA,Boeing Company (The) Common Stock
+BABA,Alibaba Group Holding Limited American Depositary Shares each representing eight Ordinary share
 BAC,Bank of America Corporation Common Stock
+BITO,ProShares Bitcoin Strategy ETF
 BKLN,Invesco Senior Loan ETF
 BMY,Bristol-Myers Squibb Company Common Stock
+BOIL,ProShares Ultra Bloomberg Natural Gas
+BOX,Box
 BP,BP p.l.c. Common Stock
 BSV,Vanguard Short-Term Bond ETF
 BSX,Boston Scientific Corporation Common Stock
 BTI,British American Tobacco  Industries
 BX,Blackstone Inc. Common Stock
+C,Citigroup
 CCJ,Cameco Corporation Common Stock
+CCL,Carnival Corporation Common Stock
+CF,CF Industries Holdings
+CHWY,Chewy
 CL,Colgate-Palmolive Company Common Stock
+CLF,Cleveland-Cliffs Inc. Common Stock
+CM,Canadian Imperial Bank of Commerce Common Stock
 COP,ConocoPhillips Common Stock
 COR,CoreSite Realty Corporation Common Stock
 CP,Canadian Pacific Railway Limited Common Stock
+CPNG,Coupang
+CRM,Salesforce.com Inc Common Stock
 CUBE,CubeSmart Common Shares
 CVX,Chevron Corporation Common Stock
 DAL,Delta Air Lines
@@ -68,20 +121,25 @@ DHI,D.R. Horton
 DIA,SPDR Dow Jones Industrial Average ETF
 DIS,Walt Disney Company (The) Common Stock
 DOW,Dow Inc. Common Stock 
+DVN,Devon Energy Corporation Common Stock
 EEM,iShares MSCI Emerging Index Fund
 EFA,iShares MSCI EAFE ETF
 EPD,Enterprise Products Partners L.P. Common Stock
 EQT,EQT Corporation Common Stock
+ERX,Direxion Energy Bull 2X Shares
 EWC,iShares MSCI Canada Index Fund
 EWG,iShares MSCI Germany Index Fund
 EWH,iShares MSCI Hong Kong Index Fund
 EWJ,iShares MSCI Japan Index Fund
+EWP,iShares Inc iShares MSCI Spain ETF
 EWU,iShares MSCI United Kingdom ETF
 EWY,iShares Inc iShares MSCI South Korea ETF
+EWZ,iShares Inc iShares MSCI Brazil ETF
 EZU,iShares MSCI Eurozone ETF
 F,Ford Motor Company Common Stock
 FCX,Freeport-McMoRan
 FNGU,MicroSectors FANG  Index 3X Leveraged ETNs due January 8
+FTCH,Farfetch Limited Class A Ordinary Shares
 FXI,iShares China Large-Cap ETF
 GDDY,GoDaddy Inc. Class A Common Stock
 GDX,VanEck Gold Miners ETF 
@@ -90,8 +148,10 @@ GE,General Electric Company Common Stock
 GLD,SPDR Gold Trust
 GLW,Corning Incorporated Common Stock
 GM,General Motors Company Common Stock
+GME,GameStop Corporation Common Stock
 GOVT,iShares U.S. Treasury Bond ETF
 HAL,Halliburton Company Common Stock
+HPQ,HP Inc. Common Stock
 HYG,iShares iBoxx $ High Yield Corporate Bond ETF
 IAU,iShares Gold Trust Shares of the iShares Gold Trust
 IBM,International Business Machines Corporation Common Stock
@@ -107,46 +167,72 @@ JPM,JP Morgan Chase & Co. Common Stock
 JPST,JPMorgan Ultra-Short Income ETF
 JWN,Nordstrom
 KEY,KeyCorp Common Stock
+KO,Coca-Cola Company (The) Common Stock
 KR,Kroger Company (The) Common Stock
 KRE,SPDR S&P Regional Banking ETF
 KWEB,KraneShares Trust KraneShares CSI China Internet ETF
 LABD,Direxion Daily S&P Biotech Bear 3X Shares
+LABU,Direxion Daily S&P Biotech Bull 3X Shares
+LAC,Lithium Americas Corp. Common Shares
 LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF
+LUV,Southwest Airlines Company Common Stock
+LVS,Las Vegas Sands Corp. Common Stock
 M,Macy's Inc Common Stock
 MDT,Medtronic plc. Ordinary Shares
+MGM,MGM Resorts International Common Stock
+MO,Altria Group
+MOS,Mosaic Company (The) Common Stock
+MP,MP Materials Corp. Common Stock
 MPC,Marathon Petroleum Corporation Common Stock
 MRK,Merck & Company
 MS,Morgan Stanley Common Stock
 NCLH,Norwegian Cruise Line Holdings Ltd. Ordinary Shares
 NEM,Newmont Corporation
+NIO,NIO Inc. American depositary shares
 NKE,Nike
 ORCL,Oracle Corporation Common Stock
 OXY,Occidental Petroleum Corporation Common Stock
+PATH,UiPath
+PFE,Pfizer
 PG,Procter & Gamble Company (The) Common Stock
+PINS,Pinterest
 QLD,ProShares Ultra QQQ
+QS,QuantumScape Corporation Class A Common Stock
+RBLX,Roblox Corporation Class A Common Stock
 RCL,D/B/A Royal Caribbean Cruises Ltd. Common Stock
 RDS.A,Royal Dutch Shell PLC Royal Dutch Shell American Depositary Shares (Each representing two Class A Ordinary Shares)
 RF,Regions Financial Corporation Common Stock
 RIO,Rio Tinto Plc Common Stock
 RSX,VanEck Russia ETF
 S,SentinelOne
+SAVE,Spirit Airlines
 SCHP,Schwab U.S. TIPs ETF
 SDOW,UltraPro Short Dow30
+SE,Sea Limited American Depositary Shares
 SLB,Schlumberger N.V. Common Stock
 SLV,iShares Silver Trust
+SNAP,Snap Inc. Class A Common Stock
+SOXL,Direxion Daily Semiconductor Bull 3x Shares
 SPLG,SPDR Portfolio S&P 500 ETF
 SPTL,SPDR Portfolio Long Term Treasury ETF
 SPXL,Direxion Daily S&P 500 Bull 3X Shares
 SPY,SPDR S&P 500
+SQ,Block
 STM,STMicroelectronics N.V. Common Stock
 STWD,STARWOOD PROPERTY TRUST
 SU,Suncor Energy  Inc. Common Stock
 SVXY,ProShares Short VIX Short Term Futures ETF
 SYF,Synchrony Financial Common Stock
 T,AT&T Inc.
+TDOC,Teladoc Health
 TECL,Direxion Technology Bull 3X Shares
+TGT,Target Corporation Common Stock
 TIP,iShares TIPS Bond ETF
+TNA,Direxion Small Cap Bull 3X Shares
 TSM,Taiwan Semiconductor Manufacturing Company Ltd.
+TWTR,Twitter
+TZA,Direxion Small Cap Bear 3X Shares
+U,Unity Software Inc. Common Stock
 UAA,Under Armour
 UBER,Uber Technologies
 UDOW,ProShares UltraPro Dow30
@@ -166,6 +252,7 @@ VZ,Verizon Communications Inc. Common Stock
 WFC,Wells Fargo & Company Common Stock
 WMB,Williams Companies
 WMT,Walmart Inc. Common Stock
+X,United States Steel Corporation Common Stock
 XBI,SPDR Series Trust  SPDR S&P Biotech ETF
 XLB,Materials Select Sector SPDR
 XLC,The Communication Services Select Sector SPDR Fund
@@ -183,3 +270,4 @@ XOM,Exxon Mobil Corporation Common Stock
 XOP,SPDR S&P Oil & Gas Explor & Product
 XPEV,XPeng Inc. American depositary shares
 XRT,SPDR S&P Retail ETF
+ZIM,ZIM Integrated Shipping Services Ltd. Ordinary Shares

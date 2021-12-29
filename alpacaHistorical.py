@@ -110,39 +110,16 @@ class AlpacaHistorical:
 
 
 class alpacaHistoricalData(AlpacaHistorical):
-    def __init__(self, minPrice=None, maxPrice=None, minVolume=None, maxVolume=None):
+    def __init__(self):
         super().__init__()
-        self.MinPrice = minPrice if minPrice is not None else int(os.environ.get(
-            'MIN_PRICE', '19'))
-        self.MaxPrice = maxPrice if maxPrice is not None else int(os.environ.get(
-            'MAX_PRICE', '9000000'))
-        self.MinVolume = minVolume if minVolume is not None else int(os.environ.get(
-            'MIN_VOLUME', '1000000'))
-        self.MaxVolume = maxVolume if maxVolume is not None else int(os.environ.get(
-            'MAX_VOLUME', '2000000000'))
-
-    def withinRange(self, price, volume, minPrice, maxPrice, minVolume, maxVolume):
-        if (price < minPrice):
-            return False
-        elif (price > maxPrice):
-            return False
-        elif (volume < minVolume):
-            return False
-        elif (volume > maxVolume):
-            return False
-        else:
-            return True
 
     def getDataLine(self, app, line, fw):
         try:
             timeframe = RedisTimeFrame.DAILY
             symbol = line.split(',')[0]
             data = app.HistoricalPrices(symbol, timeframe)
-            price = data[len(data)-1]['c']
-            volume = data[len(data)-1]['v']
-            if self.withinRange(price, volume, self.MinPrice, self.MaxPrice, self.MinVolume, self.MaxVolume):
-                app.WriteToFile(symbol, data)
-                fw.write(line + '\n')
+            app.WriteToFile(symbol, data)
+            fw.write(line + '\n')
         except Exception as e:
             print(e)
 
@@ -162,9 +139,9 @@ class alpacaHistoricalData(AlpacaHistorical):
                     print(lineCount)
                 Thread(target=self.getDataLine, args=(app, line, fw)).start()
                 while (threading.activeCount() > 10):
-                    time.sleep(2)
-            while (threading.activeCount() > 10):
-                time.sleep(2)
+                    time.sleep(1)
+            while (threading.activeCount() > 0):
+                time.sleep(1)
 
 
 if __name__ == "__main__":
