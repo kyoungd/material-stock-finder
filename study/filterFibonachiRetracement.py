@@ -11,42 +11,52 @@ class fibonachiRetracement:
         self.isFirstMin = isFirstMin
         minChange = 0.02
         self.minimumChange = self.close * minChange
-        self.toleranceLow = 0.4
-        self.toleranceHigh = 0.73
+        self.tolerance50 = 0.45
+        self.tolerance63 = 0.68
 
     def isFibonachiRetrace(self, priceFirst, priceSecond):
-        priceMove = priceFirst - priceSecond
-        fibPriceSecond = self.close + priceMove * self.toleranceLow
-        fibPriceFirst = self.close + priceMove * self.toleranceHigh
-        if (priceSecond > fibPriceSecond) and (priceFirst < fibPriceFirst):
+        priceMove = priceSecond - priceFirst
+        fibPrice50 = priceFirst + priceMove * self.tolerance50
+        fibPrice63 = priceFirst + priceMove * self.tolerance63
+        if (priceMove > 0) and (self.close > fibPrice50) and (self.close < fibPrice63):
+            return True
+        elif (priceMove < 0) and (self.close < fibPrice50) and (self.close > fibPrice63):
             return True
         else:
             return False
 
-    def isPriceCheck(self, priceFirst, priceSecond):
-        if self.isFirstMin and priceFirst > priceSecond:
-            return True
-        elif not self.isFirstMin and priceFirst < priceSecond:
-            return True
-        else:
-            return False
+    def priceCheck5(self, p0, p1, p2, p3, p4):
+        result = []
+        d0 = abs(p0-p1)
+        d1 = abs(p1-p2) if p2 > 0 else 0
+        d2 = abs(p2-p3) if p3 > 0 else 0
+        d2a = abs(p0-p3) if p3 > 0 else 0
+        d3 = abs(p3-p4) if p4 > 0 else 0
+        d3b = abs(p1-p4) if p4 > 0 else 0
+        result.append([p0, p1])
+        if d1 > d0:
+            result.append([p1, p2])
+        if p2 > 0 and d2 > d1 and d2 > d0:
+            result.append([p2, p3])
+        if p2 > 0 and d2a > d3 and d2a > d2 and d2a > d1 and d2a > d0:
+            result.append([p0, p3])
+        if p3 > 0 and d3 > d2 and d3 > d1 and d3 > d0:
+            result.append([p3, p4])
+        if p4 > 0 and d3b > d2a and d3b > d3 and d3b > d2 and d3b > d1 and d3b > d0:
+            result.append([p1, p4])
+        return result
 
     def retracement(self):
         price0 = self.df.iloc[0].Close
         price1 = self.df.iloc[1].Close
-        price2 = 0 if self.df.count() < 3 else self.df.iloc[2].Close
-        price3 = 0 if self.df.count() < 4 else self.df.iloc[3].Close
-        price4 = 0 if self.df.count() < 5 else self.df.iloc[4].Close
-        if self.isFibonachiRetrace(price0, price1):
-            return True
-        elif price2 > 0 and self.isPriceCheck(price1, price2) and self.isFibonachiRetrace(price1, price2):
-            return True
-        elif price3 > 0 and self.isPriceCheck(price0, price3) and self.isFibonachiRetrace(price0, price3):
-            return True
-        elif price4 > 0 and self.isPriceCheck(price1, price4) and self.isFibonachiRetrace(price1, price4):
-            return True
-        else:
-            return False
+        price2 = 0 if len(self.df) < 3 else self.df.iloc[2].Close
+        price3 = 0 if len(self.df) < 4 else self.df.iloc[3].Close
+        price4 = 0 if len(self.df) < 5 else self.df.iloc[4].Close
+        listOfPrices = self.priceCheck5(price0, price1, price2, price3, price4)
+        for prices in listOfPrices:
+            if self.isFibonachiRetrace(prices[0], prices[1]):
+                return True
+        return False
 
     def Run(self):
         return self.retracement()
@@ -78,7 +88,7 @@ if __name__ == '__main__':
                  93.63782723, 91.50373968, 91.8385245]
             }
     df = pd.DataFrame(data)
-    price = 100.01
+    price = 110.01
     isFirstMin = False
     fib = fibonachiRetracement(price, isFirstMin, df)
     result = fib.Run()
