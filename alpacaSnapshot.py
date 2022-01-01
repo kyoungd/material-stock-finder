@@ -106,7 +106,7 @@ class AlpacaSnapshots:
             lineCount += 1
             symbol = line.split(',')[0]
             symbols.add(symbol)
-            if (lineCount % 100 == 0):
+            if (lineCount % 20 == 0):
                 self.getSnapshot(symbols, dicts)
                 symbols.clear()
                 if (isDebug):
@@ -114,7 +114,8 @@ class AlpacaSnapshots:
         self.getSnapshot(symbols, dicts)
         with open(filename, "w") as fw:
             for key in dicts.keys():
-                fw.write('{},{}\n'.format(key, dicts[key]))
+                content = dicts[key].strip('\n')
+                fw.write('{},{}\n'.format(key, content))
 
 
 if __name__ == "__main__":

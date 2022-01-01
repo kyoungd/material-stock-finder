@@ -43,39 +43,43 @@ class AllStocks:
 
     @staticmethod
     def GetWeeklyStockData(symbol):
-        isLoadedOk, df = AllStocks.GetDailyStockData(symbol)
-        if not isLoadedOk:
+        try:
+            isLoadedOk, df = AllStocks.GetDailyStockData(symbol)
+            if not isLoadedOk:
+                return False, None
+            print(df)
+            df['Date'] = pd.to_datetime(df['Date'])
+            df.set_index('Date', inplace=True)
+            df.sort_index(inplace=True)
+
+            def take_first(array_like):
+                return array_like[0]
+
+            def take_last(array_like):
+                return array_like[-1]
+            how = {'Open': 'first',
+                   'High': 'max',
+                   'Low': 'min',
+                   'Close': 'last',
+                   'Adj Close': 'last',
+                   'Volume': 'sum'}
+            output = df.resample('W').agg(how)
+
+            # output = df.resample('W',                                 # Weekly resample
+            #                      how={'Open': take_first,
+            #                           'High': 'max',
+            #                           'Low': 'min',
+            #                           'Close': take_last,
+            #                           'Adj Close': take_last,
+            #                           'Volume': 'sum'},
+            #                      loffset=pd.offsets.timedelta(days=-6))  # to put the labels to Monday
+
+            output = output[['Open', 'High', 'Low',
+                            'Close', 'Adj Close', 'Volume']]
+            return isLoadedOk, output
+        except Exception as e:
+            print(e)
             return False, None
-        print(df)
-        df['Date'] = pd.to_datetime(df['Date'])
-        df.set_index('Date', inplace=True)
-        df.sort_index(inplace=True)
-
-        def take_first(array_like):
-            return array_like[0]
-
-        def take_last(array_like):
-            return array_like[-1]
-        how = {'Open': 'first',
-               'High': 'max',
-               'Low': 'min',
-               'Close': 'last',
-               'Adj Close': 'last',
-               'Volume': 'sum'}
-        output = df.resample('W').agg(how)
-
-        # output = df.resample('W',                                 # Weekly resample
-        #                      how={'Open': take_first,
-        #                           'High': 'max',
-        #                           'Low': 'min',
-        #                           'Close': take_last,
-        #                           'Adj Close': take_last,
-        #                           'Volume': 'sum'},
-        #                      loffset=pd.offsets.timedelta(days=-6))  # to put the labels to Monday
-
-        output = output[['Open', 'High', 'Low',
-                         'Close', 'Adj Close', 'Volume']]
-        return output
 
 
 if __name__ == '__main__':

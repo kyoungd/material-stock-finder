@@ -119,7 +119,7 @@ class alpacaHistoricalData(AlpacaHistorical):
             symbol = line.split(',')[0]
             data = app.HistoricalPrices(symbol, timeframe)
             app.WriteToFile(symbol, data)
-            fw.write(line + '\n')
+            fw.write(line)
         except Exception as e:
             print(e)
 
@@ -133,15 +133,15 @@ class alpacaHistoricalData(AlpacaHistorical):
             timeframe = RedisTimeFrame.DAILY
             app = AlpacaHistorical()
             lineCount = 0
-            for line in lines[1:]:
+            for line in lines:
                 if (isDebug):
                     lineCount += 1
                     print(lineCount)
                 Thread(target=self.getDataLine, args=(app, line, fw)).start()
                 while (threading.activeCount() > 10):
-                    time.sleep(1)
-            while (threading.activeCount() > 0):
-                time.sleep(1)
+                    time.sleep(2)
+            if threading.activeCount() > 0:
+                time.sleep(2)
 
 
 if __name__ == "__main__":

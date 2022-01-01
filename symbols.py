@@ -3,13 +3,13 @@ import urllib.request as request
 from contextlib import closing
 import pandas as pd
 
-# with closing(request.urlopen('ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqlisted.txt')) as r:
-#     with open('nasdaqlisted.txt', 'wb') as f:
-#         shutil.copyfileobj(r, f)
+with closing(request.urlopen('ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqlisted.txt')) as r:
+    with open('nasdaqlisted.txt', 'wb') as f:
+        shutil.copyfileobj(r, f)
 
-# with closing(request.urlopen('ftp://ftp.nasdaqtrader.com/SymbolDirectory/otherlisted.txt')) as r:
-#     with open('otherlisted.txt', 'wb') as f:
-#         shutil.copyfileobj(r, f)
+with closing(request.urlopen('ftp://ftp.nasdaqtrader.com/SymbolDirectory/otherlisted.txt')) as r:
+    with open('otherlisted.txt', 'wb') as f:
+        shutil.copyfileobj(r, f)
 
 
 def write_symbolfile(symbolList, filename, isNewFile):

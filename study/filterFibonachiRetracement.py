@@ -1,4 +1,5 @@
 import os
+from allstockanalysis import StockAnalysis
 from allstocks import AllStocks
 from localMinMax import LocalMinMax
 import pandas as pd
@@ -64,19 +65,22 @@ class fibonachiRetracement:
 
 class FilterFibonachiRetracement:
     def __init__(self):
-        self.retracementMin = float(os.environ.get(
-            'FILTER_FIBONACHI_MIN', '0.02'))
-        self.retracementTolerance = float(os.environ.get(
-            'FILTER_FIBONACHI_TOLERANCE', '0.02'))
+        self.sa = StockAnalysis()
+        self.jsonData = self.sa.readJson()
 
     def Run(self, symbol):
         isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
         close = dfDaily['Close'][0]  # last close price
         minMax = LocalMinMax(dfDaily)
         isFirstMinimum, df = minMax.Run()
-        if (df is None) or (df.count() < 2):
+        if (df is None) or (len(df) < 2):
             return False
+        fib = fibonachiRetracement(close, isFirstMinimum, df)
+        result = fib.Run()
+        return result
 
+
+'
 
 if __name__ == '__main__':
     data = {'Date':

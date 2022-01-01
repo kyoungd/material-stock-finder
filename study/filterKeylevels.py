@@ -86,8 +86,14 @@ class FilterKeyLevels:
         else:
             return False
 
+    @staticmethod
+    def All():
+        filter = FilterKeyLevels()
+        AllStocks.Run(filter.Run, True)
+
 
 if __name__ == '__main__':
-    filter = FilterKeyLevels()
-    result = filter.Run('AAPL')
-    print(result)
+    FilterKeyLevels.All()
+    # filter = FilterKeyLevels()
+    # result = filter.Run('AAPL')
+    # print(result)
