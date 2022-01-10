@@ -176,6 +176,15 @@ def state():
     return stock_list
 
 
+@app.route('/symbols')
+@cross_origin()
+def symbols():
+    filename = "./data/symbols.json"
+    with open(filename, 'r') as openfile:
+        data = json.load(openfile)
+    return data
+
+
 def csv_to_json(csvFilePath):
     jsonArray = []
 

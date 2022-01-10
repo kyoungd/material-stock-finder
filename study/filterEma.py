@@ -7,7 +7,7 @@ import talib
 class FilterEma:
     def __init__(self, barCount):
         self.sa = StockAnalysis()
-        self.jsonData = self.sa.readJson()
+        self.jsonData = self.sa.GetJson
         self.trendLength = 30
         self.trendAt = 25
         self.setBarCount(barCount)
@@ -38,16 +38,6 @@ class FilterEma:
                 downCount += 1
         return upCount, downCount
 
-    def updateFilter(self, upCount, downCount):
-        if self.symbol not in self.jsonData.keys():
-            self.jsonData[self.symbol] = {}
-        self.jsonData[self.symbol]['trendup'] = False
-        self.jsonData[self.symbol]['trenddown'] = False
-        if upCount >= self.trendAt:
-            self.jsonData[self.symbol]['trendup'] = True
-        elif downCount >= self.trendAt:
-            self.jsonData[self.symbol]['trenddown'] = True
-
     def Run(self, symbol):
         isLoaded, tp = AllStocks.GetDailyStockData(symbol)
         if isLoaded:
@@ -55,7 +45,10 @@ class FilterEma:
             close = tp.Close.to_numpy()
             output = talib.EMA(close[::-1], timeperiod=self.barCount)
             upCount, downCount = self.FilterOn(close, output[::-1])
-            self.updateFilter(upCount, downCount)
+            self.sa.UpdateFilter(self.jsonData, self.symbol, 'trendup',
+                                 True if upCount > self.trendAt else False)
+            self.sa.UpdateFilter(self.jsonData, self.symbol, 'trenddown',
+                                 True if downCount > self.trendAt else False)
 
     def WriteFilter(self):
         self.sa.WriteJson(self.jsonData)

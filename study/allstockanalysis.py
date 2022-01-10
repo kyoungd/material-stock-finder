@@ -5,12 +5,16 @@ class StockAnalysis:
     def __init__(self, userId=None):
         self.filename = "./data/symbols.json" if userId == None else "../data/" + \
             userId + "./symbols.json"
-        self.readJson()
+        self.data = self.readJson()
+
+    @property
+    def GetJson(self):
+        return self.data
 
     def readJson(self):
         with open(self.filename, 'r') as openfile:
-            self.data = json.load(openfile)
-        return self.data
+            data = json.load(openfile)
+        return data
 
     def WriteJson(self, data=None):
         self.data = data if data != None else self.data
@@ -26,6 +30,15 @@ class StockAnalysis:
             if conditionMet:
                 stocks.append({'symbol': key, 'data': data})
         return stocks
+
+    def UpdateFilter(self, data, symbol, filterName, filterValue):
+        if symbol not in data.keys():
+            data[symbol] = {}
+        data[symbol][filterName] = filterValue
+
+    def EmptyJson(self):
+        self.data = {}
+        self.WriteJson()
 
 
 if __name__ == "__main__":

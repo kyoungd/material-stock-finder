@@ -37,13 +37,13 @@ class AlpacaSnapshots:
     def __init__(self, minPrice=None, maxPrice=None, minVolume=None, maxVolume=None):
         self.custom_header = AlpacaAccess.CustomHeader()
         self.MinPrice = minPrice if minPrice is not None else int(os.environ.get(
-            'MIN_PRICE', '20'))
+            'SNAPSHOT_MIN_PRICE', '20'))
         self.MaxPrice = maxPrice if maxPrice is not None else int(os.environ.get(
-            'MAX_PRICE', '1000'))
+            'SNAPSHOT_MAX_PRICE', '1000'))
         self.MinVolume = minVolume if minVolume is not None else int(os.environ.get(
-            'MIN_VOLUME', '1000000'))
+            'SNAPSHOT_MIN_VOLUME', '1000000'))
         self.MaxVolume = maxVolume if maxVolume is not None else int(os.environ.get(
-            'MAX_VOLUME', '2000000000'))
+            'SNAPSHOT_MAX_VOLUME', '2000000000'))
 
     def HistoricalSnapshots(self, symbols):
         # split set into a string of symbols separated by commas

@@ -3,6 +3,7 @@ from allstockanalysis import StockAnalysis
 from allstocks import AllStocks
 from localMinMax import LocalMinMax
 import pandas as pd
+import os
 
 
 class fibonachiRetracement:
@@ -10,13 +11,16 @@ class fibonachiRetracement:
         self.df = df
         self.close = close
         self.isFirstMin = isFirstMin
-        minChange = 0.02
+        minChange = float(os.environ.get(
+            "FITLER_FIBONACHI_MIN_CHANGE_PERCENT", '0.04'))
         self.minimumChange = self.close * minChange
         self.tolerance50 = 0.45
         self.tolerance63 = 0.68
 
     def isFibonachiRetrace(self, priceFirst, priceSecond):
         priceMove = priceSecond - priceFirst
+        if abs(priceMove) < self.minimumChange:
+            return False
         fibPrice50 = priceFirst + priceMove * self.tolerance50
         fibPrice63 = priceFirst + priceMove * self.tolerance63
         if (priceMove > 0) and (self.close > fibPrice50) and (self.close < fibPrice63):
@@ -66,7 +70,7 @@ class fibonachiRetracement:
 class FilterFibonachiRetracement:
     def __init__(self):
         self.sa = StockAnalysis()
-        self.jsonData = self.sa.readJson()
+        self.jsonData = self.sa.GetJson
 
     def Run(self, symbol):
         isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
@@ -77,23 +81,31 @@ class FilterFibonachiRetracement:
             return False
         fib = fibonachiRetracement(close, isFirstMinimum, df)
         result = fib.Run()
+        self.sa.UpdateFilter(self.jsonData, symbol, 'fibonachi', result)
         return result
 
+    @staticmethod
+    def All():
+        filter = FilterFibonachiRetracement()
+        AllStocks.Run(filter.Run, False)
+        filter.sa.WriteJson(filter.jsonData)
 
-'
 
 if __name__ == '__main__':
-    data = {'Date':
-            ['2021-01-07T00:00:00.000000000', '2021-02-01T00:00:00.000000000',
-             '2021-03-12T00:00:00.000000000', '2021-04-23T00:00:00.000000000',
-             '2021-05-28T00:00:00.000000000', '2021-09-01T00:00:00.000000000'],
-            'Close':
-                [120.00, 100.01, 99.51623309,
-                 93.63782723, 91.50373968, 91.8385245]
-            }
-    df = pd.DataFrame(data)
-    price = 110.01
-    isFirstMin = False
-    fib = fibonachiRetracement(price, isFirstMin, df)
-    result = fib.Run()
-    print(result)
+    FilterFibonachiRetracement.All()
+    print('------------------------done ------------------------')
+
+    # data = {'Date':
+    #         ['2021-01-07T00:00:00.000000000', '2021-02-01T00:00:00.000000000',
+    #          '2021-03-12T00:00:00.000000000', '2021-04-23T00:00:00.000000000',
+    #          '2021-05-28T00:00:00.000000000', '2021-09-01T00:00:00.000000000'],
+    #         'Close':
+    #             [120.00, 100.01, 99.51623309,
+    #              93.63782723, 91.50373968, 91.8385245]
+    #         }
+    # df = pd.DataFrame(data)
+    # price = 110.01
+    # isFirstMin = False
+    # fib = fibonachiRetracement(price, isFirstMin, df)
+    # result = fib.Run()
+    # print(result)

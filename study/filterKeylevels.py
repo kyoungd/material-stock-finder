@@ -3,6 +3,7 @@ import numpy as np
 import os
 from datetime import date
 from allstocks import AllStocks
+from allstockanalysis import StockAnalysis
 
 
 class KeyLevels:
@@ -63,13 +64,15 @@ class FilterKeyLevels:
     def __init__(self):
         self.keyLevelTolerance = float(os.environ.get(
             'FILTER_KEY_LEVEL_TOLERANCE', '0.02'))
+        self.sa = StockAnalysis()
+        self.data = self.sa.GetJson
 
     def filterKeyLevels(self, levels, lastPrice):
         for level in levels:
             priceLevel = level[2]
             priceDelta = abs(lastPrice * self.keyLevelTolerance)
             if lastPrice >= (priceLevel - priceDelta) and lastPrice <= (priceLevel + priceDelta):
-                return True
+                return True, priceLevel
         return False
 
     def Run(self, symbol):
@@ -79,21 +82,25 @@ class FilterKeyLevels:
             qpp = KeyLevels()
             levels = qpp.Run(df)
             lastPrice = df['Close'][0]
-            isNearKeyLevel = self.filterKeyLevels(levels, lastPrice)
+            isNearKeyLevel, keyPrice = self.filterKeyLevels(levels, lastPrice)
             if isNearKeyLevel:
                 print('keylevel: {} {}'.format(symbol, lastPrice))
+            self.sa.UpdateFilter(self.data, symbol, 'keylevel', isNearKeyLevel)
+            self.sa.UpdateFilter(self.data, symbol, 'keylevels', keyPrice)
             return isNearKeyLevel
         else:
             return False
 
     @staticmethod
     def All():
-        filter = FilterKeyLevels()
-        AllStocks.Run(filter.Run, True)
+        app = FilterKeyLevels()
+        AllStocks.Run(app.Run, False)
+        app.sa.WriteJson(app.data)
 
 
 if __name__ == '__main__':
     FilterKeyLevels.All()
+    print('----------------------------------- done -----------------------------------')
     # filter = FilterKeyLevels()
     # result = filter.Run('AAPL')
     # print(result)

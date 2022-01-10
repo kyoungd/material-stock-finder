@@ -1,13 +1,23 @@
 import pandas as pd
+import os
 from filterFibonachiRetracement import fibonachiRetracement, FilterFibonachiRetracement
 from allstocks import AllStocks
+from allstockanalysis import StockAnalysis
 
 
-class FilterThreeBars:
+class filterThreeBarsRetrace:
     def __init__(self):
-        pass
+        self.minChange = float(os.environ.get(
+            'FILTER_THREEBAR_MIN_CHANGE_PERCENT', '0.02'))
+        self.minChangePrice = float(os.environ.get(
+            'FILTER_THREEBAR_MIN_CHANGE_PRICE', '0.20'))
 
     def isThreeBars(self, p0, p1, p2):
+        minPriceChange = self.minChange * p0
+        if minPriceChange < self.minChangePrice:
+            minPriceChange = self.minChangePrice
+        if abs(p1 - p2) < minPriceChange:
+            return False
         if p0 > p1 and p1 < p2:
             return True
         if p0 < p1 and p1 > p2:
@@ -57,3 +67,25 @@ class FilterThreeBars:
         isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
         result = self.ThreeBarLogic(dfDaily)
         return result
+
+
+class FilterThreeBars:
+    def __init__(self):
+        self.sa = StockAnalysis()
+        self.data = self.sa.GetJson
+        self.filter = filterThreeBarsRetrace()
+
+    def Run(self, symbol):
+        result = self.filter.Run(symbol)
+        self.sa.UpdateFilter(self.data, symbol, 'threebars', result)
+
+    @ staticmethod
+    def All():
+        app = FilterThreeBars()
+        AllStocks.Run(app.Run, False)
+        app.sa.WriteJson(app.data)
+
+
+if __name__ == '__main__':
+    FilterThreeBars.All()
+    print('------------------------------ done ------------------------------')
