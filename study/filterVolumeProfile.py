@@ -53,7 +53,7 @@ class FilterVolumeProfile:
             volProfiles = self.volumeProfiles(tp)
             isNear, vpro = self.isNearVP(price, volProfiles)
             self.sa.UpdateFilter(self.jsonData, self.symbol,
-                                 'vpro', 'yes' if isNear else 'no')
+                                 'vpro', isNear)
             self.sa.UpdateFilter(self.jsonData, self.symbol,
                                  'vpros', round(float(vpro), 2))
 

@@ -2,10 +2,10 @@ import json
 
 
 class StockAnalysis:
-    def __init__(self, userId=None):
+    def __init__(self, userId=None, readJsonFile=True):
         self.filename = "./data/symbols.json" if userId == None else "../data/" + \
             userId + "./symbols.json"
-        self.data = self.readJson()
+        self.data = self.readJson() if readJsonFile else {}
 
     @property
     def GetJson(self):

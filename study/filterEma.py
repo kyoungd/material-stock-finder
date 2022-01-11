@@ -10,6 +10,7 @@ class FilterEma:
         self.jsonData = self.sa.GetJson
         self.trendLength = 30
         self.trendAt = 25
+        self.nearPercent = 0.05
         self.setBarCount(barCount)
 
     def setSymbol(self, symbol):
@@ -38,6 +39,9 @@ class FilterEma:
                 downCount += 1
         return upCount, downCount
 
+    def isNearEma(self, close, ema):
+        return True if abs(close - ema) / close <= self.nearPercent else False
+
     def Run(self, symbol):
         isLoaded, tp = AllStocks.GetDailyStockData(symbol)
         if isLoaded:
@@ -49,11 +53,13 @@ class FilterEma:
                                  True if upCount > self.trendAt else False)
             self.sa.UpdateFilter(self.jsonData, self.symbol, 'trenddown',
                                  True if downCount > self.trendAt else False)
+            self.sa.UpdateFilter(
+                self.jsonData, self.symbol, self.filterName, self.isNearEma(close[0], output[-1]))
 
     def WriteFilter(self):
         self.sa.WriteJson(self.jsonData)
 
-    @staticmethod
+    @ staticmethod
     def All():
         filter = FilterEma(20)
         AllStocks.Run(filter.Run, False)

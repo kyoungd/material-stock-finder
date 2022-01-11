@@ -73,7 +73,7 @@ class FilterKeyLevels:
             priceDelta = abs(lastPrice * self.keyLevelTolerance)
             if lastPrice >= (priceLevel - priceDelta) and lastPrice <= (priceLevel + priceDelta):
                 return True, priceLevel
-        return False
+        return False, 0
 
     def Run(self, symbol):
         # isLoaded, df = GetDailyStockData(symbol)
