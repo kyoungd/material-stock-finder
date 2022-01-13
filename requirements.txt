@@ -14,7 +14,7 @@ greenlet==1.1.0
 HTMLParser==0.0.2
 importlib_metadata==3.10.1
 inotify==0.2.10
-jnius==1.1.0
+pyjnius==1.4.0
 keyring==23.0.1
 lockfile==0.12.2
 lxml==4.6.3
