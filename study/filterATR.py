@@ -30,9 +30,12 @@ class calculateATR:
     def Run(self, symbol):
         isLoaded, tp = AllStocks.GetDailyStockData(symbol)
         if isLoaded:
-            _avg, _last = self.filterOn(tp)
-            return {'avg': _avg, 'last': _last, 'close': tp['Close'][0]}
-        return {'avg': 0, 'last': 0, 'close': tp['Close'][0]}
+            try:
+                _avg, _last = self.filterOn(tp)
+                return {'avg': _avg, 'last': _last, 'close': tp['Close'][0]}
+            except Exception as e:
+                print(e)
+        return {'avg': 0, 'last': 0, 'close': 0}
 
 
 class FilterATR:

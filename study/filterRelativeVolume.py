@@ -30,13 +30,22 @@ class FilterRelativeVolume:
             self.symbol = symbol
         isLoaded, tp = AllStocks.GetDailyStockData(symbol)
         if isLoaded:
-            volumes = tp.Volume.to_numpy()
-            relVol = self.getRelativeVolume(volumes)
-            # round up
-            relVol = round(relVol * 100) - 100
-            self.sa.UpdateFilter(self.jsonData, self.symbol, 'relvol', relVol)
-            self.sa.UpdateFilter(
-                self.jsonData, self.symbol, 'volume', int(volumes[0]))
+            try:
+                volumes = tp.Volume.to_numpy()
+                relVol = self.getRelativeVolume(volumes)
+                # round up
+                relVol = round(relVol * 100) - 100
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, 'relvol', relVol)
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, 'volume', int(volumes[0]))
+            except Exception as e:
+                print(e)
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, 'relvol', False)
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, 'volume', int(volumes[0]))
+        return False
 
     def WriteFilter(self):
         self.sa.WriteJson(self.jsonData)

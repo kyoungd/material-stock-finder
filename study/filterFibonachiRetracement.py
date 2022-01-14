@@ -73,16 +73,20 @@ class FilterFibonachiRetracement:
         self.jsonData = self.sa.GetJson
 
     def Run(self, symbol):
-        isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
-        close = dfDaily['Close'][0]  # last close price
-        minMax = LocalMinMax(dfDaily)
-        isFirstMinimum, df = minMax.Run()
-        if (df is None) or (len(df) < 2):
+        try:
+            isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
+            close = dfDaily['Close'][0]  # last close price
+            minMax = LocalMinMax(dfDaily)
+            isFirstMinimum, df = minMax.Run()
+            if (df is None) or (len(df) < 2):
+                return False
+            fib = fibonachiRetracement(close, isFirstMinimum, df)
+            result = fib.Run()
+            self.sa.UpdateFilter(self.jsonData, symbol, 'fibonachi', result)
+            return result
+        except Exception as e:
+            print(e)
             return False
-        fib = fibonachiRetracement(close, isFirstMinimum, df)
-        result = fib.Run()
-        self.sa.UpdateFilter(self.jsonData, symbol, 'fibonachi', result)
-        return result
 
     @staticmethod
     def All():

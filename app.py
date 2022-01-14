@@ -9,6 +9,7 @@ from flask import Flask, request, render_template
 from flask_cors import CORS, cross_origin
 from patterns import candlestick_patterns
 from datetime import date
+from study.favorites import JsonFavorite
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -84,6 +85,26 @@ def scanner():
                            candlestick_patterns=candlestick_patterns,
                            stocks=stocks, pattern=pattern, fet=fet,
                            state=stock_list, active='scanner')
+
+
+@app.route('/favorites')
+@cross_origin()
+def get_favorites():
+    jsonfile = JsonFavorite()
+    return jsonfile.GetJson
+
+
+@app.route('/favorites', methods=['POST'])
+@cross_origin()
+def post_favorites():
+    jsonfile = JsonFavorite()
+    content_type = request.headers.get('Content-Type')
+    if (content_type == 'application/json'):
+        json = request.json
+        jsonfile.WriteJson(json)
+        return {'status': 'success'}
+    else:
+        return {'status': 'Content-Type not supported!'}
 
 
 @app.route('/about')

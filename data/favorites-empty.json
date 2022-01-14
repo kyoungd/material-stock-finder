@@ -1,0 +1,12 @@
+{
+    "AAPL": {
+        "created": "2022-01-11:00:00:00",
+        "description": "it looks like it is about to move",
+        "rank": 5
+    },
+    "MRVL": {
+        "created": "2022-01-11:00:00:00",
+        "description": "it looks like it is slowing down",
+        "rank": 2
+    }
+}

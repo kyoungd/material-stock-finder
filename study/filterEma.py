@@ -45,16 +45,26 @@ class FilterEma:
     def Run(self, symbol):
         isLoaded, tp = AllStocks.GetDailyStockData(symbol)
         if isLoaded:
-            self.setSymbol(symbol)
-            close = tp.Close.to_numpy()
-            output = talib.EMA(close[::-1], timeperiod=self.barCount)
-            upCount, downCount = self.FilterOn(close, output[::-1])
-            self.sa.UpdateFilter(self.jsonData, self.symbol, 'trendup',
-                                 True if upCount > self.trendAt else False)
-            self.sa.UpdateFilter(self.jsonData, self.symbol, 'trenddown',
-                                 True if downCount > self.trendAt else False)
-            self.sa.UpdateFilter(
-                self.jsonData, self.symbol, self.filterName, self.isNearEma(close[0], output[-1]))
+            try:
+                self.setSymbol(symbol)
+                close = tp.Close.to_numpy()
+                output = talib.EMA(close[::-1], timeperiod=self.barCount)
+                upCount, downCount = self.FilterOn(close, output[::-1])
+                self.sa.UpdateFilter(self.jsonData, self.symbol, 'trendup',
+                                     True if upCount > self.trendAt else False)
+                self.sa.UpdateFilter(self.jsonData, self.symbol, 'trenddown',
+                                     True if downCount > self.trendAt else False)
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, self.filterName, self.isNearEma(close[0], output[-1]))
+            except Exception as e:
+                print(e)
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, 'trendup', False)
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, 'trenddown', False)
+                self.sa.UpdateFilter(
+                    self.jsonData, self.symbol, self.filterName, False)
+        return False
 
     def WriteFilter(self):
         self.sa.WriteJson(self.jsonData)

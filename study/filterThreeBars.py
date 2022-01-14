@@ -64,9 +64,13 @@ class filterThreeBarsRetrace:
         return False
 
     def Run(self, symbol):
-        isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
-        result = self.ThreeBarLogic(dfDaily)
-        return result
+        try:
+            isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
+            result = self.ThreeBarLogic(dfDaily)
+            return result
+        except Exception as e:
+            print(e)
+            return False
 
 
 class FilterThreeBars:

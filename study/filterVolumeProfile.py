@@ -49,13 +49,21 @@ class FilterVolumeProfile:
             self.symbol = symbol
         isLoaded, tp = AllStocks.GetDailyStockData(symbol)
         if isLoaded:
-            price = tp.Close[0]
-            volProfiles = self.volumeProfiles(tp)
-            isNear, vpro = self.isNearVP(price, volProfiles)
-            self.sa.UpdateFilter(self.jsonData, self.symbol,
-                                 'vpro', isNear)
-            self.sa.UpdateFilter(self.jsonData, self.symbol,
-                                 'vpros', round(float(vpro), 2))
+            try:
+                price = tp.Close[0]
+                volProfiles = self.volumeProfiles(tp)
+                isNear, vpro = self.isNearVP(price, volProfiles)
+                self.sa.UpdateFilter(self.jsonData, self.symbol,
+                                     'vpro', isNear)
+                self.sa.UpdateFilter(self.jsonData, self.symbol,
+                                     'vpros', round(float(vpro), 2))
+            except Exception as e:
+                print(e)
+                self.sa.UpdateFilter(self.jsonData, self.symbol,
+                                     'vpro', False)
+                self.sa.UpdateFilter(self.jsonData, self.symbol,
+                                     'vpros', 0)
+        return False
 
     @staticmethod
     def All():
