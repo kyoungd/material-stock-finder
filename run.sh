@@ -24,6 +24,8 @@ python3 study/filterRelativeVolume.py
 echo '---------------------- FILTER VOLUME PROFILE ----------------------'
 python3 study/filterVolumeProfile.py
 echo '---------------------- DONE ----------------------'
+
+read -p "Press [Enter] key to start pushing symbol data..."
 echo ''
 echo '---------------------- LAUNCHING FLASK ----------------------'
 echo ''
