@@ -51,35 +51,39 @@ class FilterATR:
         return round(oneValue, 2)
 
     def Run(self, symbol):
-        result = self.filter.Run(symbol)
-        changeRate = (result['avg'] / result['close']) * 100
-        if result['close'] < 10:
-            change = changeRate * 10
-        elif result['close'] < 20:
-            change = changeRate * 8
-        elif result['close'] < 40:
-            change = changeRate * 6
-        elif result['close'] < 60:
-            change = changeRate * 4
-        elif result['close'] < 80:
-            change = changeRate * 2
-        elif result['close'] < 100:
-            change = changeRate * 1.5
-        elif result['close'] < 200:
-            change = changeRate
-        elif result['close'] < 500:
-            change = changeRate / 1.5
-        else:
-            change = changeRate / 2
-        filterState = True if change < self.atrFilterRate else False
-        self.sa.UpdateFilter(self.data, symbol, 'filteratr', filterState)
-        self.sa.UpdateFilter(self.data, symbol, 'atr',
-                             self.cleanUp(result['last']))
-        self.sa.UpdateFilter(self.data, symbol, 'close',
-                             self.cleanUp(result['close']))
-        self.sa.UpdateFilter(self.data, symbol, 'avgatr',
-                             self.cleanUp(result['avg']))
-        return filterState
+        try:
+            result = self.filter.Run(symbol)
+            changeRate = (result['avg'] / result['close']) * 100
+            if result['close'] < 10:
+                change = changeRate * 10
+            elif result['close'] < 20:
+                change = changeRate * 8
+            elif result['close'] < 40:
+                change = changeRate * 6
+            elif result['close'] < 60:
+                change = changeRate * 4
+            elif result['close'] < 80:
+                change = changeRate * 2
+            elif result['close'] < 100:
+                change = changeRate * 1.5
+            elif result['close'] < 200:
+                change = changeRate
+            elif result['close'] < 500:
+                change = changeRate / 1.5
+            else:
+                change = changeRate / 2
+            filterState = True if change < self.atrFilterRate else False
+            self.sa.UpdateFilter(self.data, symbol, 'filteratr', filterState)
+            self.sa.UpdateFilter(self.data, symbol, 'atr',
+                                self.cleanUp(result['last']))
+            self.sa.UpdateFilter(self.data, symbol, 'close',
+                                self.cleanUp(result['close']))
+            self.sa.UpdateFilter(self.data, symbol, 'avgatr',
+                                self.cleanUp(result['avg']))
+            return True
+        except Exception as e:
+            print(e)
+            return False
 
     @staticmethod
     def All():

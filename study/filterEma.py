@@ -2,14 +2,14 @@ import pandas as pd
 from allstockanalysis import StockAnalysis
 from allstocks import AllStocks
 import talib
-
+import os
 
 class FilterEma:
     def __init__(self, barCount):
         self.sa = StockAnalysis()
         self.jsonData = self.sa.GetJson
-        self.trendLength = 30
-        self.trendAt = 25
+        self.trendLength = os.getenv('FILTER_TREND_LENGTH', 30)
+        self.trendAt = os.getenv('FILTER_TREND_AT', 5)
         self.nearPercent = 0.05
         self.setBarCount(barCount)
 
@@ -69,7 +69,7 @@ class FilterEma:
     def WriteFilter(self):
         self.sa.WriteJson(self.jsonData)
 
-    @ staticmethod
+    @staticmethod
     def All():
         filter = FilterEma(20)
         AllStocks.Run(filter.Run, False)
