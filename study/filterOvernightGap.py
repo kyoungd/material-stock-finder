@@ -9,7 +9,7 @@ from allstockanalysis import StockAnalysis
 
 class FilterOvernightGapper:
     def __init__(self):
-        self.gapPercent = float(os.environ.get('FILTER_OVERNIGHT_GAP_PERCENT', '0.05'))
+        self.gapPercent = float(os.environ.get('FILTER_OVERNIGHT_GAP_PERCENT', '0.08'))
         self.gapMargin = float(os.environ.get('FILTER_OVERNIGHT_GAP_MARGIN', '0.7'))
         self.sa = StockAnalysis()
         self.jsonData = self.sa.GetJson
@@ -88,10 +88,12 @@ class FilterOvernightGapper:
         gapUp = self.gapUpPriceMovementCheck(gapUp, tp)
         gapDown = self.gapDownNearClose(gapDown, tp.Close.iloc[0])
         gapDown = self.gapDownPriceMovementCheck(gapDown, tp)
-        gaps = []
-        gaps.append(gapUp)
-        gaps.append(gapDown)
-        return gaps
+        # merge array gapUp and gapDown into one array
+        return gapUp + gapDown
+        # gaps = []
+        # gaps.append(gapUp)
+        # gaps.append(gapDown)
+        # return gaps
 
     def Run(self, symbol:str):
         isLoaded, tp = AllStocks.GetDailyStockData(symbol)

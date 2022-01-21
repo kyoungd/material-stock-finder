@@ -24,7 +24,7 @@ python3 study/filterRelativeVolume.py
 echo '---------------------- FILTER VOLUME PROFILE ----------------------'
 python3 study/filterVolumeProfile.py
 echo '---------------------- FILTER OVERNIGHT GAPPER ----------------------'
-python3 filterOvernightGap.py
+python3 study/filterOvernightGap.py
 echo '---------------------- DONE ----------------------'
 
 read -p "Press [Enter] key to start pushing symbol data..."

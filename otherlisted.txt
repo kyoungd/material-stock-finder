@@ -865,6 +865,7 @@ BY|Byline Bancorp, Inc. Common Stock|N|BY|N|100|N|BY
 BYD|Boyd Gaming Corporation Common Stock|N|BYD|N|100|N|BYD
 BYLD|iShares Yield Optimized Bond ETF|P|BYLD|Y|100|N|BYLD
 BYM|Blackrock Municipal Income Quality Trust Common Shares of Beneficial Interest|N|BYM|N|100|N|BYM
+BYN.U|Banyan Acquisition Corporation Units, each consisting of one share of Class A common stock, and one-half of one redeemable warrant|N|BYN.U|N|100|N|BYN=
 BYTE|Roundhill IO Digital Infrastructure ETF|P|BYTE|Y|100|N|BYTE
 BZH|Beazer Homes USA, Inc. Common Stock|N|BZH|N|100|N|BZH
 BZQ|ProShares UltraShort MSCI Brazil Capped|P|BZQ|Y|100|N|BZQ
@@ -1889,6 +1890,7 @@ EVA|Enviva Inc. Common Stock|N|EVA|N|100|N|EVA
 EVBN|Evans Bancorp, Inc. Common Stock|A|EVBN|N|100|N|EVBN
 EVC|Entravision Communications Corporation Common Stock|N|EVC|N|100|N|EVC
 EVE.U|EVe Mobility Acquisition Corp Units, each consisting of one Class A ordinary share and one-half of one redeemable warrant(|N|EVE.U|N|100|N|EVE=
+EVEN|Direxion Shares ETF Trust Direxion Daily S&P 500 Equal Weight Bull 2X Shares|P|EVEN|Y|100|N|EVEN
 EVF|Eaton Vance Senior Income Trust Common Stock|N|EVF|N|100|N|EVF
 EVG|Eaton Vance Short Diversified Income Fund Eaton Vance Short Duration Diversified Income Fund Common Shares of Beneficial Interest|N|EVG|N|100|N|EVG
 EVH|Evolent Health, Inc Class A Common Stock|N|EVH|N|100|N|EVH
@@ -2191,6 +2193,7 @@ FNGS|MicroSectors FANG  ETNs due January 8, 2038|P|FNGS|Y|100|N|FNGS
 FNGU|MicroSectors FANG  Index 3X Leveraged ETNs due January 8, 2038|P|FNGU|N|100|N|FNGU
 FNI|First Trust Chindia ETF|P|FNI|Y|100|N|FNI
 FNOV|FT Cboe Vest U.S. Equity Buffer ETF - November|Z|FNOV|Y|100|N|FNOV
+FNTC|Direxion Shares ETF Trust Direxion Daily FinTech Bull 2X Shares|P|FNTC|Y|100|N|FNTC
 FNV|Franco-Nevada Corporation|N|FNV|N|100|N|FNV
 FOA|Finance of America Companies Inc. Class A Common Stock|N|FOA|N|100|N|FOA
 FOA.W|Finance of America Companies Inc. Warrants, each whole warrant exercisable for one Class A Common Stock at an exercise price of $11.50|N|FOA.WS|N|100|N|FOA+
@@ -2257,6 +2260,7 @@ FSNB|Fusion Acquisition Corp. II Class A Common Stock|N|FSNB|N|100|N|FSNB
 FSNB.U|Fusion Acquisition Corp. II Units, each consisting of one share of Class A common stock and one-third of one redeemable warrant|N|FSNB.U|N|100|N|FSNB=
 FSNB.W|Fusion Acquisition Corp. II Redeemable Warrants, each whole warrant exercisable for one share of Class A common stock, each at an exercise price of $11.50 per share|N|FSNB.WS|N|100|N|FSNB+
 FSP|Franklin Street Properties Corp. Common Stock|A|FSP|N|100|N|FSP
+FSPR|Four Springs Capital Trust Common Shares|N|FSPR|N|100|N|FSPR
 FSR|Fisker Inc. Class A Common Stock|N|FSR|N|100|N|FSR
 FSS|Federal Signal Corporation Common Stock|N|FSS|N|100|N|FSS
 FSST|Fidelity Sustainability U.S. Equity ETF|P|FSST|Y|100|N|FSST
@@ -2338,6 +2342,7 @@ GAMR|Wedbush ETFMG Video Game Tech ETF|P|GAMR|Y|100|N|GAMR
 GAPA|G&P Acquisition Corp. Class A Common Stock|N|GAPA|N|100|N|GAPA
 GAPA.U|G&P Acquisition Corp. Units, each consisting of one share of Class A common stock and one-half of one redeemable warrant|N|GAPA.U|N|100|N|GAPA=
 GAPA.W|G&P Acquisition Corp. Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50 per share|N|GAPA.WS|N|100|N|GAPA+
+GAQ.U|Generation Asia I Acquisition Limited Units, each consisting of one Class A ordinary share and one-half of one redeemable warrant|N|GAQ.U|N|100|N|GAQ=
 GAST|Gabelli ETFs Trust Gabelli Asset ETF|P|GAST|Y|100|N|GAST
 GATO|Gatos Silver, Inc. Common Stock|N|GATO|N|100|N|GATO
 GATX|GATX Corporation Common Stock|N|GATX|N|100|N|GATX
@@ -3103,6 +3108,7 @@ ITRG|Integra Resources Corp. Common Shares|A|ITRG|N|100|N|ITRG
 ITT|ITT Inc. Common Stock |N|ITT|N|100|N|ITT
 ITUB|Itau Unibanco Banco Holding SA American Depositary Shares (Each repstg 500 Preferred shares)|N|ITUB|N|100|N|ITUB
 ITW|Illinois Tool Works Inc. Common Stock|N|ITW|N|100|N|ITW
+IUSA|Northern Lights Fund Trust II Amberwave Invest USA JSG Fund|P|IUSA|Y|100|N|IUSA
 IVAL|Alpha Architect International Quantitative Value ETF|Z|IVAL|Y|100|N|IVAL
 IVAN|Ivanhoe Capital Acquisition Corp. Class A Ordinary Shares|N|IVAN|N|100|N|IVAN
 IVAN.U|Ivanhoe Capital Acquisition Corp. Unit, each consisting of one Class A ordinary share and one-third of one redeemable warrant|N|IVAN.U|N|100|N|IVAN=
@@ -3486,7 +3492,7 @@ LFEQ|VanEck Long/Flat Trend ETF|P|LFEQ|Y|100|N|LFEQ
 LFG|Archaea Energy Inc. Class A Common Stock|N|LFG|N|100|N|LFG
 LFT|Lument Finance Trust, Inc. Common Stock|N|LFT|N|100|N|LFT
 LFT$A|Lument Finance Trust, Inc. 7.875% Series A Cumulative Redeemable Preferred Stock|N|LFTpA|N|100|N|LFT-A
-LFT.V|Lument Finance Trust, Inc. Rights (Expiring February 11, 2022) Rights when issued|N|LFTrw|N|100|N|LFT^#
+LFT.R|Lument Finance Trust, Inc. Rights (Expiring February 11, 2022) Rights|N|LFTr|N|100|N|LFT^
 LGF.A|Lions Gate Entertainment Corporation Class A Voting Shares|N|LGF.A|N|100|N|LGF.A
 LGF.B|Lions Gate Entertainment Corporation Class B Non-Voting Shares|N|LGF.B|N|100|N|LGF.B
 LGH|HCM Defender 500 Index ETF|P|LGH|Y|100|N|LGH
@@ -4228,6 +4234,7 @@ ONE|OneSmart International Education Group Limited ADS|N|ONE|N|100|N|ONE
 ONEO|SPDR Russell 1000 Momentum Focus ETF|P|ONEO|Y|100|N|ONEO
 ONEV|SPDR Russell 1000 Low Volatility Focus ETF|P|ONEV|Y|100|N|ONEV
 ONEY|SPDR Russell 1000 Yield Focus ETF|P|ONEY|Y|100|N|ONEY
+ONG|Direxion Shares ETF Trust Direxion Daily Oil Services Bull 2X Shares|P|ONG|Y|100|N|ONG
 ONL|Orion Office REIT Inc. Common Stock|N|ONL|N|100|N|ONL
 ONLN|ProShares Online Retail ETF|P|ONLN|Y|100|N|ONLN
 ONOF|Global X Adaptive U.S. Risk Management ETF|P|ONOF|Y|100|N|ONOF
@@ -5081,6 +5088,7 @@ SDPI|Superior Drilling Products, Inc. Common Stock|A|SDPI|N|100|N|SDPI
 SDS|ProShares UltraShort S&P500|P|SDS|Y|100|N|SDS
 SDY|SPDR S&P Dividend ETF|P|SDY|Y|100|N|SDY
 SE|Sea Limited American Depositary Shares, each representing one Class A Ordinary Share|N|SE|N|100|N|SE
+SEA|ETF Series Solutions U.S. Global Sea to Sky Cargo ETF|P|SEA|Y|100|N|SEA
 SEAH|Sports Entertainment Acquisition Corp. Class A Common Stock|N|SEAH|N|100|N|SEAH
 SEAH.U|Sports Entertainment Acquisition Corp. Units, each consisting of one share of Class A Common Stock, and one-half of one redeemable Warrant|N|SEAH.U|N|100|N|SEAH=
 SEAH.W|Sports Entertainment Acquisition Corp. Redeemable Warrants, each whole Warrant exercisable for one share of Class A Common Stock, each at an exercise price of $11.50 per share|N|SEAH.WS|N|100|N|SEAH+
@@ -5277,7 +5285,6 @@ SPDN|Direxion Daily S&P 500 Bear 1X Shares|P|SPDN|Y|100|N|SPDN
 SPDV|AAM S&P 500 High Dividend Value ETF|P|SPDV|Y|100|N|SPDV
 SPDW|SPDR Portfolio Developed World ex-US ETF|P|SPDW|Y|100|N|SPDW
 SPE|Special Opportunities Fund, Inc Common Stock|N|SPE|N|100|N|SPE
-SPE.R|Special Opportunities Fund Inc. Rights (expiring January 21, 2022) Rights|N|SPEr|N|100|N|SPE^
 SPEM|SPDR Index Shares Fund SPDR Portfolio Emerging Markets ETF|P|SPEM|Y|100|N|SPEM
 SPEU|SPDR Portfolio Europe ETF|P|SPEU|Y|100|N|SPEU
 SPFF|Global X SuperIncome Preferred ETF|P|SPFF|Y|100|N|SPFF
@@ -6387,4 +6394,4 @@ ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZWS|Zurn Water Solutions Corporation Common Stock|N|ZWS|N|100|N|ZWS
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
 ZYME|Zymeworks Inc. Common Shares|N|ZYME|N|100|N|ZYME
-File Creation Time: 0118202221:31||||||
+File Creation Time: 0120202221:32||||||
