@@ -7,6 +7,8 @@ echo '---------------------- SNAPSHOT ----------------------'
 python3 alpacaSnapshot.py
 echo '---------------------- DOWNLOAD HISTORICAL ----------------------'
 python3 alpacaHistorical.py
+echo '---------------------- DOWNLOAD COMPANY STATISTICS ----------------------'
+python3 study/stockFinancial.py
 echo '---------------------- CLEAN UP STOCK DATA ----------------------'
 python3 study/filterRemoveNoDataStocks.py
 echo '---------------------- FILTER ATR ----------------------'
