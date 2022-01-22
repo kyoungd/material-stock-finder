@@ -25,13 +25,14 @@ echo '---------------------- FILTER VOLUME PROFILE ----------------------'
 python3 study/filterVolumeProfile.py
 echo '---------------------- FILTER OVERNIGHT GAPPER ----------------------'
 python3 study/filterOvernightGap.py
+echo '---------------------- FILTER Candle Stick Patterns ----------------------'
+python3 study/filterCandlePatterns.py
 echo '---------------------- DONE ----------------------'
 
-read -p "Press [Enter] key to start pushing symbol data..."
+# read -p "Press [Enter] key to start pushing symbol data..."
 echo ''
 python3 toServer.py
 echo '---------------------- LAUNCHING FLASK ----------------------'
 echo ''
 
 # export FLASK_APP=app; flask run
-

@@ -2260,7 +2260,6 @@ FSNB|Fusion Acquisition Corp. II Class A Common Stock|N|FSNB|N|100|N|FSNB
 FSNB.U|Fusion Acquisition Corp. II Units, each consisting of one share of Class A common stock and one-third of one redeemable warrant|N|FSNB.U|N|100|N|FSNB=
 FSNB.W|Fusion Acquisition Corp. II Redeemable Warrants, each whole warrant exercisable for one share of Class A common stock, each at an exercise price of $11.50 per share|N|FSNB.WS|N|100|N|FSNB+
 FSP|Franklin Street Properties Corp. Common Stock|A|FSP|N|100|N|FSP
-FSPR|Four Springs Capital Trust Common Shares|N|FSPR|N|100|N|FSPR
 FSR|Fisker Inc. Class A Common Stock|N|FSR|N|100|N|FSR
 FSS|Federal Signal Corporation Common Stock|N|FSS|N|100|N|FSS
 FSST|Fidelity Sustainability U.S. Equity ETF|P|FSST|Y|100|N|FSST
@@ -2718,6 +2717,7 @@ HLLY|Holley Inc. Common Stock|N|HLLY|N|100|N|HLLY
 HLLY.W|Holley Inc. Warrants|N|HLLY.WS|N|100|N|HLLY+
 HLT|Hilton Worldwide Holdings Inc. Common Stock |N|HLT|N|100|N|HLT
 HLX|Helix Energy Solutions Group, Inc. Common Stock|N|HLX|N|100|N|HLX
+HMA.U|Heartland Media Acquisition Corp. Units, each consisting of one share of Class A common stock and one-half of one redeemable warrant|N|HMA.U|N|100|N|HMA=
 HMC|Honda Motor Company, Ltd. Common Stock|N|HMC|N|100|N|HMC
 HMG|HMG/Courtland Properties, Inc. Common Stock|A|HMG|N|100|N|HMG
 HMLP|Hoegh LNG Partners LP Common Units representing Limited Partner Interests|N|HMLP|N|100|N|HMLP
@@ -3393,6 +3393,7 @@ KNG|FT Cboe Vest S&P 500 Dividend Aristocrats Target Income ETF|Z|KNG|Y|100|N|KN
 KNGS|UPHOLDINGS Compound Kings ETF|Z|KNGS|Y|100|N|KNGS
 KNOP|KNOT Offshore Partners LP Common Units representing Limited Partner Interests|N|KNOP|N|100|N|KNOP
 KNSL|Kinsale Capital Group, Inc. Common Stock|N|KNSL|N|100|N|KNSL
+KNSW.U|KnightSwan Acquisition Corporation Units, each consisting of one share of Class A common stock and one-half of one redeemable public warrant|N|KNSW.U|N|100|N|KNSW=
 KNX|Knight-Swift Transportation Holdings Inc.|N|KNX|N|100|N|KNX
 KO|Coca-Cola Company (The) Common Stock|N|KO|N|100|N|KO
 KOCG|FIS Knights of Columbus Global Belief ETF|P|KOCG|Y|100|N|KOCG
@@ -4300,7 +4301,9 @@ OXY.W|Occidental Petroleum Corporation Warrants |N|OXY.WS|N|100|N|OXY+
 OZ|Belpointe PREP, LLC Class A Units|A|OZ|N|100|N|OZ
 PAB|PGIM Active Aggregate Bond ETF|P|PAB|Y|100|N|PAB
 PAC|Grupo Aeroportuario Del Pacifico, S.A. B. de C.V. Grupo Aeroportuario Del Pacifico, S.A. de C.V. (each representing 10 Series B shares)|N|PAC|N|100|N|PAC
+PACI|PROOF Acquisition Corp I Class A Common Stock|N|PACI|N|100|N|PACI
 PACI.U|PROOF Acquisition Corp I Units, each consisting of one share of Class A common stock, $0.0001 par value, and one-half of one redeemable warrant|N|PACI.U|N|100|N|PACI=
+PACI.W|PROOF Acquisition Corp I Redeemable Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50|N|PACI.WS|N|100|N|PACI+
 PACK|Ranpak Holdings Corp Class A Common Stock|N|PACK|N|100|N|PACK
 PAG|Penske Automotive Group, Inc. Common Stock|N|PAG|N|100|N|PAG
 PAGS|PagSeguro Digital Ltd. Class A Common Shares|N|PAGS|N|100|N|PAGS
@@ -4931,6 +4934,7 @@ RRD|R.R. Donnelley & Sons Company Common Stock|N|RRD|N|100|N|RRD
 RRH|Advocate Rising Rate Hedge ETF|P|RRH|Y|100|N|RRH
 RRX|Regal Rexnord Corporation Common Stock|N|RRX|N|100|N|RRX
 RS|Reliance Steel & Aluminum Co. Common Stock (DE)|N|RS|N|100|N|RS
+RSEE|Collaborative Investment Series Trust Rareview Systematic Equity ETF|Z|RSEE|Y|100|N|RSEE
 RSF|RiverNorth Specialty Finance Corporation|N|RSF|N|100|N|RSF
 RSG|Republic Services, Inc. Common Stock|N|RSG|N|100|N|RSG
 RSI|Rush Street Interactive, Inc. Class A Common Stock|N|RSI|N|100|N|RSI
@@ -6091,6 +6095,7 @@ VYGG.W|Vy Global Growth Warrants, each whole warrant exercisable for one Class A
 VYM|Vanguard High Dividend Yield ETF|P|VYM|Y|100|N|VYM
 VZ|Verizon Communications Inc. Common Stock|N|VZ|N|100|N|VZ
 VZIO|VIZIO Holding Corp. Class A Common Stock|N|VZIO|N|100|N|VZIO
+VZLA|Vizsla Silver Corp. Common Shares|A|VZLA|N|100|N|VZLA
 W|Wayfair Inc. Class A Common Stock|N|W|N|100|N|W
 WAB|Westinghouse Air Brake Technologies Corporation Common Stock|N|WAB|N|100|N|WAB
 WAL|Western Alliance Bancorporation Common Stock (DE)|N|WAL|N|100|N|WAL
@@ -6394,4 +6399,4 @@ ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZWS|Zurn Water Solutions Corporation Common Stock|N|ZWS|N|100|N|ZWS
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
 ZYME|Zymeworks Inc. Common Shares|N|ZYME|N|100|N|ZYME
-File Creation Time: 0120202221:32||||||
+File Creation Time: 0121202221:31||||||
