@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from scipy.signal import argrelextrema
 from allstocks import AllStocks
 
 
@@ -8,7 +9,7 @@ class LocalMinMax:
         self.df = df
         self.df = self.df.reset_index()
 
-    def Run(self):
+    def Polyfit(self):
         # discrete dataset
         x_data = self.df.index.tolist()      # the index will be our x axis, not date
         y_data = self.df['Close']
@@ -48,6 +49,70 @@ class LocalMinMax:
         closes = data[l_minmax]
         df = pd.DataFrame.from_dict({'Date': timeframes, 'Close': closes})
         return isFirstMinimum, df
+
+
+    def TightMinMiax(self, df=None):
+        if df is None:
+            df = self.df
+        n = 4  # number of points to be checked before and after
+
+        df['min'] = df.iloc[argrelextrema(df.Close.values, np.less_equal,
+                            order=n)[0]]['Close']
+        df['max'] = df.iloc[argrelextrema(df.Close.values, np.greater_equal,
+                            order=n)[0]]['Close']
+        firstMin = False
+        l_minmax = None
+        for ix in range(len(df.index)):
+            lmin = df.iloc[ix]['min']
+            lmax = df.iloc[ix]['max']
+            if l_minmax is None and not np.isnan(lmin):
+                l_minmax = {'Close': lmin, 'index': ix, 'type': 'min'}
+                firstMin = True
+            elif l_minmax is None and not np.isnan(lmax):
+                l_minmax = {'Close': lmax, 'index': ix, 'type': 'max'}
+                firstMin = False
+            elif not np.isnan(lmin):
+                thisPt = df.iloc[ix]
+                if l_minmax['type'] == 'max':
+                    l_minmax = {'Close': thisPt['Close'],
+                                'index': ix, 'type': 'min'}
+                elif (thisPt['Close'] >= l_minmax['Close']):
+                    df['min'][ix] = np.nan
+                else:
+                    lastIx = l_minmax['index']
+                    df['min'][lastIx] = np.nan
+                    l_minmax = {'Close': thisPt['Close'],
+                                'index': ix, 'type': 'min'}
+            elif not np.isnan(lmax):
+                thisPt = df.iloc[ix]
+                if l_minmax['type'] == 'min':
+                    l_minmax = {'Close': thisPt['Close'],
+                                'index': ix, 'type': 'max'}
+                elif (thisPt['Close'] <= l_minmax['Close']):
+                    df['max'][ix] = np.nan
+                else:
+                    lastIx = l_minmax['index']
+                    df['max'][lastIx] = np.nan
+                    l_minmax = {'Close': thisPt['Close'],
+                                'index': ix, 'type': 'max'}
+
+        timeframes = []
+        closes = []
+        for _, row in df.iterrows():
+            data = None
+            if not np.isnan(row['min']):
+                data = row['min']
+            elif not(row['max']):
+                data = row['max']
+            if data is not None:
+                closes.append(data)
+                timeframes.append(row['Date'])
+        df1 = pd.DataFrame.from_dict({'Date': timeframes, 'Close': closes})
+        return firstMin, df1
+
+    def Run(self):
+        isFirstMin, df1 = self.TightMinMiax()
+        return isFirstMin, df1
 
 
 if __name__ == '__main__':

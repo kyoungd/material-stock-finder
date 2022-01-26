@@ -76,19 +76,23 @@ class FilterKeyLevels:
         return False, 0
 
     def Run(self, symbol):
-        # isLoaded, df = GetDailyStockData(symbol)
-        isLoaded, df = AllStocks.GetWeeklyStockData(symbol)
-        if isLoaded:
-            qpp = KeyLevels()
-            levels = qpp.Run(df)
-            lastPrice = df['Close'][0]
-            isNearKeyLevel, keyPrice = self.filterKeyLevels(levels, lastPrice)
-            if isNearKeyLevel:
-                print('keylevel: {} {}'.format(symbol, lastPrice))
-            self.sa.UpdateFilter(self.data, symbol, 'keylevel', isNearKeyLevel)
-            self.sa.UpdateFilter(self.data, symbol, 'keylevels', keyPrice)
-            return isNearKeyLevel
-        else:
+        try:
+            _, dfDaily = AllStocks.GetDailyStockData(symbol)
+            isLoaded, df = AllStocks.GetWeeklyStockData(symbol)
+            if isLoaded:
+                qpp = KeyLevels()
+                levels = qpp.Run(df)
+                lastPrice = dfDaily['Close'][0]
+                isNearKeyLevel, keyPrice = self.filterKeyLevels(levels, lastPrice)
+                if isNearKeyLevel:
+                    print('keylevel: {} {} {}'.format(symbol, lastPrice, keyPrice))
+                self.sa.UpdateFilter(self.data, symbol, 'keylevel', isNearKeyLevel)
+                self.sa.UpdateFilter(self.data, symbol, 'keylevels', keyPrice)
+                return isNearKeyLevel
+            else:
+                return False
+        except Exception as e:
+            print(e)
             return False
 
     @staticmethod

@@ -47,7 +47,6 @@ class AllStocks:
             isLoadedOk, df = AllStocks.GetDailyStockData(symbol)
             if not isLoadedOk:
                 return False, None
-            print(df)
             df['Date'] = pd.to_datetime(df['Date'])
             df.set_index('Date', inplace=True)
             df.sort_index(inplace=True)

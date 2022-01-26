@@ -1,12 +1,12 @@
 rm ./data/stocks/*.csv
 echo '---------------------- CLEAR STAT ----------------------'
-cp ./data/symbols-empty.json ./data/symbols.json
+cp ./data/symbols-bak.json ./data/symbols.json
 echo '---------------------- SYMBOLS ----------------------'
 python3 symbols.py
 echo '---------------------- SNAPSHOT ----------------------'
 python3 alpacaSnapshot.py
 echo '---------------------- DOWNLOAD HISTORICAL ----------------------'
-python3 alpacaHistorical.py
+python3 alpacaHistorical.py $1
 echo '---------------------- DOWNLOAD COMPANY STATISTICS ----------------------'
 python3 study/stockFinancial.py
 echo '---------------------- CLEAN UP STOCK DATA ----------------------'
@@ -29,6 +29,8 @@ echo '---------------------- FILTER OVERNIGHT GAPPER ----------------------'
 python3 study/filterOvernightGap.py
 echo '---------------------- FILTER Candle Stick Patterns ----------------------'
 python3 study/filterCandlePatterns.py
+echo '---------------------- FILTER Double Top ----------------------'
+python3 study/filterDoubleTop.py
 echo '---------------------- DONE ----------------------'
 
 # read -p "Press [Enter] key to start pushing symbol data..."

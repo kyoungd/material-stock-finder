@@ -9,6 +9,7 @@
       "type": "python",
       "request": "launch",
       "program": "${file}",
+      // "args": ["2022-01-03"],
       "console": "integratedTerminal"
     },
     {

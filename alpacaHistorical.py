@@ -9,6 +9,7 @@ import os
 import threading
 from threading import Thread
 import time
+import sys
 
 custom_header = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
@@ -110,14 +111,19 @@ class AlpacaHistorical:
 
 
 class alpacaHistoricalData(AlpacaHistorical):
-    def __init__(self):
+    def __init__(self, startdate=None, enddate=None):
         super().__init__()
+        self.startdate = startdate
+        self.enddate = enddate
 
     def getDataLine(self, app, line, fw):
         try:
             timeframe = RedisTimeFrame.DAILY
             symbol = line.split(',')[0]
-            data = app.HistoricalPrices(symbol, timeframe)
+            if self.startdate is not None and self.enddate is not None:
+                data = self.HistoricalPrices(symbol, timeframe, starttime=self.startdate, endtime=self.enddate)
+            else:
+                data = app.HistoricalPrices(symbol, timeframe)
             app.WriteToFile(symbol, data)
             fw.write(line)
         except Exception as e:
@@ -145,13 +151,27 @@ class alpacaHistoricalData(AlpacaHistorical):
 
 
 if __name__ == "__main__":
+
+    n = len(sys.argv)
+    if (n == 1):
+        app = alpacaHistoricalData()
+        app.Run(isDebug=True)
+    elif (n == 2):
+        # convert string to datetime
+        enddate = datetime.strptime(sys.argv[1], '%Y-%m-%d')
+        startdate = enddate - timedelta(days=400)
+        app = alpacaHistoricalData(startdate, enddate)
+        app.Run(isDebug=True)
+    else:
+        enddate = datetime.strptime(sys.argv[2], '%Y-%m-%d')
+        startdate = datetime.strptime(sys.argv[1], '%Y-%m-%d')
+        app = alpacaHistoricalData(startdate, enddate)
+        app.Run(isDebug=True)
     # timeframe = RedisTimeFrame.DAILY
     # symbol = "AAPL"
     # app = AlpacaHistorical()
     # data = app.HistoricalPrices(symbol, timeframe)
     # app.WriteToFile(symbol, data)
     #
-    app = alpacaHistoricalData()
-    app.Run(isDebug=True)
     #
     print('done')
