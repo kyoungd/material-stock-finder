@@ -1,5 +1,6 @@
 import alpaca_trade_api as alpaca
 import os
+import requests
 
 
 class AlpacaAccess:
@@ -12,6 +13,8 @@ class AlpacaAccess:
         'ALPACA_WS', 'wss://stream.data.alpaca.markets/v2')
     # <- replace to SIP if you have PRO subscription
     ALPACA_FEED = os.environ.get('ALPACA_FEED', 'sip')
+    ALPACA_SNAPSHOT_URL = os.environ.get(
+        'ALPACA_SNAPSHOT_URL', 'https://data.alpaca.markets/v2/stocks/snapshots?symbols=%s')
 
     @staticmethod
     def connection():
@@ -23,6 +26,15 @@ class AlpacaAccess:
     def CustomHeader():
         return {'APCA-API-KEY-ID': AlpacaAccess.ALPACA_API_KEY,
                 'APCA-API-SECRET-KEY': AlpacaAccess.ALPACA_SECRET_KEY}
+
+    @staticmethod
+    def HistoricalSnapshots(symbols):
+        # split set into a string of symbols separated by commas
+        symbolsString = ','.join(s for s in symbols)
+        url = AlpacaAccess.ALPACA_SNAPSHOT_URL % (
+            symbolsString)
+        snapshots = requests.get(url, headers=AlpacaAccess.CustomHeader())
+        return snapshots
 
 
 class RedisTimeFrame:

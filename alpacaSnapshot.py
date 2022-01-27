@@ -5,7 +5,7 @@ from enum import Enum
 from study.favorites import JsonFavorite
 import alpaca_trade_api as tradeapi
 import requests
-from alpacaUtil import AlpacaAccess, RedisTimeFrame
+from study.alpacaUtil import AlpacaAccess, RedisTimeFrame
 import json
 import os
 import threading
