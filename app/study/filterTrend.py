@@ -17,7 +17,7 @@ class trendMinMax:
             return []
         for ix, row in df.iterrows():
             if ix >= 2:
-                thisValue = row['close']
+                thisValue = row['Close']
                 lastValue = df.iloc[ix - 2]['Close']
                 delta = lastValue * minDelta
                 if thisValue + delta > lastValue:
@@ -30,7 +30,7 @@ class trendMinMax:
 
     def trendingCount(self, directions:list, isFirstMin:bool, close:float, minDelta: float)->bool:
         dir1 = directions[0]
-        count = 1
+        count = 0
         for direction in directions:
             if direction != dir1:
                 return count
@@ -40,11 +40,11 @@ class trendMinMax:
     def reverseCount(self, directions:list, isFirstMin:bool, close:float, minDelta: float)->bool:
         dir2 = ''
         dir1 = directions[0]
-        count = 1
+        count = 0
         for direction in directions:
             if direction != dir1 and dir2 == '' and count <= 2.5:
                 dir2 = direction
-                count = 1
+                count = 0
             elif dir2 != '' and direction != dir2 and dir2:
                 return count
             count += 0.5
@@ -74,17 +74,17 @@ class FilterTrends:
                 minMax = LocalMinMax(dfDaily, 5)
                 isFirstMinimum, df = minMax.Run()
                 if df is not None and (len(df.index) > 3):
-                    trend = self.trendNunNax(minMax, isFirstMinimum, close)
+                    trend = trendMinMax(df, isFirstMinimum, close)
                     trendPeaks, reversePeaks = trend.Run()
-                    self.sa.UpdateFilter(symbol, 'trend', trendPeaks)
-                    self.sa.UpdateFilter(symbol, 'reverse', reversePeaks)
+                    self.sa.UpdateFilter(self.jsonData, symbol, 'trend', trendPeaks)
+                    self.sa.UpdateFilter(self.jsonData, symbol, 'reverse', reversePeaks)
                     isAssigned = True
         except Exception as e:
             print(e)
         finally:
             if not isAssigned:
-                self.sa.UpdateFilter(symbol, 'trend', 0)
-                self.sa.UpdateFilter(symbol, 'reverse', 0)
+                self.sa.UpdateFilter(self.jsonData, symbol, 'trend', 0)
+                self.sa.UpdateFilter(self.jsonData, symbol, 'reverse', 0)
             return False
 
     @staticmethod

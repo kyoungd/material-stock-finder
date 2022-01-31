@@ -70,7 +70,7 @@ class SecDb:
             else:
                 return True, {'close': result[0], 'dt': result[1]}
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            print('databaseAccess.GetLastDaily() {}'.format(error))
             return False, None
         pass
 
@@ -91,5 +91,38 @@ class SecDb:
         except (Exception, psycopg2.DatabaseError) as error:
             print('databaseAccess.SetLastDaily() {}'.format(error))
             return False
-        pass
     
+    def GetFloats(self, symbol:str)->set:
+        try:
+            cur = self.conn.cursor()
+
+            sql = """SELECT float_percent, float_volume FROM site_sec where symbol=%s"""
+            # execute the SELECT statement
+            cur.execute(sql, (symbol,))
+            # get the generated id back
+            result = cur.fetchone()
+            if (result == None or result[0] is None or result[1] is None):
+                return False, (0,0)
+            else:
+                return True, (result[0], result[1])
+        except (Exception, psycopg2.DatabaseError) as error:
+            print('databaseAccess.getFloats() {}'.format(error))
+            return False, (0,0)
+
+    def SetFloats(self, symbol:str, floatP: float, floatV: float, dt:datetime = None) -> bool:
+        try:
+            if dt is None:
+                dt = datetime.datetime.now()
+            """ insert a new vendor into the vendors table """
+            cur = self.conn.cursor()
+
+            sql = """INSERT INTO public.site_sec(symbol, cik, float_percent, float_volume) VALUES(%s, '0', %s, %s) ON CONFLICT (symbol) DO UPDATE SET float_percent=%s, float_volume=%s;"""
+            # execute the INSERT statement
+            cur.execute(sql, (symbol, floatP, floatV, floatP, floatV))
+            # get the generated id back
+            # id = cur.fetchone()[0]
+            self.conn.commit()
+            return True
+        except (Exception, psycopg2.DatabaseError) as error:
+            print('databaseAccess.setFloats() {}'.format(error))
+            return False

@@ -13,7 +13,7 @@ if __name__ == "__main__":
         Run()
         AlpacaSnapshots.All()
         AlpacaHistoricalData.All()
-        StockFinancial.All(True)
+        StockFinancial.All(isDebug=True, isForceDownloadYahoo=False)
         RemoveNoDataStocks()
         FilterAtr.All()
         FilterEma.All()
@@ -25,27 +25,11 @@ if __name__ == "__main__":
         FilterGapper.All()
         FilterCandlePattern.All()
         FilterDoubleTop.All()
-        PushToServer()
-
-    if isTagInOptions('--dy', sys.argv):
-        Run()
-        AlpacaSnapshots.All()
-        AlpacaHistoricalData.All()
-        RemoveNoDataStocks()
-        FilterAtr.All()
-        FilterEma.All()
-        FilterKeyLevels.All()
-        FilterFibonacciRetracement.All()
-        FilterThreeBars.All()
-        FilterRelativeVolume.All()
-        FilterVolumeProfile.All()
-        FilterGapper.All()
-        FilterCandlePattern.All()
-        FilterDoubleTop.All()
+        FilterTrends.All()
         PushToServer()
 
     if isTagInOptions('--fn', sys.argv):
-        StockFinancial.All(True)
+        StockFinancial.All(isDebug=True, isForceDownloadYahoo=True)
         PushToServer()
 
     if isTagInOptions('--mc', sys.argv):
@@ -54,6 +38,9 @@ if __name__ == "__main__":
     if isTagInOptions('--mo', sys.argv):
         LastNightGapper.All(False)
         PushToServer()
+
+    if isTagInOptions('--test', sys.argv):
+        StockFinancial.All(True)
 
     # db = SecDb()
     # db.SetLastDaily('AAPL', 170.33, '2020-01-28')

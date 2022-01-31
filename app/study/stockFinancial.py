@@ -1,18 +1,19 @@
 
 
 import yfinance as yf
-
+import time
 import pandas as pd
 from util import StockAnalysis, AllStocks
-import time
-
+import dbase as db
 
 class StockFinancial:
-    def __init__(self, isDebug=None):
+    def __init__(self, isDebug=None, isForceDownloadYahoo=None):
         self.sa = StockAnalysis()
         self.jsonData = self.sa.GetJson
         self.lineCount = 0
         self.isDebug = isDebug
+        self.db = db.SecDb()
+        self.isDownload = True if isForceDownloadYahoo else False
 
     def getFinancials(self, symbol):
         stock = yf.Ticker(symbol)
@@ -50,24 +51,28 @@ class StockFinancial:
             try:
                 if self.isDebug:
                     self.lineCount += 1
-                floats, floatp = self.getFinancials(symbol)
-                self.sa.UpdateFilter(self.jsonData, symbol, 'floats', floats)
+                isOk, (floatp, floatv) = self.db.GetFloats(symbol)
+                if not isOk or self.isDownload:
+                    floatv, floatp = self.getFinancials(symbol)
+                    self.db.SetFloats(symbol, floatp, floatv)
+                self.sa.UpdateFilter(self.jsonData, symbol, 'floatv', floatv)
                 self.sa.UpdateFilter(self.jsonData, symbol, 'floatp', floatp)
                 if self.isDebug:
                     print('{} - {}'.format(symbol, self.lineCount))
             except Exception as e:
                 print('{} {} - {}'.format(self.lineCount, symbol, e))
                 self.sa.UpdateFilter(
-                    self.jsonData, symbol, 'floats', 0)
+                    self.jsonData, symbol, 'floatv', 0)
                 self.sa.UpdateFilter(
                     self.jsonData, symbol, 'floatp', 0)
                 time.sleep(1)
         return False
 
     @staticmethod
-    def All(isDebug=None):
+    def All(isDebug=None, isForceDownloadYahoo=None):
         isDebug = True if isDebug else False
-        filter = StockFinancial(isDebug)
+        isForceDownloadYahoo = True if isForceDownloadYahoo else False
+        filter = StockFinancial(isDebug=isDebug, isForceDownloadYahoo=isForceDownloadYahoo)
         AllStocks.Run(filter.Run, False)
         filter.sa.WriteJson(filter.jsonData)
 

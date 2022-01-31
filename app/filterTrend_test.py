@@ -19,8 +19,8 @@ class TestFilterTrend(TestCase):
                  '2021-12-25T00:00:00.000000000', '2021-12-24T00:00:00.000000000',
                  '2021-12-23T00:00:00.000000000', '2021-12-22T00:00:00.000000000',
                  '2021-12-21T00:00:00.000000000', '2021-12-20T00:00:00.000000000',
-                 '2021-12-19T00:00:00.000000000', '2021-12-18T00:00:00.000000000',
-                 ''],
+                 '2021-12-19T00:00:00.000000000', '2021-12-18T00:00:00.000000000'
+                 ],
                 'Close':
                     [p0, p0 - 10,
                      p1, p1 - 10,
@@ -31,13 +31,26 @@ class TestFilterTrend(TestCase):
                      p6, p6 - 10]
                 }
         df = pd.DataFrame(data)
-        price = 110.01
+        price = p0 + 1
         isFirstMin = False
-        app = trendMinMax(data, isFirstMin, df)
+        app = trendMinMax(df, isFirstMin, price)
         return app.Run()
 
 
-    def test_trend20success(self):
-        data = [50, 55, 60, 65, 70, 75, 80]
-        trends, _ = self.dataSetup(data)
-        self.assertEqual(trends, 3.5)
+    def test_trend7success1(self):
+        trends, _ = self.dataSetup(50, 55, 60, 65, 70, 75, 80)
+        self.assertEqual(trends, 7)
+
+    def test_trend7success2(self):
+        trends, _ = self.dataSetup(80, 75, 70, 65, 60, 55, 50)
+        self.assertEqual(trends, 7)
+
+    def test_trend7fail1(self):
+        trends, reveres = self.dataSetup(50, 55, 45, 65, 40, 75, 60)
+        self.assertEqual(trends, 1)
+        self.assertEqual(reveres, 1)
+
+    def test_reverse3success(self):
+        trends, reveres = self.dataSetup(50, 55, 45, 40, 35, 50, 60)
+        self.assertEqual(trends, 1)
+        self.assertEqual(reveres, 3)
