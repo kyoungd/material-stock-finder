@@ -1,5 +1,5 @@
 from unittest import mock, TestCase
-from filterDoubleTop import doubleTop
+from study import doubleTop
 import pandas as pd
 
 

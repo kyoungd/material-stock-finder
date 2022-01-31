@@ -76,6 +76,8 @@ class SecDb:
 
     def SetLastDaily(self, symbol, close: float, dt = None):
         try:
+            if dt is None:
+                dt = datetime.datetime.now()
             """ insert a new vendor into the vendors table """
             cur = self.conn.cursor()
 
@@ -87,7 +89,7 @@ class SecDb:
             self.conn.commit()
             return True
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
+            print('databaseAccess.SetLastDaily() {}'.format(error))
             return False
         pass
     

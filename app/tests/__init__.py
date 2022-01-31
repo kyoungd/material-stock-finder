@@ -1,0 +1,5 @@
+from .filterDoubleTop_test import TestFilterDoubleTop
+from .filterFibonacciRetracement_test import TestFilterDoubleTop
+from .filterGapper_test import TestFilterGappers
+from .filterThreeBars_test import TestFilterThreeBars
+from .filterTrend_test import TestFilterTrend

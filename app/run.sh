@@ -1,10 +1,23 @@
 echo '---------------------- STARTING ----------------------'
 cd /home/young/Desktop/code/trading/candlestick-pattern-analyzer
 
-rm ./data/stocks/*.csv
-echo '---------------------- CLEAR STAT ----------------------'
-cp ./data/symbols-bak.json ./data/symbols.json
-# echo '---------------------- SYMBOLS ----------------------'
+if [ $1 == '--daily']
+then
+    echo '---------------------- CLEAR STAT ----------------------'
+    rm ./data/stocks/*.csv
+    cp ./data/symbols-bak.json ./data/symbols.json
+fi
+if [ $1 == '--dy']
+then
+    echo '---------------------- CLEAR STAT ----------------------'
+    rm ./data/stocks/*.csv
+    cp ./data/symbols-bak.json ./data/symbols.json
+fi
+
+echo '---------------------- START APP ----------------------'
+python3 app/app.py %1
+echo '---------------------- END APP ----------------------'
+
 # python3 symbols.py
 # echo '---------------------- SNAPSHOT ----------------------'
 # python3 alpacaSnapshot.py

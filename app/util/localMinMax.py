@@ -2,13 +2,17 @@ import numpy as np
 import pandas as pd
 from scipy.signal import argrelextrema
 from .allstocks import AllStocks
-
+import os
 
 class LocalMinMax:
-    def __init__(self, df):
+    def __init__(self, df, tightMinMaxN = None):
         self.df = df
         self.df = self.df.reset_index()
-
+        if tightMinMaxN is None:
+            self.minMaxN = int(os.environ.get('TIGHT_MINMAX_N', '4'))
+        else:
+            self.minMaxN = tightMinMaxN
+    
     def Polyfit(self):
         # discrete dataset
         x_data = self.df.index.tolist()      # the index will be our x axis, not date
@@ -54,7 +58,7 @@ class LocalMinMax:
     def TightMinMiax(self, df=None):
         if df is None:
             df = self.df
-        n = 4  # number of points to be checked before and after
+        n = self.minMaxN        # number of points to be checked before and after
 
         df['min'] = df.iloc[argrelextrema(df.Close.values, np.less_equal,
                             order=n)[0]]['Close']

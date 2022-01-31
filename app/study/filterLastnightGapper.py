@@ -33,34 +33,40 @@ class overnightGapper:
         snapshots = json.loads(data.text)
         return snapshots
 
-    def getSnapshotAtMarketClose(self, symbols):
+    def getSnapshotAtMarketOpen(self, symbols):
         snapshots = self.getSnapshotFromApi(symbols)
-        for symbol in snapshots.keys():
+        for symbol in snapshots:
             try:
-                price1 = self.db.GetLastDaily(symbol)
-                price2 = float(snapshots[symbol]['minuteBar']['c'])
-                isOvernightGapper = self.getLastNightGapper(
-                    price1, price2)
-                print('{} {} {} {}'.format(symbol, price1, price2, isOvernightGapper))
-                self.sa.UpdateFilter(
-                    self.data, symbol, 'lng', isOvernightGapper)
+                isOk, snapshot = self.db.GetLastDaily(symbol)
+                if (isOk):
+                    price1 = snapshot['close']
+                    price2 = snapshots[symbol]['minuteBar']['c']
+                    nightGap = self.getLastNightGapper(
+                        price1, price2)
+                    # print('{} {} {} {}'.format(symbol, price1, price2, nightGap))
+                    self.sa.UpdateFilter(
+                        self.data, symbol, 'lng', nightGap)
+                else:
+                    self.sa.UpdateFilter(
+                        self.data, symbol, 'lng', 0)
             except Exception as e:
                 try:
-                    print('ERROR: ' + symbol + ': ' + str(e))
+                    print(
+                        'filterLastnightGapper.getSnapshotAtMarketClose(). ERROR: ' + symbol + ': ' + str(e))
                     self.sa.UpdateFilter(self.data, symbol, 'lng', 0)
                 except Exception as e:
                     print(e)
 
-    def getSnapshotAtMarketOpen(self, symbols):
+    def getSnapshotAtMarketClose(self, symbols):
         snapshots = self.getSnapshotFromApi(symbols)
-        for symbol in snapshots.keys():
+        for symbol in snapshots:
             try:
-                price2 = float(snapshots[symbol]['minuteBar']['c'])
+                price2 = snapshots[symbol]['minuteBar']['c']
                 self.db.SetLastDaily(symbol, price2)
-                return price2
             except Exception as e:
                 try:
-                    print('ERROR: ' + symbol + ': ' + str(e))
+                    print('filterLastnigthGapper.getSnapshotAtMarketOpen(). ERROR: ' +
+                          symbol + ': ' + str(e))
                 except Exception as e:
                     print(e)
                 self.db.SetLastDaily(symbol, 0)
@@ -74,7 +80,7 @@ class LastNightGapper:
     def symbolLoop(self, func, isDebug:bool):
         lineCount = 0
         symbols = set()
-        for symbol in self.og.data.keys():
+        for symbol in self.og.data:
             lineCount += 1
             symbols.add(symbol)
             if (lineCount % 20 == 0):
@@ -84,13 +90,14 @@ class LastNightGapper:
         self.func(symbols)
 
     def Run(self):
-        self.SystemLoop(self.func, self.isDebug)
+        self.symbolLoop(self.func, self.isDebug)
 
     @staticmethod
-    def All(isMarketClose:bool = None):
+    def All(isMarketClose:bool):
         app = LastNightGapper(isMarketClose, isDebug=True)
         app.Run()
-        app.og.sa.WriteJson(app.data)
+        if not isMarketClose:
+            app.og.sa.WriteJson(app.og.data)
 
 
 if __name__ == "__main__":

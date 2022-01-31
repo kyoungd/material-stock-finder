@@ -1,5 +1,5 @@
 from unittest import mock, TestCase
-from app.study.filterFibonacciRetracement import fibonachiRetracement
+from study import fibonachiRetracement
 import pandas as pd
 
 

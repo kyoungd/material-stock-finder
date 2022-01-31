@@ -1,9 +1,9 @@
 from unittest import mock, TestCase
-from filterThreeBars import FilterThreeBars
+from study import FilterThreeBars
 import pandas as pd
 
 
-class TestFilterFibonachiRetracement(TestCase):
+class TestFilterThreeBars(TestCase):
 
     def setUp(self):
         pass

@@ -11,3 +11,4 @@ from .filterVolumeProfile import FilterVolumeProfile
 from .filterGappper import FilterGapper
 from .filterCandlePattern import FilterCandlePattern
 from .filterDoubleTop import FilterDoubleTop
+from .filterTrend import FilterTrends, trendMinMax

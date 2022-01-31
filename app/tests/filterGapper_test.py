@@ -1,5 +1,5 @@
 from unittest import mock, TestCase
-from app.study.filterGappper import FilterGapper
+from study import FilterGapper
 import pandas as pd
 
 

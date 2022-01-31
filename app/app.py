@@ -9,12 +9,28 @@ def isTagInOptions(tag:str, cmds:list):
     return True if tag in cmds else False
 
 if __name__ == "__main__":
-    n = len(sys.argv)
     if isTagInOptions('--daily', sys.argv):
         Run()
         AlpacaSnapshots.All()
         AlpacaHistoricalData.All()
         StockFinancial.All(True)
+        RemoveNoDataStocks()
+        FilterAtr.All()
+        FilterEma.All()
+        FilterKeyLevels.All()
+        FilterFibonacciRetracement.All()
+        FilterThreeBars.All()
+        FilterRelativeVolume.All()
+        FilterVolumeProfile.All()
+        FilterGapper.All()
+        FilterCandlePattern.All()
+        FilterDoubleTop.All()
+        PushToServer()
+
+    if isTagInOptions('--dy', sys.argv):
+        Run()
+        AlpacaSnapshots.All()
+        AlpacaHistoricalData.All()
         RemoveNoDataStocks()
         FilterAtr.All()
         FilterEma.All()
