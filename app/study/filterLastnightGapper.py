@@ -39,7 +39,8 @@ class overnightGapper:
             try:
                 isOk, snapshot = self.db.GetLastDaily(symbol)
                 if (isOk):
-                    price1 = snapshot['close']
+                    # price1 = snapshot['close']
+                    price1 = snapshots[symbol]['dailyBar']['c']
                     price2 = snapshots[symbol]['minuteBar']['c']
                     nightGap = self.getLastNightGapper(
                         price1, price2)

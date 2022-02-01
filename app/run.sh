@@ -7,52 +7,7 @@ then
     rm ./data/stocks/*.csv
     cp ./data/symbols-bak.json ./data/symbols.json
 fi
-if [ $1 == '--dy']
-then
-    echo '---------------------- CLEAR STAT ----------------------'
-    rm ./data/stocks/*.csv
-    cp ./data/symbols-bak.json ./data/symbols.json
-fi
 
 echo '---------------------- START APP ----------------------'
 python3 app/app.py %1
-echo '---------------------- END APP ----------------------'
-
-# python3 symbols.py
-# echo '---------------------- SNAPSHOT ----------------------'
-# python3 alpacaSnapshot.py
-# echo '---------------------- DOWNLOAD HISTORICAL ----------------------'
-# python3 alpacaHistorical.py $1
-# echo '---------------------- DOWNLOAD COMPANY STATISTICS ----------------------'
-# python3 study/stockFinancial.py
-# echo '---------------------- CLEAN UP STOCK DATA ----------------------'
-# python3 study/filterRemoveNoDataStocks.py
-# echo '---------------------- FILTER ATR ----------------------'
-# python3 study/filterATR.py
-# echo '---------------------- FILTER EMA ----------------------'
-# python3 study/filterEma.py
-# echo '---------------------- FILTER KEYLEVEL ----------------------'
-# python3 study/filterKeylevels.py
-# echo '---------------------- FILTER FIBONACHI ----------------------'
-# python3 study/filterFibonachiRetracement.py
-# echo '---------------------- FILTER THREEBARS ----------------------'
-# python3 study/filterThreeBars.py
-# echo '---------------------- FILTER RELATIVE VOLUME ----------------------'
-# python3 study/filterRelativeVolume.py
-# echo '---------------------- FILTER VOLUME PROFILE ----------------------'
-# python3 study/filterVolumeProfile.py
-# echo '---------------------- FILTER OVERNIGHT GAPPER ----------------------'
-# python3 study/filterOvernightGap.py
-# echo '---------------------- FILTER Candle Stick Patterns ----------------------'
-# python3 study/filterCandlePatterns.py
-# echo '---------------------- FILTER Double Top ----------------------'
-# python3 study/filterDoubleTop.py
-# echo '---------------------- DONE ----------------------'
-
-# # read -p "Press [Enter] key to start pushing symbol data..."
-# echo ''
-# python3 toServer.py
-# echo '---------------------- LAUNCHING FLASK ----------------------'
-# echo ''
-
-# # export FLASK_APP=app; flask run
+echo '----------------------  END APP  ----------------------'
