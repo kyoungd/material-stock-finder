@@ -32,6 +32,7 @@ ACAD|ACADIA Pharmaceuticals Inc. - Common Stock|Q|N|N|100|N|N
 ACAH|Atlantic Coastal Acquisition Corp. - Class A Common Stock|S|N|N|100|N|N
 ACAHU|Atlantic Coastal Acquisition Corp. - Unit|S|N|N|100|N|N
 ACAHW|Atlantic Coastal Acquisition Corp. - Warrant|S|N|N|100|N|N
+ACAXU|Alset Capital Acquisition Corp. - Unit|G|N|N|100|N|N
 ACB|Aurora Cannabis Inc. - Common Shares|Q|N|N|100|N|N
 ACBA|Ace Global Business Acquisition Limited - Ordinary Shares|S|N|N|100|N|N
 ACBAU|Ace Global Business Acquisition Limited - Unit|S|N|N|100|N|N
@@ -1937,7 +1938,9 @@ FPXI|First Trust International Equity Opportunities ETF|G|N|N|100|Y|N
 FRAF|Franklin Financial Services Corporation - Common Stock|S|N|N|100|N|N
 FRBA|First Bank  - Common Stock|G|N|N|100|N|N
 FRBK|Republic First Bancorp, Inc. - Common Stock|G|N|N|100|N|N
+FRBN|Forbion European Acquisition Corp. - Class A Ordinary Shares|G|N|N|100|N|N
 FRBNU|Forbion European Acquisition Corp. - Units|G|N|N|100|N|N
+FRBNW|Forbion European Acquisition Corp. - Warrants|G|N|N|100|N|N
 FREE|Whole Earth Brands, Inc. - Class A Common Stock|S|N|N|100|N|N
 FREEW|Whole Earth Brands, Inc. - Warrant|S|N|N|100|N|N
 FREQ|Frequency Therapeutics, Inc. - Common Stock|Q|N|N|100|N|N
@@ -2133,7 +2136,7 @@ GHACU|Gaming & Hospitality Acquisition Corp. - Unit|S|N|N|100|N|N
 GHACW|Gaming & Hospitality Acquisition Corp. - Warrants|S|N|N|100|N|N
 GHIXU|Gores Holdings IX, Inc. - Unit|G|N|N|100|N|N
 GHRS|GH Research PLC - Ordinary Shares|G|N|N|100|N|N
-GHSI|Guardion Health Sciences, Inc. - Common Stock|S|N|N|100|N|N
+GHSI|Guardion Health Sciences, Inc. - Common Stock|S|N|D|100|N|N
 GIAC|Gesher I Acquisition Corp. - Class A Ordinary Shares|G|N|N|100|N|N
 GIACU|Gesher I Acquisition Corp. - Unit|G|N|N|100|N|N
 GIACW|Gesher I Acquisition Corp. - Warrants|G|N|N|100|N|N
@@ -2377,7 +2380,7 @@ HERAW|FTAC Hera Acquisition Corp. - Warrant|S|N|N|100|N|N
 HERD|Pacer Cash Cows Fund of Funds ETF|G|N|N|100|Y|N
 HERO|Global X Video Games & Esports ETF|G|N|N|100|Y|N
 HEWG|iShares Currency Hedged MSCI Germany ETF|G|N|N|100|Y|N
-HEXO|HEXO Corp. - Common Shares|S|N|N|100|N|N
+HEXO|HEXO Corp. - Common Shares|S|N|D|100|N|N
 HFBL|Home Federal Bancorp, Inc. of Louisiana - Common Stock|S|N|N|100|N|N
 HFFG|HF Foods Group Inc. - Common Stock|S|N|N|100|N|N
 HFWA|Heritage Financial Corporation - Common Stock|Q|N|N|100|N|N
@@ -3585,6 +3588,7 @@ NVTS|Navitas Semiconductor Corporation - Common Stock|G|N|N|100|N|N
 NVTSW|Navitas Semiconductor Corporation - Warrant|G|N|N|100|N|N
 NVVE|Nuvve Holding Corp. - Common Stock|S|N|N|100|N|N
 NVVEW|Nuvve Holding Corp. - Warrant|S|N|N|100|N|N
+NVX|NOVONIX Limited - American Depository Shares|G|N|N|100|N|N
 NWBI|Northwest Bancshares, Inc. - Common Stock|Q|N|N|100|N|N
 NWE|NorthWestern Corporation - Common Stock|Q|N|N|100|N|N
 NWFL|Norwood Financial Corp. - Common Stock|G|N|N|100|N|N
@@ -4109,7 +4113,7 @@ QCRH|QCR Holdings, Inc. - Common Stock|G|N|N|100|N|N
 QDEL|Quidel Corporation - Common Stock|Q|N|N|100|N|N
 QFIN|360 DigiTech, Inc. - American Depositary Shares|Q|N|N|100|N|N
 QH|Quhuo Limited - American Depository Shares|G|N|N|100|N|N
-QIPT|Quipt Home Medical Corp. - Common Shares|S|N|E|100|N|N
+QIPT|Quipt Home Medical Corp. - Common Shares|S|N|N|100|N|N
 QIWI|QIWI plc - American Depositary Shares|Q|N|N|100|N|N
 QK|Q&K International Group Limited - American Depositary Shares|G|N|D|100|N|N
 QLGN|Qualigen Therapeutics, Inc. - Common Stock|S|N|N|100|N|N
@@ -4265,7 +4269,6 @@ RIOT|Riot Blockchain, Inc - Common Stock|S|N|N|100|N|N
 RIVN|Rivian Automotive, Inc. - Class A Common Stock|Q|N|N|100|N|N
 RKDA|Arcadia Biosciences, Inc. - Common Stock|S|N|N|100|N|N
 RKLB|Rocket Lab USA, Inc. - Common Stock|S|N|N|100|N|N
-RKLBW|Rocket Lab USA, Inc. - Warrant|S|N|N|100|N|N
 RLAY|Relay Therapeutics, Inc. - Common Stock|G|N|N|100|N|N
 RLMD|Relmada Therapeutics, Inc. - Common Stock|Q|N|N|100|N|N
 RLYB|Rallybio Corporation - Common Stock|Q|N|N|100|N|N
@@ -4805,7 +4808,9 @@ SYPR|Sypris Solutions, Inc. - Common Stock|G|N|N|100|N|N
 SYRS|Syros Pharmaceuticals, Inc. - common stock|Q|N|N|100|N|N
 SYTA|Siyata Mobile, Inc. - Common Shares|S|N|N|100|N|N
 SYTAW|Siyata Mobile, Inc. - Warrant|S|N|N|100|N|N
+SZZL|Sizzle Acquisition Corp. - Common stock|G|N|N|100|N|N
 SZZLU|Sizzle Acquisition Corp. - Unit|G|N|N|100|N|N
+SZZLW|Sizzle Acquisition Corp. - Warrant|G|N|N|100|N|N
 TA|TravelCenters of America Inc.  - Common Stock|Q|N|N|100|N|N
 TACO|Del Taco Restaurants, Inc. - Common Stock|S|N|N|100|N|N
 TACT|TransAct Technologies Incorporated - Common Stock|G|N|N|100|N|N
@@ -5526,4 +5531,4 @@ ZXZZT|NASDAQ TEST STOCK|G|Y|N|100||N
 ZY|Zymergen Inc. - Common Stock|Q|N|N|100|N|N
 ZYNE|Zynerba Pharmaceuticals, Inc. - Common Stock|G|N|N|100|N|N
 ZYXI|Zynex, Inc. - Common Stock|Q|N|N|100|N|N
-File Creation Time: 0131202221:31|||||||
+File Creation Time: 0201202221:30|||||||

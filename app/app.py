@@ -28,7 +28,7 @@ if __name__ == "__main__":
         FilterTrends.All()
         PushToServer()
 
-    if isTagInOptions('--fn', sys.argv):
+    if isTagInOptions('--fd', sys.argv):
         StockFinancial.All(isDebug=True, isForceDownloadYahoo=True)
         PushToServer()
 
@@ -40,7 +40,8 @@ if __name__ == "__main__":
         PushToServer()
 
     if isTagInOptions('--test', sys.argv):
-        StockFinancial.All(True)
+        FilterFibonacciRetracement.All()
+        PushToServer()
 
     # db = SecDb()
     # db.SetLastDaily('AAPL', 170.33, '2020-01-28')

@@ -15,51 +15,35 @@ class fibonachiRetracement:
         self.tolerance50 = 0.45
         self.tolerance63 = 0.68
 
-    def isFibonachiRetrace(self, priceFirst, priceSecond):
+    def isFibonachiRetrace(self, close, priceFirst, priceSecond):
         priceMove = priceSecond - priceFirst
         if abs(priceMove) < self.minimumChange:
-            return False
+            return False, 0
         fibPrice50 = priceFirst + priceMove * self.tolerance50
         fibPrice63 = priceFirst + priceMove * self.tolerance63
-        if (priceMove > 0) and (self.close > fibPrice50) and (self.close < fibPrice63):
-            return True
-        elif (priceMove < 0) and (self.close < fibPrice50) and (self.close > fibPrice63):
-            return True
+        if (priceMove > 0) and (close > fibPrice50) and (close < fibPrice63):
+            return True, abs(priceMove)
+        elif (priceMove < 0) and (close < fibPrice50) and (close > fibPrice63):
+            return True, abs(priceMove)
         else:
-            return False
-
-    def priceCheck5(self, p0, p1, p2, p3, p4):
-        result = []
-        d0 = abs(p0-p1)
-        d1 = abs(p1-p2) if p2 > 0 else 0
-        d2 = abs(p2-p3) if p3 > 0 else 0
-        d2a = abs(p0-p3) if p3 > 0 else 0
-        d3 = abs(p3-p4) if p4 > 0 else 0
-        d3b = abs(p1-p4) if p4 > 0 else 0
-        result.append([p0, p1])
-        if d1 > d0:
-            result.append([p1, p2])
-        if p2 > 0 and d2 > d1 and d2 > d0:
-            result.append([p2, p3])
-        if p2 > 0 and d2a > d3 and d2a > d2 and d2a > d1 and d2a > d0:
-            result.append([p0, p3])
-        if p3 > 0 and d3 > d2 and d3 > d1 and d3 > d0:
-            result.append([p3, p4])
-        if p4 > 0 and d3b > d2a and d3b > d3 and d3b > d2 and d3b > d1 and d3b > d0:
-            result.append([p1, p4])
-        return result
+            return False, 0
 
     def retracement(self):
         price0 = self.df.iloc[0].Close
         price1 = self.df.iloc[1].Close
-        price2 = 0 if len(self.df) < 3 else self.df.iloc[2].Close
-        price3 = 0 if len(self.df) < 4 else self.df.iloc[3].Close
-        price4 = 0 if len(self.df) < 5 else self.df.iloc[4].Close
-        listOfPrices = self.priceCheck5(price0, price1, price2, price3, price4)
-        for prices in listOfPrices:
-            if self.isFibonachiRetrace(prices[0], prices[1]):
-                return True
-        return False
+        price2 = price1 if len(self.df) < 3 else self.df.iloc[2].Close
+        f1, m1 = self.isFibonachiRetrace(self.close, price0, price1)
+        f2, m2 = self.isFibonachiRetrace(self.close, price1, price2)
+        if f1 and f2:
+            if m1 > m2:
+                return True, {'fib1': price0, 'fib2': price1}
+            else:
+                return True, {'fib1': price1, 'fib2': price2}
+        elif f1:
+            return True, {'fib1': price0, 'fib2': price1}
+        elif f2:
+            return True, {'fib1': price1, 'fib2': price2}
+        return False, {}
 
     def Run(self):
         return self.retracement()
@@ -74,16 +58,19 @@ class FilterFibonacciRetracement:
         try:
             isLoaded, dfDaily = AllStocks.GetDailyStockData(symbol)
             close = dfDaily['Close'][0]  # last close price
-            minMax = LocalMinMax(dfDaily)
+            minMax = LocalMinMax(dfDaily, 6)
             isFirstMinimum, df = minMax.Run()
             if (df is None) or (len(df) < 2):
                 return False
             fib = fibonachiRetracement(close, isFirstMinimum, df)
-            result = fib.Run()
+            result, fibs = fib.Run()
             self.sa.UpdateFilter(self.jsonData, symbol, 'fibonachi', result)
+            self.sa.UpdateFilter(self.jsonData, symbol, 'fibs', fibs)
             return result
         except Exception as e:
-            print(e)
+            self.sa.UpdateFilter(self.jsonData, symbol, 'fibonachi', False)
+            self.sa.UpdateFilter(self.jsonData, symbol, 'fibs', {})
+            print(symbol, e)
             return False
 
     @staticmethod

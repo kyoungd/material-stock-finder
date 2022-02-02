@@ -104,7 +104,7 @@ class SecDb:
             if (result == None or result[0] is None or result[1] is None):
                 return False, (0,0)
             else:
-                return True, (result[0], result[1])
+                return True, (float(result[0]), float(result[1]))
         except (Exception, psycopg2.DatabaseError) as error:
             print('databaseAccess.getFloats() {}'.format(error))
             return False, (0,0)

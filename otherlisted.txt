@@ -1212,6 +1212,7 @@ CRUZ|Defiance Hotel, Airline, and Cruise ETF|P|CRUZ|Y|100|N|CRUZ
 CS|Credit Suisse Group American Depositary Shares|N|CS|N|100|N|CS
 CSAN|Cosan S.A. ADS|N|CSAN|N|100|N|CSAN
 CSD|Invesco S&P Spin-Off ETF|P|CSD|Y|100|N|CSD
+CSH|Listed Funds Trust Morgan Creek - Exos Active SPAC Arbitrage ETF|P|CSH|Y|100|N|CSH
 CSL|Carlisle Companies Incorporated Common Stock|N|CSL|N|100|N|CSL
 CSLT|Castlight Health, Inc. Class B Common Stock|N|CSLT|N|100|N|CSLT
 CSM|ProShares Large Cap Core Plus|Z|CSM|Y|100|N|CSM
@@ -2598,7 +2599,6 @@ GTLS|Chart Industries, Inc. Common Stock|N|GTLS|N|100|N|GTLS
 GTN|Gray Television, Inc. Common Stock|N|GTN|N|100|N|GTN
 GTN.A|Gray Television, Inc. CLass A Common Stock|N|GTN.A|N|100|N|GTN.A
 GTO|Invesco Total Return Bond ETF|P|GTO|Y|100|N|GTO
-GTS|Triple-S Management Corporation Common Stock|N|GTS|N|100|N|GTS
 GTY|Getty Realty Corporation Common Stock|N|GTY|N|100|N|GTY
 GUG|Guggenheim Active Allocation Fund Common Shares of Beneficial Interest|N|GUG|N|100|N|GUG
 GUNR|FlexShares Global Upstream Natural Resources Index Fund ETF|P|GUNR|Y|100|N|GUNR
@@ -2610,7 +2610,6 @@ GVA|Granite Construction Incorporated Common Stock|N|GVA|N|100|N|GVA
 GVAL|Cambria Global Value ETF|Z|GVAL|Y|100|N|GVAL
 GVI|iShares Intermediate Government/Credit Bond ETF|Z|GVI|Y|100|N|GVI
 GVIP|Goldman Sachs Hedge Industry VIP ETF|P|GVIP|Y|100|N|GVIP
-GWB|Great Western Bancorp, Inc. Common Stock|N|GWB|N|100|N|GWB
 GWH|ESS Tech, Inc. Common Stock|N|GWH|N|100|N|GWH
 GWH.W|ESS Tech, Inc. Warrant|N|GWH.WS|N|100|N|GWH+
 GWRE|Guidewire Software, Inc. Common Stock|N|GWRE|N|100|N|GWRE
@@ -3069,6 +3068,7 @@ IQSI|IQ Candriam ESG International Equity ETF|P|IQSI|Y|100|N|IQSI
 IQSU|IQ Candriam ESG US Equity ETF|P|IQSU|Y|100|N|IQSU
 IQV|IQVIA Holdings, Inc. Common Stock|N|IQV|N|100|N|IQV
 IR|Ingersoll Rand Inc. Common Stock|N|IR|N|100|N|IR
+IRBA|Litman Gregory Funds Trust iMGP RBA Responsible Global Allocation ETF|P|IRBA|Y|100|N|IRBA
 IRBO|iShares Robotics and Artificial Intelligence Multisector ETF|P|IRBO|Y|100|N|IRBO
 IRL|New Ireland Fund, Inc (The) Common Stock|N|IRL|N|100|N|IRL
 IRM|Iron Mountain Incorporated (Delaware)Common Stock REIT|N|IRM|N|100|N|IRM
@@ -4639,6 +4639,7 @@ PSTL|Postal Realty Trust, Inc. Class A Common Stock|N|PSTL|N|100|N|PSTL
 PSX|Phillips 66 Common Stock|N|PSX|N|100|N|PSX
 PSXP|Phillips 66 Partners LP Common Units representing limited partner interest in the Partnership|N|PSXP|N|100|N|PSXP
 PSY|Defiance Next Gen Altered Experience ETF|P|PSY|Y|100|N|PSY
+PSYK|ETF Series Solutions PSYK ETF|P|PSYK|Y|100|N|PSYK
 PTA|Cohen & Steers Tax-Advantaged Preferred Securities and Income Fund Common Shares of Beneficial Interest|N|PTA|N|100|N|PTA
 PTBD|Pacer Trendpilot US Bond ETF|P|PTBD|Y|100|N|PTBD
 PTEU|Pacer TrendpilotTM European Index ETF|Z|PTEU|Y|100|N|PTEU
@@ -5141,7 +5142,7 @@ SHAG|WisdomTree Yield Enhanced U.S. Short-Term Aggregate Bond Fund|Z|SHAG|Y|100|
 SHAK|Shake Shack, Inc. Class A Common Stock|N|SHAK|N|100|N|SHAK
 SHAP.U|Spree Acquisition Corp. 1 Limited Units, each consisting of one Class A ordinary share and one-half of one redeemable warrant|N|SHAP.U|N|100|N|SHAP=
 SHE|SPDR Series Trust SPDR SSGA Gender Diversity Index ETF|P|SHE|Y|100|N|SHE
-SHEL.V|Royal Dutch Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares) When-Issued|N|SHELw|N|100|N|SHEL#
+SHEL|Royal Dutch Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares) |N|SHEL|N|100|N|SHEL
 SHFT|Tidal ETF Trust iClima Distributed Renewable Energy Transition Leaders ETF|P|SHFT|Y|100|N|SHFT
 SHG|Shinhan Financial Group Co Ltd American Depositary Shares|N|SHG|N|100|N|SHG
 SHI|SINOPEC Shangai Petrochemical Company, Ltd. Common Stock|N|SHI|N|100|N|SHI
@@ -5416,8 +5417,6 @@ STET.W|ST Energy Transition I Ltd. Redeemable warrants, each whole warrant exerc
 STG|Sunlands Technology Group American Depositary Shares, representing Class A ordinary shares|N|STG|N|100|N|STG
 STIP|iShares 0-5 Year TIPS Bond ETF|P|STIP|Y|100|N|STIP
 STK|Columbia Seligman Premium Technology Growth Fund Inc|N|STK|N|100|N|STK
-STL|Sterling Bancorp|N|STL|N|100|N|STL
-STL$A|Sterling Bancorp Depositary Shares each representing ownership of a 1/40th interest in a share of 6.50% Non-Cumulative, Perpetual Preferred Stock, Series A|N|STLpA|N|100|N|STL-A
 STLA|Stellantis N.V. Common Shares|N|STLA|N|100|N|STLA
 STLG|iShares Factors US Growth Style ETF|Z|STLG|Y|100|N|STLG
 STLV|iShares Factors US Value Style ETF|Z|STLV|Y|100|N|STLV
@@ -6129,6 +6128,7 @@ WBIT|Absolute Shares Trust WBI BullBear Trend Switch US 3000 Total Return ETF|P|
 WBIY|WBI Power Factor High Dividend ETF|P|WBIY|Y|100|N|WBIY
 WBS|Webster Financial Corporation Common Stock|N|WBS|N|100|N|WBS
 WBS$F|Webster Financial Corporation Depositary Shares, Each Representing 1/1,000th Interest in a Share of 5.25% Series F Non-Cumulative Perpetual Preferred Stock|N|WBSpF|N|100|N|WBS-F
+WBS$G|Webster Financial Corporation Depositary Shares, each representing a 1/40th interest in a share of 6.50% Series G non-cumulative perpetual preferred stock|N|WBSpG|N|100|N|WBS-G
 WBT|Welbilt, Inc. Common Stock|N|WBT|N|100|N|WBT
 WBX|Wallbox N.V. Class A Ordinary Shares|N|WBX|N|100|N|WBX
 WBX.W|Wallbox N.V. Warrants, each warrant to purchase one Class A Ordinary Share|N|WBX.WS|N|100|N|WBX+
@@ -6407,4 +6407,4 @@ ZVV|NYSE ARCA test stock|P|ZVV|N|100|Y|ZVV
 ZWS|Zurn Water Solutions Corporation Common Stock|N|ZWS|N|100|N|ZWS
 ZXIET|IEX Test Company Test Symbol Three for IEX|V|ZXIET|N|100|Y|ZXIET
 ZYME|Zymeworks Inc. Common Shares|N|ZYME|N|100|N|ZYME
-File Creation Time: 0131202221:31||||||
+File Creation Time: 0201202221:30||||||
