@@ -1,0 +1,82 @@
+02-Feb-22 23:05:06 INFO <module>(16) APP.PY Started
+02-Feb-22 23:10:41 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+02-Feb-22 23:15:43 INFO <module>(57) done
+03-Feb-22 00:14:44 INFO <module>(16) APP.PY Started
+03-Feb-22 01:01:31 INFO <module>(16) APP.PY Started
+03-Feb-22 01:16:23 INFO <module>(16) APP.PY Started
+03-Feb-22 01:40:44 INFO <module>(47) APP.PY Started
+03-Feb-22 01:43:03 INFO <module>(52) APP.PY Started
+03-Feb-22 01:43:20 INFO <module>(52) APP.PY Started
+03-Feb-22 01:43:20 INFO <module>(65) done
+03-Feb-22 01:44:07 INFO <module>(53) APP.PY Started
+03-Feb-22 01:44:07 INFO <module>(66) done
+03-Feb-22 01:47:03 INFO <module>(53) APP.PY Started
+03-Feb-22 01:48:05 INFO <module>(53) APP.PY Started
+03-Feb-22 01:50:24 INFO <module>(53) APP.PY Started
+03-Feb-22 01:51:08 INFO <module>(53) APP.PY Started
+03-Feb-22 01:51:08 INFO <module>(66) done
+03-Feb-22 01:53:35 INFO <module>(53) APP.PY Started
+03-Feb-22 01:53:35 INFO <module>(66) done
+03-Feb-22 01:55:19 INFO <module>(53) APP.PY Started
+03-Feb-22 01:55:19 INFO <module>(66) done
+03-Feb-22 21:29:14 INFO <module>(53) APP.PY Started
+03-Feb-22 21:29:14 INFO <module>(66) done
+03-Feb-22 21:30:58 INFO <module>(53) APP.PY Started
+03-Feb-22 21:30:58 INFO <module>(66) done
+03-Feb-22 23:36:54 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+04-Feb-22 23:34:16 INFO <module>(53) APP.PY Started
+04-Feb-22 23:34:16 INFO <module>(66) done
+04-Feb-22 23:36:36 INFO <module>(53) APP.PY Started
+04-Feb-22 23:42:10 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+04-Feb-22 23:51:06 INFO <module>(68) done
+06-Feb-22 16:46:51 INFO <module>(52) APP.PY Started
+06-Feb-22 16:46:52 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+06-Feb-22 18:28:14 INFO <module>(69) done
+06-Feb-22 20:34:24 INFO <module>(52) APP.PY Started
+06-Feb-22 20:34:24 INFO <module>(69) done
+06-Feb-22 22:08:05 INFO <module>(52) APP.PY Started
+06-Feb-22 22:08:05 INFO <module>(69) done
+06-Feb-22 22:39:22 INFO <module>(52) APP.PY Started
+06-Feb-22 22:39:22 INFO <module>(69) done
+06-Feb-22 23:36:36 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+06-Feb-22 23:49:22 INFO <module>(52) APP.PY Started
+06-Feb-22 23:49:26 INFO <module>(68) done
+06-Feb-22 23:50:36 INFO <module>(52) APP.PY Started
+07-Feb-22 00:02:26 INFO <module>(68) done
+07-Feb-22 00:07:37 INFO <module>(52) APP.PY Started
+07-Feb-22 00:07:42 INFO <module>(68) done
+07-Feb-22 00:09:02 INFO <module>(52) APP.PY Started
+07-Feb-22 00:09:08 INFO <module>(69) done
+07-Feb-22 14:16:24 INFO <module>(52) APP.PY Started
+07-Feb-22 15:20:43 INFO <module>(52) APP.PY Started
+07-Feb-22 15:20:58 INFO <module>(68) done
+07-Feb-22 15:29:40 INFO <module>(52) APP.PY Started
+07-Feb-22 15:30:29 INFO <module>(52) APP.PY Started
+07-Feb-22 15:32:13 INFO <module>(52) APP.PY Started
+07-Feb-22 15:36:17 INFO <module>(52) APP.PY Started
+07-Feb-22 15:37:25 INFO <module>(52) APP.PY Started
+07-Feb-22 15:50:50 INFO <module>(52) APP.PY Started
+07-Feb-22 15:51:16 INFO <module>(52) APP.PY Started
+07-Feb-22 15:53:58 INFO <module>(52) APP.PY Started
+07-Feb-22 15:54:36 INFO <module>(52) APP.PY Started
+07-Feb-22 15:59:47 INFO <module>(52) APP.PY Started
+07-Feb-22 16:00:46 INFO <module>(52) APP.PY Started
+07-Feb-22 18:19:09 INFO <module>(52) APP.PY Started
+07-Feb-22 18:24:28 INFO <module>(52) APP.PY Started
+07-Feb-22 19:14:13 INFO <module>(52) APP.PY Started
+07-Feb-22 19:22:36 INFO <module>(52) APP.PY Started
+07-Feb-22 21:50:40 INFO <module>(52) APP.PY Started
+07-Feb-22 21:51:11 INFO <module>(52) APP.PY Started
+07-Feb-22 22:06:18 INFO <module>(52) APP.PY Started
+07-Feb-22 22:11:47 INFO <module>(52) APP.PY Started
+07-Feb-22 22:14:11 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+07-Feb-22 22:30:13 INFO <module>(52) APP.PY Started
+07-Feb-22 22:47:39 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+07-Feb-22 22:49:28 INFO <module>(52) APP.PY Started
+07-Feb-22 22:49:49 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+07-Feb-22 22:53:44 INFO <module>(52) APP.PY Started
+07-Feb-22 22:56:00 INFO <module>(52) APP.PY Started
+07-Feb-22 23:04:20 INFO <module>(68) done
+07-Feb-22 23:46:28 INFO <module>(53) APP.PY Started
+07-Feb-22 23:46:28 INFO <module>(69) done
+07-Feb-22 23:56:32 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.

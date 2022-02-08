@@ -5,3 +5,4 @@ from .allstocks import AllStocks
 from .localMinMax import LocalMinMax
 from .interval import SetInterval
 from .toServer import PushToServer
+from .tightMinMax import TightMinMax

@@ -12,3 +12,4 @@ from .filterGappper import FilterGapper
 from .filterCandlePattern import FilterCandlePattern
 from .filterDoubleTop import FilterDoubleTop, doubleTop
 from .filterTrend import FilterTrends, trendMinMax
+from .filterRsiDivergence import FilterRsiDivergence

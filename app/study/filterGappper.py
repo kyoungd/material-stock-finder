@@ -99,9 +99,9 @@ class FilterGapper:
         if isLoaded:
             try:
                 gaps = self.overnightGapperLogic(tp)
-                self.sa.UpdateFilter(self.jsonData, symbol, 'ogap',
+                self.sa.UpdateFilter(self.jsonData, symbol, 'gap',
                                      True if len(gaps) > 0 else False)
-                self.sa.UpdateFilter(self.jsonData, symbol, 'ogaps', gaps)
+                self.sa.UpdateFilter(self.jsonData, symbol, 'gaps', gaps)
             except Exception as e:
                 print(e)
         return isLoaded

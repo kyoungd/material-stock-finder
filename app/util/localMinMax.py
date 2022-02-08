@@ -5,7 +5,8 @@ from .allstocks import AllStocks
 import os
 
 class LocalMinMax:
-    def __init__(self, df, tightMinMaxN = None):
+    def __init__(self, df, tightMinMaxN = None, colName = None):
+        self.colName = 'Close' if colName is None else colName
         self.df = df
         self.df = self.df.reset_index()
         if tightMinMaxN is None:
@@ -60,9 +61,9 @@ class LocalMinMax:
             df = self.df
         n = self.minMaxN        # number of points to be checked before and after
 
-        df['min'] = df.iloc[argrelextrema(df.Close.values, np.less_equal,
+        df['min'] = df.iloc[argrelextrema(df['Close'].values, np.less_equal,
                             order=n)[0]]['Close']
-        df['max'] = df.iloc[argrelextrema(df.Close.values, np.greater_equal,
+        df['max'] = df.iloc[argrelextrema(df['Close'].values, np.greater_equal,
                             order=n)[0]]['Close']
         firstMin = False
         l_minmax = None

@@ -34,7 +34,7 @@ class SecDb:
             if (result == None):
                 return False, None
             else:
-                return result[0]
+                return True, result[0]
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
             return False, None
@@ -44,9 +44,9 @@ class SecDb:
             """ insert a new vendor into the vendors table """
             cur = self.conn.cursor()
 
-            sql = """INSERT INTO public.site_sec(symbol, cik) VALUES(%s, %s);"""
+            sql = """INSERT INTO public.site_sec(symbol, cik) VALUES(%s, %s) ON CONFLICT (symbol) DO UPDATE SET cik=%s"""
             # execute the INSERT statement
-            cur.execute(sql, (symbol, cik))
+            cur.execute(sql, (symbol, cik, cik))
             # get the generated id back
             # id = cur.fetchone()[0]
             self.conn.commit()
@@ -81,7 +81,7 @@ class SecDb:
             """ insert a new vendor into the vendors table """
             cur = self.conn.cursor()
 
-            sql = """INSERT INTO public.site_sec(symbol, cik, market_close, market_close_at) VALUES(%s, '0', %s, %s) ON CONFLICT (symbol) DO UPDATE SET cik=EXCLUDED.cik, market_close=%s, market_close_at=%s;"""
+            sql = """INSERT INTO public.site_sec(symbol, cik, market_close, market_close_at) VALUES(%s, '0', %s, %s) ON CONFLICT (symbol) DO UPDATE SET market_close=%s, market_close_at=%s;"""
             # execute the INSERT statement
             cur.execute(sql, (symbol, close, dt, close, dt))
             # get the generated id back

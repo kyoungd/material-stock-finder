@@ -114,14 +114,18 @@ class AlpacaSnapshots:
             lineCount = 0
             symbols = set()
             for line in lines[1:]:
-                lineCount += 1
                 symbol = line.split(',')[0]
-                symbols.add(symbol)
-                if (lineCount % 20 == 0):
-                    self.getSnapshot(symbols, dicts)
-                    symbols.clear()
-                    if (isDebug):
-                        print(lineCount)
+                if '.' in symbol:
+                    dicts.pop(symbol)
+                    print('Skipping {}'.format(symbol))
+                else:
+                    symbols.add(symbol)
+                    lineCount += 1
+                    if (lineCount % 20 == 0):
+                        self.getSnapshot(symbols, dicts)
+                        symbols.clear()
+                        if (isDebug):
+                            print(lineCount)
             self.getSnapshot(symbols, dicts)
             with open(filename, "w") as fw:
                 for key in dicts.keys():

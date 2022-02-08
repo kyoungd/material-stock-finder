@@ -59,7 +59,11 @@ class StockFinancial:
                     self.jsonData, symbol, 'floatv', 0)
                 self.sa.UpdateFilter(
                     self.jsonData, symbol, 'floatp', 0)
-                time.sleep(1)
+            try:
+                isOk, cik = self.db.get_cik(symbol)
+                self.sa.UpdateFilter(self.jsonData, symbol, 'cik', cik if isOk else '0')
+            except Exception as e:
+                self.sa.UpdateFilter(self.jsonData, symbol, 'cik', '0')
         return False
 
     @staticmethod
@@ -75,4 +79,4 @@ if __name__ == '__main__':
     # StockFinancial.All(True)
     # print('---------- done ----------')
     filter = StockFinancial(isDebug=True)
-    filter.getFinancialData('AAPL')
+    # filter.getFinancialData('AAPL')

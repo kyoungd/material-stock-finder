@@ -46,15 +46,15 @@ class overnightGapper:
                         price1, price2)
                     # print('{} {} {} {}'.format(symbol, price1, price2, nightGap))
                     self.sa.UpdateFilter(
-                        self.data, symbol, 'lng', nightGap)
+                        self.data, symbol, 'ogap', nightGap)
                 else:
                     self.sa.UpdateFilter(
-                        self.data, symbol, 'lng', 0)
+                        self.data, symbol, 'ogap', 0)
             except Exception as e:
                 try:
                     print(
                         'filterLastnightGapper.getSnapshotAtMarketClose(). ERROR: ' + symbol + ': ' + str(e))
-                    self.sa.UpdateFilter(self.data, symbol, 'lng', 0)
+                    self.sa.UpdateFilter(self.data, symbol, 'ogap', 0)
                 except Exception as e:
                     print(e)
 
