@@ -8,6 +8,7 @@ class rsiDivergence:
     def __init__(self, df):
         self.df = df
 
+    @staticmethod
     def getRsiMinmax(self, df):
         rsiv = ta.RSI(df['Close'][::-1], timeperiod=14)
         # add column to df
@@ -15,19 +16,23 @@ class rsiDivergence:
         app = TightMinMax(df, colName = 'Rsi')
         return app.Run()
 
+    @staticmethod
     def days_between(d1, d2):
         d1 = datetime.strptime(d1.iloc[0].split('T')[0], "%Y-%m-%d")
         d2 = datetime.strptime(d2.iloc[0].split('T')[0], "%Y-%m-%d")
         return abs((d2 - d1).days)
 
+    @staticmethod
     def getFrame(df, oneDate):
         return df.loc[df['Date']==oneDate]
 
+    @staticmethod
     def getSlope(one, two, column):
         days = rsiDivergence.days_between(one['Date'], two['Date'])
         slope = (two[column].iloc[0] - one[column].iloc[0]) / days
         return slope, days
 
+    @staticmethod
     def getMinAndMax(df, dfRsiMinMax, isFirstMin):
         isItemMin = isFirstMin
         mins = []

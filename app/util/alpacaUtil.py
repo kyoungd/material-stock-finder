@@ -45,4 +45,4 @@ class RedisTimeFrame:
     MIN30 = "30Min"
     HOUR = "Hour"
     DAILY = "1Day"
-    WEEKLY = "Wweekly"
+    WEEKLY = "Weekly"

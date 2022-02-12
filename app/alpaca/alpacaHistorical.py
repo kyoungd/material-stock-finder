@@ -1,4 +1,5 @@
 from alpaca_trade_api.rest import REST, TimeFrame
+from .yahooFin import YahooFin
 from datetime import datetime, timedelta
 from enum import Enum
 import requests
@@ -29,6 +30,7 @@ class TimePeriod(Enum):
 
 class AlpacaHistorical:
     ALPACA_URL = 'https://data.alpaca.markets/v2/stocks/%s/bars?start=%s&end=%s&timeframe=%s'
+    CRYPTO_URL = 'https://data.alpaca.markets/v1beta1/crypto/%sUSD/bars?start=%s&end=%s&timeframe=%s'
     CsvHeader = "Date, Open, High, Low, Close, Adj Close, Volume"
     conn: REST = None
 
@@ -95,6 +97,22 @@ class AlpacaHistorical:
             symbol, start, end, tf)
         data = requests.get(url, headers=self.custom_header)
         bars = self.adjustPrices(data, datatype)
+        return bars
+
+    def CryptoPrices(self, symbol, timeframe, datatype=None, starttime=None, endtime=None):
+        start = self.timeframe_start(
+            timeframe) if starttime is None else starttime
+        end = self.timeframe_end(timeframe) if endtime is None else endtime
+        tf = '1Min' if RedisTimeFrame.REALTIME == timeframe else timeframe
+        url = AlpacaHistorical.CRYPTO_URL % (
+            symbol, start, end, tf)
+        data = requests.get(url, headers=self.custom_header)
+        bars = self.adjustPrices(data, datatype)
+        return bars
+
+    def CommodityPrices(self, symbol, timeframe, datatype=None, starttime=None, endtime=None):
+        data = YahooFin.HistoricalPrices(symbol)
+        bars = self.adjustPrices(data)
         return bars
 
     def WriteToFile(self, symbol, data):

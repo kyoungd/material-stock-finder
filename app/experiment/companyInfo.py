@@ -1,67 +1,80 @@
 import yfinance as yf
 
-stock = yf.Ticker("AAL")
+def GetHisotricalCommodities(symbol):
+    stock = yf.Ticker(symbol)
 
-# get stock info
-stock.info
+    hist = stock.history(period="1y")
+    # show actions (dividends, splits)
+    stock.actions
 
-print(stock)
-print(stock.info.floatShares)
-print(stock.info.shortPercentOfFloat)
+    result = []
+    for _, row in hist.iterrows():
+        print(str(row.name))
+        result.append({'t': str(row.name), 'o': row.Open, 'h': row.High, 'l': row.Low, 'c': row.Close, 'v': row.Volume})
+    print(result[::-1])
+    return result[::-1]
 
-# get historical market data
-hist = stock.history(period="max")
+def GetSnapshotCommodities(symbol):
+    stock = yf.Ticker(symbol)
+    hist = stock.history(period="1day")
+    for _, row in hist.iterrows():
+        return {'t': str(row.name), 'o': row.Open, 'h': row.High, 'l': row.Low, 'c': row.Close, 'v': row.Volume}
 
-# show actions (dividends, splits)
-stock.actions
 
-# show dividends
-stock.dividends
+historicals = GetHisotricalCommodities('GC=F')
+print(historicals)
+print('-----------------------------------------------------')
+snapshot = GetSnapshotCommodities('GC=F')
+print(snapshot)
+print('done')
 
-# show splits
-stock.splits
+# # show dividends
+# stock.dividends
 
-# show financials
-stock.financials
-stock.quarterly_financials
+# # show splits
+# stock.splits
 
-# show major holders
-stock.major_holders
+# # show financials
+# stock.financials
+# stock.quarterly_financials
 
-# show institutional holders
-stock.institutional_holders
+# # show major holders
+# stock.major_holders
 
-# show balance sheet
-stock.balance_sheet
-stock.quarterly_balance_sheet
+# # show institutional holders
+# stock.institutional_holders
 
-# show cashflow
-stock.cashflow
-stock.quarterly_cashflow
+# # show balance sheet
+# stock.balance_sheet
+# stock.quarterly_balance_sheet
 
-# show earnings
-stock.earnings
-stock.quarterly_earnings
+# # show cashflow
+# stock.cashflow
+# stock.quarterly_cashflow
 
-# show sustainability
-stock.sustainability
+# # show earnings
+# stock.earnings
+# stock.quarterly_earnings
 
-# show analysts recommendations
-stock.recommendations
+# # show sustainability
+# stock.sustainability
 
-# show next event (earnings, etc)
-stock.calendar
+# # show analysts recommendations
+# stock.recommendations
 
-# show ISIN code - *experimental*
-# ISIN = International Securities Identification Number
-stock.isin
+# # show next event (earnings, etc)
+# stock.calendar
 
-# show options expirations
-stock.options
+# # show ISIN code - *experimental*
+# # ISIN = International Securities Identification Number
+# stock.isin
 
-# show news
-stock.news
+# # show options expirations
+# stock.options
 
-# get option chain for specific expiration
-opt = stock.option_chain('YYYY-MM-DD')
-# data available via: opt.calls, opt.puts
+# # show news
+# stock.news
+
+# # get option chain for specific expiration
+# opt = stock.option_chain('YYYY-MM-DD')
+# # data available via: opt.calls, opt.puts
