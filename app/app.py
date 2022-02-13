@@ -29,11 +29,18 @@ def AppDaily():
     FilterDoubleTop.All()
     FilterTrends.All()
     FilterRsiDivergence.All()
+    FilterCorrelate.All()
     PushToServer()
 
 def AppCorrelation():
     Run()
     AlpacaDaily.All()
+    YahooDaily.All()
+    AlpacaCrypto.All()
+    AtrCalculate.All()
+    CorrelateAssets.All(isSendToServer=True, days=45, minAtr=5)
+    CorrelateAssets.All(isSendToServer=True, days=90, minAtr=5)
+    CorrelateAssets.All(isSendToServer=True, days=180, minAtr=5)
 
 def AppMarketOpen():
     LastNightGapper.All(False)
@@ -59,16 +66,23 @@ if __name__ == "__main__":
     logging.info("APP.PY Started")
 
     if isTagInOptions('--test', sys.argv):
-        YahooDaily.All()
-        # CorrelateAssets.All()
+        # Run()
         # AlpacaDaily.All()
-        # AtrCalculate.All() 
+        YahooDaily.All()
+        # AlpacaCrypto.All()
+        # AtrCalculate.All()
+        # CorrelateAssets.All(isSendToServer=False, days=45, minAtr=5)
+        # CorrelateAssets.All(isSendToServer=False, days=90, minAtr=5)
+        # CorrelateAssets.All(isSendToServer=False, days=180, minAtr=5)
+
         # db = MarketDataDb()
         # db.WriteMarket('AAPL', [{'close': 120, 'open': 110}, {'close': 115, 'open': 105}], name='Apple, Inc.')
         # isOk, data = db.ReadMarket('AAPL')
         # df: pd.DataFrame = db.LoadDataFrame(data)
         # print(df)
-    elif isTagInOptions('--run', sys.argv):
+    elif isTagInOptions('--corr', sys.argv):
+        AppCorrelation()
+    elif isTagInOptions('--day', sys.argv):
         AppDaily()
     elif isTagInOptions('--fin', sys.argv):
         StockFinancial.All(isDebug=True, isForceDownloadYahoo=True)

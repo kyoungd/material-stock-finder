@@ -3,3 +3,4 @@ __pycache__/app.cpython-37.pyc
 __pycache__/app.cpython-38.pyc
 __pycache__/patterns.cpython-37.pyc
 data/stocks/*
+data/bak/*

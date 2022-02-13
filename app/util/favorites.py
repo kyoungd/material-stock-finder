@@ -5,8 +5,7 @@ class JsonFavorite:
     def __init__(self, filename=None, userId=None, readJsonFile=True) -> None:
         filename = 'favorites.json' if filename == None else filename
         self.userId = userId
-        self.filename = "./data/{}".format(
-            filename) if userId == None else "../data/{}/{}".format(userId, filename)
+        self.filename = f'./data/{filename}' if userId is None else f'../data/{userId}/{filename}'
         self.data = self.readJson() if readJsonFile else {}
 
     @property

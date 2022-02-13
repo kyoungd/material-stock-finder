@@ -320,7 +320,9 @@ ANY,Sphere 3D Corp. - Common Shares
 ANZU,Anzu Special Acquisition Corp I - Class A Common Stock
 ANZUU,Anzu Special Acquisition Corp I - Units
 ANZUW,Anzu Special Acquisition Corp I - Warrant
+AOGO,Arogo Capital Acquisition Corp. - Class A Common Stock
 AOGOU,Arogo Capital Acquisition Corp. - Unit
+AOGOW,Arogo Capital Acquisition Corp. - Warrant
 AOSL,Alpha and Omega Semiconductor Limited - Common Shares
 AOUT,American Outdoor Brands, Inc. - Common Stock
 APA,APA Corporation - Common Stock
@@ -869,6 +871,7 @@ BWMX,Betterware de Mexico, S.A.B de C.V. - Ordinary Shares
 BXRX,Baudax Bio, Inc. - Common stock
 BYFC,Broadway Financial Corporation - Common Stock
 BYND,Beyond Meat, Inc. - Common stock
+BYNOU,byNordic Acquisition Corporation - Units
 BYRN,Byrna Technologies, Inc. - Common Stock
 BYSI,BeyondSpring, Inc. - Ordinary Shares
 BYTS,BYTE Acquisition Corp. - Class A Ordinary Shares
@@ -962,6 +965,8 @@ CDXC,ChromaDex Corporation - Common Stock
 CDXS,Codexis, Inc. - Common Stock
 CDZI,Cadiz, Inc. - Common Stock
 CDZIP,Cadiz, Inc. - Depositary Shares
+CEAD,CEA Industries Inc. - Common Stock
+CEADW,CEA Industries Inc. - Warrant
 CECE,CECO Environmental Corp. - Common Stock
 CEFA,Global X S&P Catholic Values Developed ex-U.S. ETF
 CEG,Constellation Energy Corporation - Common Stock
@@ -994,7 +999,9 @@ CFFEU,CF Acquisition Corp. VIII - Unit
 CFFEW,CF Acquisition Corp. VIII - Warrant
 CFFI,C&F Financial Corporation - Common Stock
 CFFN,Capitol Federal Financial, Inc. - Common Stock
+CFFS,CF Acquisition Corp. VII - Class A Common Stock
 CFFSU,CF Acquisition Corp. VII - Unit
+CFFSW,CF Acquisition Corp. VII - Warrant
 CFIV,CF Acquisition Corp. IV - Class A common stock
 CFIVU,CF Acquisition Corp. IV - Unit
 CFIVW,CF Acquisition Corp. IV - Warrant
@@ -1208,6 +1215,7 @@ COWNL,Cowen Inc. - 7.75% Senior Notes due 2033
 CPAA,Conyers Park III Acquisition Corp. - Class A Common Stock
 CPAAU,Conyers Park III Acquisition Corp. - Unit
 CPAAW,Conyers Park III Acquisition Corp. - Warrants
+CPAQU,Counter Press Acquisition Corporation - Unit
 CPAR,Catalyst Partners Acquisition Corp. - Class A Ordinary Share
 CPARU,Catalyst Partners Acquisition Corp. - Unit
 CPARW,Catalyst Partners Acquisition Corp. - Warrant
@@ -1222,6 +1230,8 @@ CPSI,Computer Programs and Systems, Inc. - Common Stock
 CPSS,Consumer Portfolio Services, Inc. - Common Stock
 CPTAG,Logan Ridge Finance Corporation - 5.75% Convertible Notes Due 2022
 CPTAL,Logan Ridge Finance Corporation - 6% Notes Due 2022
+CPTN,Cepton, Inc. - Common Stock
+CPTNW,Cepton, Inc. - Warrant
 CPZ,Calamos Long/Short Equity & Dynamic Income Trust - Common Stock
 CRAI,CRA International,Inc. - Common Stock
 CRBP,Corbus Pharmaceuticals Holdings, Inc. - Common Stock
@@ -1477,6 +1487,8 @@ DPRO,Draganfly Inc. - Common Shares
 DRAY,Macondray Capital Acquisition Corp. I - Class A Ordinary Shares
 DRAYU,Macondray Capital Acquisition Corp. I - Unit
 DRAYW,Macondray Capital Acquisition Corp. I - Warrant
+DRCT,Direct Digital Holdings, Inc. - Class A Common Stock
+DRCTW,Direct Digital Holdings, Inc. - Warrant
 DRIO,DarioHealth Corp. - Common Stock
 DRIV,Global X Autonomous & Electric Vehicles ETF
 DRMA,Dermata Therapeutics, Inc. - Common Stock
@@ -1718,6 +1730,7 @@ EVGBC,Eaton Vance Global Income Builder NextShares
 EVGN,Evogene Ltd. - Ordinary Shares
 EVGO,EVgo Inc. - Common Stock
 EVGOW,EVgo Inc. - Warrants, each whole warrant exercisable for one share of Class A Common Stock at an exercise price of $11.50
+EVGRU,Evergreen Corporation - Unit
 EVK,Ever-Glory International Group, Inc. - Common Stock
 EVLMC,Eaton Vance TABS 5-to-15 Year Laddered Municipal Bond NextShares
 EVLO,Evelo Biosciences, Inc. - Common Stock
@@ -2083,9 +2096,6 @@ GBRGU,Goldenbridge Acquisition Limited - Unit
 GBRGW,Goldenbridge Acquisition Limited - Warrant
 GBS,GBS Inc. - Common Stock
 GBT,Global Blood Therapeutics, Inc. - Common Stock
-GCAC,Growth Capital Acquisition Corp. - Class A Common Stock
-GCACU,Growth Capital Acquisition Corp. - Unit
-GCACW,Growth Capital Acquisition Corp. - Warrant
 GCBC,Greene County Bancorp, Inc. - Common Stock
 GCMG,GCM Grosvenor Inc. - Class A Common Stock
 GCMGW,GCM Grosvenor Inc. - Warrant
@@ -2306,7 +2316,7 @@ GTPBW,Gores Technology Partners II, Inc. - Warrant
 GTR,WisdomTree Target Range Fund
 GTX,Garrett Motion Inc. - Common Stock
 GTXAP,Garrett Motion Inc. - Series A Cumulative Convertible Preferred Stock
-GTYH,GTY Technology Holdings, Inc. - Common Stock
+GTYH,GTY Technology Holdings Inc. - Common Stock
 GURE,Gulf Resources, Inc. - Common Stock
 GVCI,Green Visor Financial Technology Acquisition Corp. I - Class A Ordinary Shares
 GVCIU,Green Visor Financial Technology Acquisition Corp. I - Units
@@ -2476,6 +2486,7 @@ HSTO,Histogen Inc. - Common Stock
 HTBI,HomeTrust Bancshares, Inc. - Common Stock
 HTBK,Heritage Commerce Corp - Common Stock
 HTBX,Heat Biologics, Inc. - Common Stock
+HTCR,Heartcore Enterprises, Inc. - Common Stock
 HTGM,HTG Molecular Diagnostics, Inc. - Common Stock
 HTHT,Huazhu Group Limited - American Depositary Shares
 HTIA,Healthcare Trust, Inc. - 7.375% Series A Cumulative Redeemable Perpetual Preferred Stock
@@ -2797,6 +2808,7 @@ JD,JD.com, Inc. - American Depositary Shares
 JFIN,Jiayin Group Inc. - American Depositary Shares
 JFU,9F Inc. - American Depositary Shares
 JG,Aurora Mobile Limited - American Depositary Shares
+JGGCU,Jaguar Global Growth Corporation I - Unit
 JJSF,J & J Snack Foods Corp. - Common Stock
 JKHY,Jack Henry & Associates, Inc. - Common Stock
 JMAC,Maxpro Capital Acquisition Corp. - Class A Common Stock
@@ -3114,7 +3126,9 @@ LSBK,Lake Shore Bancorp, Inc. - Common Stock
 LSCC,Lattice Semiconductor Corporation - Common Stock
 LSEA,Landsea Homes Corporation - Common Stock
 LSEAW,Landsea Homes Corporation - Warrant
+LSPR,Larkspur Health Acquisition Corp. - Class A Common Stock
 LSPRU,Larkspur Health Acquisition Corp. - Unit
+LSPRW,Larkspur Health Acquisition Corp. - Warrants
 LSTR,Landstar System, Inc. - Common Stock
 LSXMA,Liberty Media Corporation - Series A Liberty SiriusXM Common Stock
 LSXMB,Liberty Media Corporation - Series B Liberty SiriusXM Common Stock
@@ -3337,6 +3351,7 @@ MNTV,Momentive Global Inc.  - Common Stock
 MNTX,Manitex International, Inc. - common stock
 MOBQ,Mobiquity Technologies, Inc. - common stock
 MOBQW,Mobiquity Technologies, Inc. - warrant
+MODD,Modular Medical, Inc. - common stock
 MODV,ModivCare Inc. - Common Stock
 MOFG,MidWestOne Financial Group, Inc. - Common Stock
 MOGO,Mogo Inc. - Common Shares
@@ -3793,6 +3808,7 @@ OZKAP,Bank OZK - 4.625% Series A Non-Cumulative Perpetual Preferred Stock
 OZON,Ozon Holdings PLC - ADS, each ADS representing one ordinary share
 PAA,Plains All American Pipeline, L.P. - Common Units representing Limited Partner Interests
 PAAS,Pan American Silver Corp. - Common Stock
+PABU,iShares Paris-Aligned Climate MSCI USA ETF
 PACB,Pacific Biosciences of California, Inc. - Common Stock
 PACW,PacWest Bancorp - Common Stock
 PACX,Pioneer Merger Corp. - Class A Ordinary Share
@@ -4172,6 +4188,7 @@ QURE,uniQure N.V. - Ordinary Shares
 QYLD,Global X NASDAQ-100 Covered Call ETF
 QYLG,Global X Nasdaq 100 Covered Call & Growth ETF
 RACB,Research Alliance Corp. II - Class A Common Stock
+RACYU,Relativity Acquisition Corp. - Unit
 RADA,RADA Electronic Industries Ltd. - Ordinary Shares
 RADI,Radius Global Infrastructure, Inc. - Common Stock
 RAIL,Freightcar America, Inc. - Common Stock
@@ -4396,6 +4413,8 @@ SABS,SAB Biotherapeutics, Inc. - Common Stock
 SABSW,SAB Biotherapeutics, Inc. - Warrant
 SAFM,Sanderson Farms, Inc. - Common Stock
 SAFT,Safety Insurance Group, Inc. - Common Stock
+SAGA,Sagaliam Acquisition Corp. - Class A Common Stock
+SAGAR,Sagaliam Acquisition Corp. - Rights
 SAGAU,Sagaliam Acquisition Corp. - Units
 SAGE,Sage Therapeutics, Inc. - Common Stock
 SAIA,Saia, Inc. - Common Stock
@@ -4420,9 +4439,6 @@ SATS,EchoStar Corporation - Common stock
 SAVA,Cassava Sciences, Inc. - Common Stock
 SBAC,SBA Communications Corporation - Class A Common Stock
 SBCF,Seacoast Banking Corporation of Florida - Common Stock
-SBEA,SilverBox Engaged Merger Corp I - Class A Common Stock
-SBEAU,SilverBox Engaged Merger Corp I - Units
-SBEAW,SilverBox Engaged Merger Corp I - Warrant
 SBET,SharpLink Gaming Ltd. - Ordinary Shares
 SBFG,SB Financial Group, Inc. - Common Stock
 SBGI,Sinclair Broadcast Group, Inc. - Class A Common Stock
@@ -4565,6 +4581,7 @@ SKYAW,Skydeck Acquisition Corp. - Warrants
 SKYT,SkyWater Technology, Inc. - Common Stock
 SKYU,ProShares Ultra Nasdaq Cloud Computing ETF
 SKYW,SkyWest, Inc. - Common Stock
+SKYX,SQL Technologies Corp. - Common Stock
 SKYY,First Trust Cloud Computing ETF
 SLAB,Silicon Laboratories, Inc. - Common Stock
 SLAM,Slam Corp. - Class A Ordinary Share
@@ -4874,6 +4891,8 @@ TCBC,TC Bancshares, Inc. - Common Stock
 TCBI,Texas Capital Bancshares, Inc. - Common Stock
 TCBIO,Texas Capital Bancshares, Inc. - Depositary Shares 5.75% Fixed Rate Non-Cumulative Perpetual Preferred Stock Series B
 TCBK,TriCo Bancshares - Common Stock
+TCBP,TC BioPharm (Holdings) plc - American Depositary Shares
+TCBPW,TC BioPharm (Holdings) plc - Warrants
 TCBS,Texas Community Bancshares, Inc. - Common Stock
 TCBX,Third Coast Bancshares, Inc. - Common Stock
 TCDA,Tricida, Inc. - Common Stock
@@ -5882,6 +5901,7 @@ ARCM,Arrow Reserve Capital Management ETF
 ARCO,Arcos Dorados Holdings Inc. Class A Shares
 ARDC,Ares Dynamic Credit Allocation Fund, Inc. Common Shares
 ARE,Alexandria Real Estate Equities, Inc. Common Stock
+AREN,The Arena Group Holdings, Inc. Common Stock
 ARES,Ares Management Corporation Class A Common Stock
 ARGD,Argo Group International Holdings, Ltd. 6.5% Senior Notes Due 2042
 ARGO,Argo Group International Holdings, Ltd.
@@ -6160,6 +6180,7 @@ BFAC.U,Battery Future Acquisition Corp. Units, each consisting of one Class A or
 BFAC.W,Battery Future Acquisition Corp. Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50 per share
 BFAM,Bright Horizons Family Solutions Inc. Common Stock
 BFEB,Innovator U.S. Equity Buffer ETF - February
+BFIX,Build Funds Trust Build Bond Innovation ETF
 BFK,BlackRock Municipal Income Trust
 BFLY,Butterfly Network, Inc. Class A Common Stock
 BFLY.W,Butterfly Network, Inc. Warrants
@@ -6337,6 +6358,8 @@ BR,Broadridge Financial Solutions, Inc. Common Stock
 BRBR,BellRing Brands, Inc. Class A Common Stock
 BRBS,Blue Ridge Bankshares, Inc. Common Stock
 BRC,Brady Corporation Common Stock
+BRCC,BRC Inc. Class A Common Stock
+BRCC.W,BRC Inc. Redeemable Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50
 BRD,Beard Energy Transition Acquisition Corp. Class A Common Stock
 BRD.U,Beard Energy Transition Acquisition Corp. Units, each consisting of one share of Class A Common Stock and one-half of one Warrant
 BRD.W,Beard Energy Transition Acquisition Corp. Warrants, each whole warrant exercisable for one share of Class A Common Stock at an exercise price of $11.50 per share
@@ -6392,8 +6415,9 @@ BTU,Peabody Energy Corporation Common Stock
 BTZ,BlackRock Credit Allocation Income Trust
 BUD,Anheuser-Busch Inbev SA Sponsored ADR (Belgium)
 BUDX,Cannabis Growth ETF
+BUFB,Innovator ETFs Trust Innovator Laddered Allocation Buffer ETF
 BUFD,FT Cboe Vest Fund of Deep Buffer ETF
-BUFF,Innovator Laddered Fund of U.S. Equity Power Buffer ETFs
+BUFF,Innovator Laddered Allocation Power Buffer ETF
 BUFG,FT Cboe Vest Buffered Allocation Growth ETF
 BUFR,FT Cboe Vest Fund of Buffer ETFs
 BUFT,FT Cboe Vest Buffered Allocation Defensive ETF
@@ -6476,9 +6500,6 @@ CBU,Community Bank System, Inc. Common Stock
 CBX,CBX (Listing Market NYSE Networks AE) Common Stock
 CBZ,CBIZ, Inc. Common Stock
 CC,Chemours Company (The) Common Stock
-CCAC,CITIC Capital Acquisition Corp. Class A Ordinary Shares
-CCAC.U,CITIC Capital Acquisition Corp. Units
-CCAC.W,CITIC Capital Acquisition Corp. Warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50 per share
 CCCS,CCC Intelligent Solutions Holdings Inc. Common Stock
 CCF,Chase Corporation Common Stock
 CCI,Crown Castle International Corp. (REIT) Common Stock
@@ -6557,7 +6578,6 @@ CHIR,Global X Funds Global X MSCI China Real Estate ETF
 CHIS,Global X Funds Global X MSCI China Consumer Staples ETF
 CHIU,Global X Funds Global X MSCI China Utilities ETF
 CHIX,Global X MSCI China Financials ETF
-CHLD,LifeGoal Children Investment ETF
 CHMI,Cherry Hill Mortgage Investment Corporation Common Stock
 CHMI$A,Cherry Hill Mortgage Investment Corporation 8.20% Series A Cumulative Redeemable Preferred Stock
 CHMI$B,Cherry Hill Mortgage Investment Corporation 8.250% Series B Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock
@@ -7281,6 +7301,7 @@ EMDV,ProShares MSCI Emerging Markets Dividend Growers ETF
 EME,EMCOR Group, Inc. Common Stock
 EMF,Templeton Emerging Markets Fund Common Stock
 EMFM,Global X MSCI Next Emerging & Frontier ETF
+EMFQ,Amplify Emerging Markets FinTech ETF
 EMGD,Simplify Exchange Traded Funds Simplify Emerging Markets Equity PLUS Downside Convexity ETF
 EMGF,iShares MSCI Emerging Markets Multifactor ETF
 EMHC,SPDR Bloomberg Emerging Markets USD Bond ETF
@@ -7824,7 +7845,7 @@ FSNB.W,Fusion Acquisition Corp. II Redeemable Warrants, each whole warrant exerc
 FSP,Franklin Street Properties Corp. Common Stock
 FSR,Fisker Inc. Class A Common Stock
 FSS,Federal Signal Corporation Common Stock
-FSST,Fidelity Sustainability U.S. Equity ETF
+FSST,Fidelity Sustainable U.S. Equity ETF
 FST,FAST Acquisition Corp. Class A Common Stock
 FST.U,FAST Acquisition Corp. Units, each consisting of one share of Class A common stock and one-half of one redeemable warrant
 FST.W,FAST Acquisition Corp. Warrants, each whole warrant exercisable for one share of Class A Common Stock at an exercise price of $11.50
@@ -7928,6 +7949,7 @@ GBX,Greenbrier Companies, Inc. (The) Common Stock
 GCC,WisdomTree EnhancedContinuous Commodity Index Fund
 GCI,Gannett Co., Inc. Common Stock
 GCIG,Valued Advisers Trust Genuine Investors ETF
+GCLN,Goldman Sachs ETF Trust Goldman Sachs Bloomberg Clean Energy Equity ETF
 GCO,Genesco Inc. Common Stock
 GCOR,Goldman Sachs ETF Trust Goldman Sachs Access U.S. Aggregate Bond ETF
 GCOW,Pacer Global Cash Cows Dividend ETF
@@ -8230,6 +8252,7 @@ HFGO,Hartford Large Cap Growth ETF
 HFRO,Highland Income Fund
 HFRO$A,Highland Income Fund 5.375% Series A Cumulative Preferred Shares
 HFXI,IQ 50 Percent Hedged FTSE International ETF
+HGER,Harbor ETF Trust Harbor All-Weather Inflation Focus ETF
 HGH,Hartford Financial Services Group, Inc. (The) 7.875% Fixed to Floating Rate Junior Subordinated Debentures due 2042
 HGLB,Highland Global Allocation Fund Common Stock
 HGTY,Hagerty, Inc. Class A Common Stock
@@ -8283,6 +8306,7 @@ HMY,Harmony Gold Mining Company Limited
 HNGR,Hanger, Inc. Common Stock
 HNI,HNI Corporation Common Stock
 HNP,Huaneng Power Intl Common Stock
+HNRA.U,HNR Acquisition Corp Units, each consisting of one share of Common Stock, and one redeemable Warrant
 HNW,Pioneer Diversified High Income Fund, Inc.
 HOG,Harley-Davidson, Inc. Common Stock
 HOLD,AdvisorShares North Square McKee Core Reserves ETF.
@@ -8375,6 +8399,7 @@ HYLN,Hyliion Holdings Corp. Class A Common Stock
 HYLV,IndexIQ ETF Trust IQ S&P High Yield Low Volatility Bond ETF
 HYMB,SPDR Nuveen Bloomberg High Yield Municipal Bond ETF
 HYMU,BlackRock High Yield Muni Income Bond ETF
+HYRM,DBX ETF Trust Xtrackers Risk Managed USD High Yield Strategy ETF
 HYS,PIMCO 0-5 Year High Yield Corporat Bond Index Exchange-Traded Fund
 HYT,Blackrock Corporate High Yield Fund, Inc. Common Stock
 HYTR,CP High Yield Trend ETF
@@ -8928,7 +8953,6 @@ KJUL,Innovator U.S. Small Cap Power Buffer ETF - July
 KKR,KKR & Co. Inc. Common Stock
 KKR$C,KKR & Co. Inc. 6.00% Series C Mandatory Convertible Preferred Stock
 KKRS,KKR Group Finance Co. IX LLC 4.625% Subordinated Notes due 2061
-KL,Kirkland Lake Gold Ltd. Common Shares
 KLCD,KFA Large Cap Quality Dividend Index ETF
 KLDW,Knowledge Leaders Developed World ETF
 KLNE,Direxion Daily Global Clean Energy Bull 2X Shares
@@ -9037,6 +9061,7 @@ LEMB,iShares J.P. Morgan EM Local Currency Bond
 LEN,Lennar Corporation Class A Common Stock
 LEN.B,Lennar Corporation Class B
 LEO,BNY Mellon Strategic Municipals, Inc. Common Stock
+LETB,AdvisorShares Trust AdvisorShares Let Bob AI Powered Momentum ETF
 LEU,Centrus Energy Corp. Class A Common Stock
 LEV,The Lion Electric Company Common Shares
 LEV.W,The Lion Electric Company Redeemable Warrants, each whole warrant entitles the holder to purchase one Common Share at a price of $11.50 per share
@@ -9047,7 +9072,6 @@ LFEQ,VanEck Long/Flat Trend ETF
 LFG,Archaea Energy Inc. Class A Common Stock
 LFT,Lument Finance Trust, Inc. Common Stock
 LFT$A,Lument Finance Trust, Inc. 7.875% Series A Cumulative Redeemable Preferred Stock
-LFT.R,Lument Finance Trust, Inc. Rights (Expiring February 11, 2022) Rights
 LGF.A,Lions Gate Entertainment Corporation Class A Voting Shares
 LGF.B,Lions Gate Entertainment Corporation Class B Non-Voting Shares
 LGH,HCM Defender 500 Index ETF
@@ -9199,7 +9223,8 @@ MDH.U,MDH Acquisition Corp. Units, each consisting of one share of Class A Commo
 MDH.W,MDH Acquisition Corp. Warrants, each whole warrant exercisable for one share of Class A common stock at an exercise price of $11.50 per share
 MDT,Medtronic plc. Ordinary Shares
 MDU,MDU Resources Group, Inc. Common Stock (Holding Company)
-MDVA,Modiv Inc. 7.375% Series A Cumulative Redeemable Perpetual Preferred Stock
+MDV,Modiv Inc. Class C Common Stock
+MDV$A,Modiv Inc. 7.375% Series A Cumulative Redeemable Perpetual Preferred Stock
 MDY,SPDR MidCap Trust Series I
 MDYG,SPDR S&P 400 Mid Cap Growth ETF (based on S&P MidCap 400 Growth Index--symbol: MUV)
 MDYV,SPDR S&P 400 Mid Cap Value ETF (based on S&P MidCap 400 Value Index--symbol: MGD
@@ -10280,6 +10305,8 @@ QLVE,FlexShares Emerging Markets  Quality Low Volatility Index Fund
 QMAR,FT Cboe Vest Nasdaq-100 Buffer ETF - March
 QMN,IQ Hedge Market Neutral Tracker ETF
 QMOM,Alpha Architect U.S. Quantitative Momentum ETF
+QNGY,Quanergy Systems, Inc. Common Stock
+QNGY.W,Quanergy Systems, Inc. Warrants, each whole warrant exercisable for one share of Common Stock at an exercise price of $11.50 per share
 QPFF,American Century ETF Trust American Century Quality Preferred ETF
 QPT,AdvisorShares Q Portfolio Blended Allocation ETF
 QPX,AdvisorShares Q Dynamic Growth ETF
@@ -10451,6 +10478,7 @@ RMD,ResMed Inc. Common Stock
 RMED,Ra Medical Systems, Inc. Common Stock
 RMI,RiverNorth Opportunistic Municipal Income Fund, Inc. Common Stock
 RMM,RiverNorth Managed Duration Municipal Income Fund, Inc. Common Stock
+RMMZ,RiverNorth Managed Duration Municipal Income Fund II, Inc. Common Stock
 RMO,Romeo Power, Inc. Class A Common Stock
 RMPL$,RiverNorth Specialty Finance Corporation 5.875% 
 RMT,Royce Micro-Cap Trust, Inc. Common Stock
@@ -11014,7 +11042,6 @@ SUM,Summit Materials, Inc. Class A Common Stock
 SUN,Sunoco LP Common Units representing limited partner interests
 SUNL,Sunlight Financial Holdings, Inc. Class A Common Stock
 SUNL.W,Sunlight Financial Holdings, Inc. Warrants
-SUNY,LifeGoal Vacation Investment ETF
 SUP,Superior Industries International, Inc. Common Stock (DE)
 SUPV,Grupo Supervielle S.A. American Depositary Shares each Representing five Class B shares
 SUSA,iShares MSCI USA ESG Select ETF
@@ -11827,7 +11854,6 @@ XBJA,Innovator ETFs Trust Innovator U.S. Equity Accelerated 9 Buffer ETF - Janua
 XBJL,Innovator U.S. Equity Accelerated 9 Buffer ETF - July
 XBOC,Innovator U.S. Equity Accelerated 9 Buffer ETF - October
 XBTF,VanEck ETF Trust VanEck Bitcoin Strategy ETF
-XBUY,Amplify International Online Retail ETF
 XCEM,Columbia EM Core ex-China ETF
 XCLR,Global X Funds Global X S&P 500 Collar 95-110 ETF
 XDAP,Innovator U.S. Equity Accelerated ETF - April

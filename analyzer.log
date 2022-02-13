@@ -1,252 +1,234 @@
-02-Feb-22 23:05:06 INFO <module>(16) APP.PY Started
-02-Feb-22 23:10:41 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-02-Feb-22 23:15:43 INFO <module>(57) done
-03-Feb-22 00:14:44 INFO <module>(16) APP.PY Started
-03-Feb-22 01:01:31 INFO <module>(16) APP.PY Started
-03-Feb-22 01:16:23 INFO <module>(16) APP.PY Started
-03-Feb-22 01:40:44 INFO <module>(47) APP.PY Started
-03-Feb-22 01:43:03 INFO <module>(52) APP.PY Started
-03-Feb-22 01:43:20 INFO <module>(52) APP.PY Started
-03-Feb-22 01:43:20 INFO <module>(65) done
-03-Feb-22 01:44:07 INFO <module>(53) APP.PY Started
-03-Feb-22 01:44:07 INFO <module>(66) done
-03-Feb-22 01:47:03 INFO <module>(53) APP.PY Started
-03-Feb-22 01:48:05 INFO <module>(53) APP.PY Started
-03-Feb-22 01:50:24 INFO <module>(53) APP.PY Started
-03-Feb-22 01:51:08 INFO <module>(53) APP.PY Started
-03-Feb-22 01:51:08 INFO <module>(66) done
-03-Feb-22 01:53:35 INFO <module>(53) APP.PY Started
-03-Feb-22 01:53:35 INFO <module>(66) done
-03-Feb-22 01:55:19 INFO <module>(53) APP.PY Started
-03-Feb-22 01:55:19 INFO <module>(66) done
-03-Feb-22 21:29:14 INFO <module>(53) APP.PY Started
-03-Feb-22 21:29:14 INFO <module>(66) done
-03-Feb-22 21:30:58 INFO <module>(53) APP.PY Started
-03-Feb-22 21:30:58 INFO <module>(66) done
-03-Feb-22 23:36:54 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-04-Feb-22 23:34:16 INFO <module>(53) APP.PY Started
-04-Feb-22 23:34:16 INFO <module>(66) done
-04-Feb-22 23:36:36 INFO <module>(53) APP.PY Started
-04-Feb-22 23:42:10 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-04-Feb-22 23:51:06 INFO <module>(68) done
-06-Feb-22 16:46:51 INFO <module>(52) APP.PY Started
-06-Feb-22 16:46:52 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-06-Feb-22 18:28:14 INFO <module>(69) done
-06-Feb-22 20:34:24 INFO <module>(52) APP.PY Started
-06-Feb-22 20:34:24 INFO <module>(69) done
-06-Feb-22 22:08:05 INFO <module>(52) APP.PY Started
-06-Feb-22 22:08:05 INFO <module>(69) done
-06-Feb-22 22:39:22 INFO <module>(52) APP.PY Started
-06-Feb-22 22:39:22 INFO <module>(69) done
-06-Feb-22 23:36:36 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-06-Feb-22 23:49:22 INFO <module>(52) APP.PY Started
-06-Feb-22 23:49:26 INFO <module>(68) done
-06-Feb-22 23:50:36 INFO <module>(52) APP.PY Started
-07-Feb-22 00:02:26 INFO <module>(68) done
-07-Feb-22 00:07:37 INFO <module>(52) APP.PY Started
-07-Feb-22 00:07:42 INFO <module>(68) done
-07-Feb-22 00:09:02 INFO <module>(52) APP.PY Started
-07-Feb-22 00:09:08 INFO <module>(69) done
-07-Feb-22 14:16:24 INFO <module>(52) APP.PY Started
-07-Feb-22 15:20:43 INFO <module>(52) APP.PY Started
-07-Feb-22 15:20:58 INFO <module>(68) done
-07-Feb-22 15:29:40 INFO <module>(52) APP.PY Started
-07-Feb-22 15:30:29 INFO <module>(52) APP.PY Started
-07-Feb-22 15:32:13 INFO <module>(52) APP.PY Started
-07-Feb-22 15:36:17 INFO <module>(52) APP.PY Started
-07-Feb-22 15:37:25 INFO <module>(52) APP.PY Started
-07-Feb-22 15:50:50 INFO <module>(52) APP.PY Started
-07-Feb-22 15:51:16 INFO <module>(52) APP.PY Started
-07-Feb-22 15:53:58 INFO <module>(52) APP.PY Started
-07-Feb-22 15:54:36 INFO <module>(52) APP.PY Started
-07-Feb-22 15:59:47 INFO <module>(52) APP.PY Started
-07-Feb-22 16:00:46 INFO <module>(52) APP.PY Started
-07-Feb-22 18:19:09 INFO <module>(52) APP.PY Started
-07-Feb-22 18:24:28 INFO <module>(52) APP.PY Started
-07-Feb-22 19:14:13 INFO <module>(52) APP.PY Started
-07-Feb-22 19:22:36 INFO <module>(52) APP.PY Started
-07-Feb-22 21:50:40 INFO <module>(52) APP.PY Started
-07-Feb-22 21:51:11 INFO <module>(52) APP.PY Started
-07-Feb-22 22:06:18 INFO <module>(52) APP.PY Started
-07-Feb-22 22:11:47 INFO <module>(52) APP.PY Started
-07-Feb-22 22:14:11 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-07-Feb-22 22:30:13 INFO <module>(52) APP.PY Started
-07-Feb-22 22:47:39 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-07-Feb-22 22:49:28 INFO <module>(52) APP.PY Started
-07-Feb-22 22:49:49 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-07-Feb-22 22:53:44 INFO <module>(52) APP.PY Started
-07-Feb-22 22:56:00 INFO <module>(52) APP.PY Started
-07-Feb-22 23:04:20 INFO <module>(68) done
-07-Feb-22 23:46:28 INFO <module>(53) APP.PY Started
-07-Feb-22 23:46:28 INFO <module>(69) done
-07-Feb-22 23:56:32 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-08-Feb-22 15:56:05 INFO <module>(57) APP.PY Started
-08-Feb-22 15:57:38 INFO <module>(57) APP.PY Started
-08-Feb-22 15:58:51 INFO <module>(57) APP.PY Started
-08-Feb-22 16:06:26 INFO <module>(57) APP.PY Started
-08-Feb-22 16:13:51 INFO <module>(57) APP.PY Started
-08-Feb-22 16:14:38 INFO <module>(57) APP.PY Started
-08-Feb-22 16:16:06 INFO <module>(57) APP.PY Started
-08-Feb-22 16:17:23 INFO <module>(57) APP.PY Started
-08-Feb-22 16:19:48 INFO <module>(57) APP.PY Started
-08-Feb-22 16:20:59 INFO <module>(57) APP.PY Started
-08-Feb-22 16:42:50 INFO <module>(57) APP.PY Started
-08-Feb-22 17:00:50 INFO <module>(57) APP.PY Started
-08-Feb-22 17:04:56 INFO <module>(57) APP.PY Started
-08-Feb-22 17:11:48 INFO <module>(57) APP.PY Started
-08-Feb-22 17:28:27 INFO <module>(57) APP.PY Started
-08-Feb-22 17:37:23 INFO <module>(57) APP.PY Started
-08-Feb-22 18:25:11 INFO <module>(57) APP.PY Started
-08-Feb-22 18:27:35 INFO <module>(57) APP.PY Started
-08-Feb-22 18:39:50 INFO <module>(57) APP.PY Started
-08-Feb-22 18:59:52 INFO <module>(57) APP.PY Started
-08-Feb-22 19:07:57 INFO <module>(57) APP.PY Started
-08-Feb-22 19:14:23 INFO <module>(57) APP.PY Started
-08-Feb-22 19:16:58 INFO <module>(57) APP.PY Started
-08-Feb-22 19:23:43 INFO <module>(57) APP.PY Started
-08-Feb-22 20:36:13 INFO <module>(57) APP.PY Started
-08-Feb-22 20:46:17 INFO <module>(57) APP.PY Started
-08-Feb-22 20:54:58 INFO <module>(57) APP.PY Started
-08-Feb-22 20:58:25 INFO <module>(57) APP.PY Started
-08-Feb-22 22:59:19 INFO <module>(74) done
-09-Feb-22 17:29:01 INFO <module>(57) APP.PY Started
-09-Feb-22 17:29:36 INFO <module>(57) APP.PY Started
-09-Feb-22 17:36:30 INFO <module>(57) APP.PY Started
-09-Feb-22 17:37:14 INFO <module>(74) done
-09-Feb-22 17:37:43 INFO <module>(57) APP.PY Started
-09-Feb-22 17:41:38 INFO <module>(57) APP.PY Started
-09-Feb-22 17:41:49 INFO <module>(74) done
-09-Feb-22 17:42:20 INFO <module>(57) APP.PY Started
-09-Feb-22 17:42:28 INFO <module>(74) done
-09-Feb-22 17:45:08 INFO <module>(57) APP.PY Started
-09-Feb-22 17:45:11 INFO <module>(74) done
-09-Feb-22 17:48:37 INFO <module>(57) APP.PY Started
-09-Feb-22 17:51:14 INFO <module>(57) APP.PY Started
-09-Feb-22 17:53:10 INFO <module>(76) done
-09-Feb-22 17:53:35 INFO <module>(57) APP.PY Started
-09-Feb-22 17:53:39 INFO <module>(76) done
-09-Feb-22 18:16:18 INFO <module>(58) APP.PY Started
-09-Feb-22 18:21:49 INFO <module>(58) APP.PY Started
-09-Feb-22 18:22:17 INFO <module>(58) APP.PY Started
-09-Feb-22 18:22:33 INFO <module>(58) APP.PY Started
-09-Feb-22 18:22:52 INFO <module>(58) APP.PY Started
-09-Feb-22 21:29:25 INFO <module>(58) APP.PY Started
-09-Feb-22 21:32:27 INFO <module>(58) APP.PY Started
-09-Feb-22 21:36:53 INFO <module>(58) APP.PY Started
-09-Feb-22 21:51:17 INFO <module>(58) APP.PY Started
-09-Feb-22 21:53:16 INFO <module>(58) APP.PY Started
-09-Feb-22 21:54:34 INFO <module>(58) APP.PY Started
-09-Feb-22 21:58:45 INFO <module>(58) APP.PY Started
-09-Feb-22 22:00:38 INFO <module>(58) APP.PY Started
-09-Feb-22 22:02:48 INFO <module>(58) APP.PY Started
-09-Feb-22 22:04:04 INFO <module>(58) APP.PY Started
-09-Feb-22 22:05:09 INFO <module>(58) APP.PY Started
-09-Feb-22 22:07:09 INFO <module>(58) APP.PY Started
-09-Feb-22 22:08:06 INFO <module>(58) APP.PY Started
-09-Feb-22 22:08:43 INFO <module>(58) APP.PY Started
-09-Feb-22 22:09:50 INFO <module>(58) APP.PY Started
-09-Feb-22 22:10:00 INFO <module>(79) done
-09-Feb-22 22:12:12 INFO <module>(58) APP.PY Started
-09-Feb-22 22:12:23 INFO <module>(79) done
-09-Feb-22 22:18:48 INFO <module>(58) APP.PY Started
-09-Feb-22 22:18:58 INFO <module>(79) done
-09-Feb-22 22:20:37 INFO <module>(58) APP.PY Started
-09-Feb-22 22:21:45 INFO <module>(58) APP.PY Started
-09-Feb-22 22:25:08 INFO <module>(58) APP.PY Started
-09-Feb-22 22:43:04 INFO <module>(58) APP.PY Started
-09-Feb-22 22:45:36 INFO <module>(58) APP.PY Started
-09-Feb-22 22:46:05 INFO <module>(79) done
-09-Feb-22 22:46:59 INFO <module>(58) APP.PY Started
-09-Feb-22 22:47:45 INFO <module>(58) APP.PY Started
-09-Feb-22 22:49:19 INFO <module>(58) APP.PY Started
-09-Feb-22 22:49:51 INFO <module>(79) done
-09-Feb-22 22:50:27 INFO <module>(58) APP.PY Started
-09-Feb-22 22:50:27 INFO <module>(79) done
-09-Feb-22 22:51:21 INFO <module>(58) APP.PY Started
-09-Feb-22 22:51:21 INFO <module>(79) done
-10-Feb-22 01:37:01 INFO <module>(58) APP.PY Started
-10-Feb-22 01:37:01 INFO <module>(79) done
-10-Feb-22 09:11:00 INFO <module>(58) APP.PY Started
-10-Feb-22 10:30:46 INFO <module>(79) done
-10-Feb-22 19:59:31 INFO <module>(59) APP.PY Started
-10-Feb-22 19:59:31 INFO <module>(81) done
-10-Feb-22 20:07:11 INFO <module>(59) APP.PY Started
-10-Feb-22 20:07:11 INFO <module>(81) done
-10-Feb-22 20:07:43 INFO <module>(59) APP.PY Started
-10-Feb-22 20:09:43 INFO <module>(59) APP.PY Started
-10-Feb-22 20:16:38 INFO <module>(59) APP.PY Started
-10-Feb-22 20:19:11 INFO <module>(59) APP.PY Started
-10-Feb-22 20:30:36 INFO <module>(59) APP.PY Started
-10-Feb-22 20:37:30 INFO <module>(59) APP.PY Started
-10-Feb-22 20:37:49 INFO <module>(59) APP.PY Started
-10-Feb-22 20:38:58 INFO <module>(59) APP.PY Started
-10-Feb-22 20:39:58 INFO <module>(59) APP.PY Started
-10-Feb-22 20:42:18 INFO <module>(59) APP.PY Started
-10-Feb-22 20:42:59 INFO <module>(59) APP.PY Started
-10-Feb-22 20:47:42 INFO <module>(59) APP.PY Started
-10-Feb-22 20:49:20 INFO <module>(59) APP.PY Started
-10-Feb-22 20:54:00 INFO <module>(59) APP.PY Started
-10-Feb-22 20:55:03 INFO <module>(59) APP.PY Started
-10-Feb-22 20:55:14 INFO <module>(59) APP.PY Started
-10-Feb-22 20:57:09 INFO <module>(59) APP.PY Started
-10-Feb-22 20:59:42 INFO <module>(59) APP.PY Started
-10-Feb-22 21:02:44 INFO <module>(59) APP.PY Started
-10-Feb-22 21:05:13 INFO <module>(81) done
-10-Feb-22 21:07:13 INFO <module>(59) APP.PY Started
-10-Feb-22 21:07:54 INFO <module>(59) APP.PY Started
-10-Feb-22 21:14:02 INFO <module>(59) APP.PY Started
-10-Feb-22 21:16:37 INFO <module>(81) done
-10-Feb-22 22:33:07 INFO <module>(59) APP.PY Started
-10-Feb-22 22:33:39 INFO <module>(59) APP.PY Started
-10-Feb-22 22:34:18 INFO <module>(59) APP.PY Started
-10-Feb-22 22:35:09 INFO <module>(59) APP.PY Started
-10-Feb-22 22:39:45 INFO <module>(59) APP.PY Started
-10-Feb-22 22:44:37 INFO <module>(59) APP.PY Started
-10-Feb-22 22:55:31 INFO <module>(59) APP.PY Started
-11-Feb-22 00:02:04 INFO <module>(59) APP.PY Started
-11-Feb-22 00:14:43 INFO <module>(59) APP.PY Started
-11-Feb-22 00:16:19 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 00:44:20 INFO <module>(59) APP.PY Started
-11-Feb-22 00:44:42 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 00:46:57 INFO <module>(59) APP.PY Started
-11-Feb-22 00:47:23 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 01:01:06 INFO <module>(59) APP.PY Started
-11-Feb-22 01:01:25 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 01:06:32 INFO <module>(59) APP.PY Started
-11-Feb-22 01:06:53 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 01:08:20 INFO <module>(59) APP.PY Started
-11-Feb-22 01:08:41 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 10:28:21 INFO <module>(59) APP.PY Started
-11-Feb-22 10:28:24 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 10:29:31 INFO <module>(59) APP.PY Started
-11-Feb-22 10:29:32 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 10:30:29 INFO <module>(59) APP.PY Started
-11-Feb-22 10:30:30 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 10:32:11 INFO <module>(82) done
-11-Feb-22 10:32:21 INFO <module>(59) APP.PY Started
-11-Feb-22 10:32:23 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 10:58:24 INFO <module>(59) APP.PY Started
-11-Feb-22 10:58:26 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 11:00:49 INFO <module>(59) APP.PY Started
-11-Feb-22 11:00:51 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 11:47:27 INFO <module>(59) APP.PY Started
-11-Feb-22 11:47:29 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
-11-Feb-22 13:04:04 INFO <module>(59) APP.PY Started
-11-Feb-22 13:04:47 INFO <module>(59) APP.PY Started
-11-Feb-22 13:05:46 INFO <module>(59) APP.PY Started
-11-Feb-22 13:10:26 INFO <module>(83) done
-11-Feb-22 13:12:20 INFO <module>(59) APP.PY Started
-11-Feb-22 13:15:34 INFO <module>(59) APP.PY Started
-11-Feb-22 13:24:20 INFO <module>(59) APP.PY Started
-11-Feb-22 13:32:44 INFO <module>(59) APP.PY Started
-11-Feb-22 13:34:25 INFO <module>(59) APP.PY Started
-11-Feb-22 13:35:35 INFO <module>(83) done
-11-Feb-22 13:35:54 INFO <module>(59) APP.PY Started
-11-Feb-22 13:56:24 INFO <module>(59) APP.PY Started
-11-Feb-22 13:57:04 INFO <module>(83) done
-11-Feb-22 14:04:02 INFO <module>(59) APP.PY Started
-11-Feb-22 14:04:16 INFO <module>(83) done
-11-Feb-22 16:20:51 INFO <module>(59) APP.PY Started
-11-Feb-22 16:22:12 INFO <module>(83) done
-11-Feb-22 16:33:59 INFO <module>(59) APP.PY Started
-11-Feb-22 16:34:40 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+13-Feb-22 13:10:34 INFO <module>(66) APP.PY Started
+13-Feb-22 13:10:34 INFO All(51) Running YahooDaily.All
+13-Feb-22 13:10:34 INFO Run(38) YahooDaily.Run
+13-Feb-22 13:10:34 INFO getHistorical(42) Running AlpacaDaily.getHistorical
+13-Feb-22 13:10:34 INFO getDataLine(22) YahooDaily.getDataLine: ES=F
+13-Feb-22 13:10:34 INFO getDataLine(22) YahooDaily.getDataLine: YM=F
+13-Feb-22 13:10:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ES=F 1Day None
+13-Feb-22 13:10:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices YM=F 1Day None
+13-Feb-22 13:10:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ES=F
+13-Feb-22 13:10:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: YM=F
+13-Feb-22 13:10:34 INFO getDataLine(22) YahooDaily.getDataLine: NQ=F
+13-Feb-22 13:10:34 INFO getDataLine(22) YahooDaily.getDataLine: RTY=F
+13-Feb-22 13:10:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices NQ=F 1Day None
+13-Feb-22 13:10:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices RTY=F 1Day None
+13-Feb-22 13:10:34 INFO getDataLine(22) YahooDaily.getDataLine: ZB=F
+13-Feb-22 13:10:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: NQ=F
+13-Feb-22 13:10:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: RTY=F
+13-Feb-22 13:10:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZB=F 1Day None
+13-Feb-22 13:10:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZB=F
+13-Feb-22 13:10:35 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+13-Feb-22 13:40:20 INFO <module>(66) APP.PY Started
+13-Feb-22 13:40:20 INFO All(51) Running YahooDaily.All
+13-Feb-22 13:40:20 INFO Run(38) YahooDaily.Run
+13-Feb-22 13:40:20 INFO getHistorical(43) Running AlpacaDaily.getHistorical
+13-Feb-22 13:40:20 INFO getDataLine(22) YahooDaily.getDataLine: RTY=F
+13-Feb-22 13:40:20 INFO getDataLine(22) YahooDaily.getDataLine: ES=F
+13-Feb-22 13:40:20 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices RTY=F 1Day None
+13-Feb-22 13:40:20 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ES=F 1Day None
+13-Feb-22 13:40:20 INFO getDataLine(22) YahooDaily.getDataLine: ZB=F
+13-Feb-22 13:40:20 INFO getDataLine(22) YahooDaily.getDataLine: NQ=F
+13-Feb-22 13:40:20 INFO getDataLine(22) YahooDaily.getDataLine: YM=F
+13-Feb-22 13:40:20 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: RTY=F
+13-Feb-22 13:40:20 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ES=F
+13-Feb-22 13:40:20 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZB=F 1Day None
+13-Feb-22 13:40:20 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices NQ=F 1Day None
+13-Feb-22 13:40:20 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices YM=F 1Day None
+13-Feb-22 13:40:20 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZB=F
+13-Feb-22 13:40:20 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: NQ=F
+13-Feb-22 13:40:20 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: YM=F
+13-Feb-22 13:40:21 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+13-Feb-22 13:41:32 INFO <module>(66) APP.PY Started
+13-Feb-22 13:41:32 INFO All(51) Running YahooDaily.All
+13-Feb-22 13:41:32 INFO Run(38) YahooDaily.Run
+13-Feb-22 13:41:32 INFO getHistorical(43) Running AlpacaDaily.getHistorical
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: ES=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ES=F 1Day None
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: YM=F
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ES=F
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: NQ=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices YM=F 1Day None
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: RTY=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices NQ=F 1Day None
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: ZB=F
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: YM=F
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: ZN=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices RTY=F 1Day None
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: ZF=F
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: ZT=F
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: NQ=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZB=F 1Day None
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: GC=F
+13-Feb-22 13:41:32 INFO getHistorical(49) 10/37
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZN=F 1Day None
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: RTY=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZF=F 1Day None
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZT=F 1Day None
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZB=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices GC=F 1Day None
+13-Feb-22 13:41:32 INFO getDataLine(22) YahooDaily.getDataLine: MGC=F
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZN=F
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZF=F
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZT=F
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: GC=F
+13-Feb-22 13:41:32 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices MGC=F 1Day None
+13-Feb-22 13:41:32 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: MGC=F
+13-Feb-22 13:41:32 INFO _init_num_threads(157) NumExpr defaulting to 8 threads.
+13-Feb-22 13:41:32 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: ZF=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: RTY=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: ZT=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: YM=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: ES=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: MGC=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: GC=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: ZN=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: NQ=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:33 ERROR getDataLine(34) YahooDaily.getDataLine: ZB=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: SI=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices SI=F 1Day None
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: SI=F
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: SIL=F
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: PL=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices PL=F 1Day None
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: HG=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices SIL=F 1Day None
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: PL=F
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: PA=F
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: CL=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices HG=F 1Day None
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: HO=F
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: SIL=F
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: NG=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices PA=F 1Day None
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: RB=F
+13-Feb-22 13:41:34 INFO getHistorical(49) 20/37
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices CL=F 1Day None
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: HG=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices HO=F 1Day None
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices NG=F 1Day None
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: PA=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices RB=F 1Day None
+13-Feb-22 13:41:34 INFO getDataLine(22) YahooDaily.getDataLine: BZ=F
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: CL=F
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: HO=F
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: NG=F
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: RB=F
+13-Feb-22 13:41:34 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices BZ=F 1Day None
+13-Feb-22 13:41:34 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: BZ=F
+13-Feb-22 13:41:34 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:34 ERROR getDataLine(34) YahooDaily.getDataLine: SI=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:34 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:34 ERROR getDataLine(34) YahooDaily.getDataLine: PL=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:34 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:34 ERROR getDataLine(34) YahooDaily.getDataLine: PA=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:34 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:34 ERROR getDataLine(34) YahooDaily.getDataLine: SIL=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:35 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:35 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:35 ERROR getDataLine(34) YahooDaily.getDataLine: NG=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:35 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:35 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:35 ERROR getDataLine(34) YahooDaily.getDataLine: HG=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:35 ERROR getDataLine(34) YahooDaily.getDataLine: CL=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:35 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:35 ERROR getDataLine(34) YahooDaily.getDataLine: BZ=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:35 ERROR getDataLine(34) YahooDaily.getDataLine: RB=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:35 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:35 ERROR getDataLine(34) YahooDaily.getDataLine: HO=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: B0=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices B0=F 1Day None
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: ZC=F
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: B0=F
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: ZO=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZO=F 1Day None
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZO=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZC=F 1Day None
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: KE=F
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: ZR=F
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZC=F
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: ZM=F
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: ZL=F
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: ZS=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices KE=F 1Day None
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: GF=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZR=F 1Day None
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZR=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZM=F 1Day None
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZL=F 1Day None
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices ZS=F 1Day None
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: KE=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices GF=F 1Day None
+13-Feb-22 13:41:36 INFO getHistorical(49) 30/37
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZM=F
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZL=F
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: ZS=F
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: GF=F
+13-Feb-22 13:41:36 INFO getDataLine(22) YahooDaily.getDataLine: HE=F
+13-Feb-22 13:41:36 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices HE=F 1Day None
+13-Feb-22 13:41:36 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: HE=F
+13-Feb-22 13:41:36 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:36 ERROR getDataLine(34) YahooDaily.getDataLine: B0=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:36 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:36 ERROR getDataLine(34) YahooDaily.getDataLine: ZO=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: ZC=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: KE=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: ZS=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: HE=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: ZR=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: ZL=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: ZM=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:37 ERROR getDataLine(34) YahooDaily.getDataLine: GF=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:38 INFO getDataLine(22) YahooDaily.getDataLine: LE=F
+13-Feb-22 13:41:38 INFO getDataLine(22) YahooDaily.getDataLine: CC=F
+13-Feb-22 13:41:38 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices CC=F 1Day None
+13-Feb-22 13:41:38 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices LE=F 1Day None
+13-Feb-22 13:41:38 INFO getDataLine(22) YahooDaily.getDataLine: KC=F
+13-Feb-22 13:41:38 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: CC=F
+13-Feb-22 13:41:38 INFO getDataLine(22) YahooDaily.getDataLine: CT=F
+13-Feb-22 13:41:38 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: LE=F
+13-Feb-22 13:41:38 INFO getDataLine(22) YahooDaily.getDataLine: LBS=F
+13-Feb-22 13:41:38 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices KC=F 1Day None
+13-Feb-22 13:41:38 INFO getDataLine(22) YahooDaily.getDataLine: OJ=F
+13-Feb-22 13:41:38 INFO getDataLine(22) YahooDaily.getDataLine: SB=F
+13-Feb-22 13:41:38 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices CT=F 1Day None
+13-Feb-22 13:41:38 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices LBS=F 1Day None
+13-Feb-22 13:41:38 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: KC=F
+13-Feb-22 13:41:38 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices OJ=F 1Day None
+13-Feb-22 13:41:38 INFO CommodityPrices(114) AlpacaHistorical.CommodityPrices SB=F 1Day None
+13-Feb-22 13:41:38 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: CT=F
+13-Feb-22 13:41:38 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: LBS=F
+13-Feb-22 13:41:38 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: OJ=F
+13-Feb-22 13:41:38 INFO HistoricalPrices(10) YahooFin.HistoricalPrices: SB=F
+13-Feb-22 13:41:38 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:38 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:38 ERROR getDataLine(34) YahooDaily.getDataLine: LE=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:38 ERROR getDataLine(34) YahooDaily.getDataLine: OJ=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:38 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:39 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:39 ERROR getDataLine(34) YahooDaily.getDataLine: SB=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:39 ERROR getDataLine(34) YahooDaily.getDataLine: CC=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:39 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:39 ERROR getDataLine(34) YahooDaily.getDataLine: LBS=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:39 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:39 ERROR ReadMarket(66) MarketDataDb.ReadMarket. stock - 'str' object has no attribute 'conn'
+13-Feb-22 13:41:39 ERROR getDataLine(34) YahooDaily.getDataLine: KC=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:39 ERROR getDataLine(34) YahooDaily.getDataLine: CT=F - 'bool' object is not subscriptable
+13-Feb-22 13:41:40 INFO <module>(97) done

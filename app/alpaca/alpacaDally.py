@@ -1,4 +1,5 @@
 import json
+import logging
 import threading
 from threading import Thread
 import time
@@ -6,6 +7,7 @@ from dbase import MarketDataDb
 from util import AlpacaAccess, RedisTimeFrame
 from .alpacaHistorical import AlpacaHistorical
 from .alpacaSnapshot import AlpacaSnapshots
+from .alpacaSnapshotDaily import AlpacaSnapshotDaily
 from util import RedisTimeFrame
 
 class AlpacaDaily():
@@ -25,6 +27,7 @@ class AlpacaDaily():
 
     def getDataLine(self, app:AlpacaHistorical, symbol, db:MarketDataDb):
         try:
+            logging.info(f'AlpacaDaily.getDataLine: {symbol}')
             timeframe = RedisTimeFrame.DAILY
             if self.startdate is not None and self.enddate is not None:
                 data = app.HistoricalPrices(
@@ -33,37 +36,36 @@ class AlpacaDaily():
                 data = app.HistoricalPrices(symbol, timeframe)
             db.WriteMarket(symbol, data, datatype='stock', timeframe=timeframe)
         except Exception as e:
+            logging.error(f'AlpacaDaily.getDataLine: {symbol} - {e}')
             print(e)
 
     def getHistorical(self, symbols):
+        logging.info('Running AlpacaDaily.getHistorical')
         app = AlpacaHistorical()
         lineCount = 0
         for symbol in symbols:
             lineCount += 1
-            print(lineCount)
+            if lineCount % 10 == 0:
+                logging.info(f'{lineCount}/{len(symbols)}')
             Thread(target=self.getDataLine, args=(app, symbol, self.db)).start()
             while (threading.activeCount() > 10):
                 time.sleep(2)
         if threading.activeCount() > 0:
             time.sleep(2)
 
-    def AppendSnpashots(self, dicts):
-        for key in dicts:
-            self.db.AppendMarket(key, dicts[key], datatype='stock')
-
-    def getSnapshots(self, symbols):
-        app = AlpacaSnapshots()
-        app.RunDaily(symbols, self.AppendSnpashots)
-
     def Run(self):
+        logging.info('Running AlpacaDaily.Run')
         symbols = self.getSymbolFile()
         symbolHistoricals, symbolSnapshots = self.db.StockSymbols(symbols, 'stock')
+        logging.info(f' daily stocks: {len(symbolHistoricals)} historicals and {len(symbolSnapshots)} snapshots')
         if symbolHistoricals:
             self.getHistorical(symbolHistoricals)
         if symbolSnapshots:
-            self.getSnapshots(symbolSnapshots)
+            app = AlpacaSnapshotDaily(symbolSnapshots, datatype='stock')
+            app.Run()
 
     @staticmethod
     def All():
+        logging.info('Running AlpacaDaily()')
         app = AlpacaDaily()
         app.Run()

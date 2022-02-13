@@ -1,10 +1,11 @@
 #!/usr/bin/python
 import psycopg2
-from . import config
+import logging
 import pandas as pd
 import json
 import datetime
 from util import RedisTimeFrame
+from . import config
 
 class MarketDataDb:
     def __init__(self):
@@ -20,6 +21,7 @@ class MarketDataDb:
             conn = psycopg2.connect(**params)
             return conn
         except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.db_connection() - {error}')
             print(error)
             return None
 
@@ -33,6 +35,7 @@ class MarketDataDb:
             else:
                 return True, result
         except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.SelectQuery() - {error}')
             print(error)
             return False, None
 
@@ -49,7 +52,7 @@ class MarketDataDb:
             cur = self.conn.cursor()
             datatype = 'stock' if datatype is None else datatype
             timeframe = RedisTimeFrame.DAILY if timeframe is None else timeframe
-            sql = """SELECT data, name, updated_at FROM public.market_data WHERE symbol=%s and datatype =%s and timeframe=%s"""
+            sql = """SELECT data, name, updated_at, id FROM public.market_data WHERE symbol=%s and datatype =%s and timeframe=%s"""
 
             # execute the SELECT statement
             cur.execute(sql, (symbol,datatype, timeframe))
@@ -60,25 +63,26 @@ class MarketDataDb:
             else:
                 return True, result
         except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.ReadMarket. {symbol} - {error}')
             print(error)
             return False, None
 
-    def ReadMarketById(self, id):
-        try:
-            cur = self.conn.cursor()
-            sql = """SELECT data, symbol, atr45, atr90, atr180 FROM public.market_data WHERE symbol=%s and datatype =%s and timeframe=%s"""
+    # def ReadMarketById(self, id):
+    #     try:
+    #         cur = self.conn.cursor()
+    #         sql = """SELECT data, symbol, atr45, atr90, atr180 FROM public.market_data WHERE symbol=%s and datatype =%s and timeframe=%s"""
 
-            # execute the SELECT statement
-            cur.execute(sql, (id))
-            # get the generated id back
-            result = cur.fetchone()
-            if (result == None):
-                return False, None
-            else:
-                return True, result
-        except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
-            return False, None
+    #         # execute the SELECT statement
+    #         cur.execute(sql, (id))
+    #         # get the generated id back
+    #         result = cur.fetchone()
+    #         if (result == None):
+    #             return False, None
+    #         else:
+    #             return True, result
+    #     except (Exception, psycopg2.DatabaseError) as error:
+    #         print(error)
+    #         return False, None
 
     def AppendMarket(self, symbol: str, newdata:dict, datatype:str=None, timeframe:str=None, name:str=None) -> bool:
         isOk, result = self.ReadMarket(symbol, datatype=datatype, timeframe=timeframe)
@@ -87,10 +91,14 @@ class MarketDataDb:
             if data[0]['t'] == newdata['t']:
                 pass
             else:
-                firstItem = []
-                firstItem.append(newdata)
-                combinedData = firstItem + data
-                return self.WriteMarket(symbol, combinedData, datatype=datatype, timeframe=timeframe, name=name)
+                firstItem = json.dumps(newdata)
+                combinedData = json.dumps([newdata, data[0]]) 
+                # firstItem:list = []
+                # firstItem.append(newdata)
+                # combinedData:list = firstItem + result[0]
+                id = result[3]
+                return self.UpdateData(id, combinedData)
+                # return self.WriteMarket(symbol, combinedData, datatype=datatype, timeframe=timeframe, name=name)
 
     def WriteMarket(self, symbol: str, data:list, datatype:str=None, timeframe:str=None, name:str=None) -> bool:
         try:
@@ -108,6 +116,20 @@ class MarketDataDb:
             self.conn.commit()
             return True
         except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.WriteMarket() - {error}')
+            print(error)
+            return False
+
+    def UpdateData(self, id:int, data:str) -> bool:
+        try:
+            cur = self.conn.cursor()
+            time_now = datetime.datetime.now()
+            sql = """UPDATE public.market_data SET data=%s, updated_at=%s WHERE id=%s"""
+            cur.execute(sql, (data, time_now, id))
+            self.conn.commit()
+            return True
+        except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.UpdateData() - {error}')
             print(error)
             return False
 
@@ -126,9 +148,10 @@ class MarketDataDb:
                         existingSymbols.append(symbol)
                     else:
                         name = data[1].upper().replace('\n', '')
-                        self.WriteMarket(symbol, {}, name=name)
+                        self.WriteMarket(symbol, {}, datatype=datatype, name=name)
                         newSymbols.append(symbol)
             except (Exception, psycopg2.DatabaseError) as error:
+                logging.error(f'MarketDataDb.StockSymbols() - {error}')
                 print(f'SockSymbols() - {error}')
         return newSymbols, existingSymbols
 
@@ -143,6 +166,7 @@ class MarketDataDb:
             result = cur.fetchall()
             return result
         except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.AllAVailableSymbols() - {error}')
             print(error)
             return []
     
@@ -157,6 +181,7 @@ class MarketDataDb:
             self.conn.commit()
             return True
         except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.UpdateAtr() - {error}')
             print(error)
             return False
-    
+

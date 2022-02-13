@@ -3,7 +3,7 @@ from alpaca_trade_api.rest import REST, TimeFrame
 from enum import Enum
 import requests
 from util import AlpacaAccess, JsonFavorite
-
+import logging
 import json
 import os
 
@@ -94,6 +94,7 @@ class AlpacaSnapshots:
                 else:
                     dicts.pop(symbol)
             except Exception as e:
+                logging.error(f'AlpacaSnapshot.getSnapshot(). ERROR: {e}')
                 print('getSnapshot(). ERROR: {} {} {}'.format(
                     symbol, str(e), data.status_code))
                 print(snapshots[symbol])
@@ -134,50 +135,6 @@ class AlpacaSnapshots:
         except Exception as e:
             print('AlpacaSnapshot.Run(). ERROR: {}'.format(str(e)))
             return False
-
-    def getSnapshotForDaily(self, symbols, dicts):
-        data = self.HistoricalSnapshots(symbols)
-        if (data.status_code == 422):
-            removeSymbols = json.loads(data.text)['message'].split(':')[1]
-            rejectedSymbols = set()
-            for symbol in removeSymbols.strip().split(','):
-                rejectedSymbols.add(symbol)
-                dicts.pop(symbol)
-            symbolList = symbols.difference(rejectedSymbols)
-            data = self.HistoricalSnapshots(symbolList)
-        snapshots = json.loads(data.text)
-        for symbol in snapshots:
-            try:
-                dicts[symbol] = snapshots[symbol]['dailyBar']
-            except Exception as e:
-                try:
-                    print('getSnapshot(). ERROR: {} {} {}'.format(
-                        symbol, str(e), data.status_code))
-                    print(snapshots[symbol])
-                    dicts.pop(symbol)
-                except Exception as e:
-                    pass
-
-    def RunDaily(self, symbols, writeFileFunc):
-        try:
-            dicts = {}
-            for symbol in symbols:
-                dicts[symbol] = ''
-            lineCount = 0
-            symbolList = set()
-            for symbol in symbols:
-                symbolList.add(symbol)
-                lineCount += 1
-                if (lineCount % 20 == 0):
-                    self.getSnapshotForDaily(symbols, dicts)
-                    symbolList.clear()
-                    print(lineCount)
-            self.getSnapshotForDaily(symbolList, dicts)
-            writeFileFunc(dicts)
-        except Exception as e:
-            print('AlpacaSnapshot.Run(). ERROR: {}'.format(str(e)))
-            return False
-
 
     @staticmethod
     def All(isDebug=None):

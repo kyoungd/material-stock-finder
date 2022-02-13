@@ -1,4 +1,5 @@
 import talib
+import logging
 from threading import Thread
 from dbase import MarketDataDb
 import pandas as pd
@@ -32,6 +33,8 @@ class AtrCalculate():
                 atr45, atr90, atr180 = self.atrCalculation(data)
                 self.db.UpdateAtr(id, atr45, atr90, atr180)
             except Exception as e:
+                logging.error(f'AtrCalculate.ProcessAtr: {e}')
+                logging.error(f'item: {item}')
                 print(e)
 
     def Run(self):

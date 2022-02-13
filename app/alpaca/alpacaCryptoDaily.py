@@ -1,4 +1,5 @@
 from threading import Thread
+import logging
 from dbase import MarketDataDb
 from util import AlpacaAccess, RedisTimeFrame
 from .alpacaDally import AlpacaDaily
@@ -25,9 +26,11 @@ class AlpacaCrypto(AlpacaDaily):
                 data = app.CryptoPrices(symbol, timeframe)
             db.WriteMarket(symbol, data, datatype=self.datatype, timeframe=timeframe)
         except Exception as e:
+            logging.error(f'AlpacaCrypto.getDataLine: {symbol} - {e}')
             print(e)
 
     def Run(self):
+        logging.info('Running AlpacaCrypto.Run')
         symbols = self.getSymbolFile()
         symbolHistoricals, symbolSnapshots = self.db.StockSymbols(
             symbols, self.datatype)

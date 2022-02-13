@@ -1,14 +1,14 @@
-from alpaca_trade_api.rest import REST, TimeFrame
-from .yahooFin import YahooFin
-from datetime import datetime, timedelta
-from enum import Enum
-import requests
-from util import AlpacaAccess, RedisTimeFrame
 import json
 import threading
 from threading import Thread
 import time
-import sys
+import logging
+from datetime import datetime, timedelta
+from enum import Enum
+import requests
+from alpaca_trade_api.rest import REST, TimeFrame
+from .yahooFin import YahooFin
+from util import AlpacaAccess, RedisTimeFrame
 
 custom_header = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
@@ -111,8 +111,8 @@ class AlpacaHistorical:
         return bars
 
     def CommodityPrices(self, symbol, timeframe, datatype=None, starttime=None, endtime=None):
-        data = YahooFin.HistoricalPrices(symbol)
-        bars = self.adjustPrices(data)
+        logging.info(f'AlpacaHistorical.CommodityPrices {symbol} {timeframe} {datatype}')
+        bars = YahooFin.HistoricalPrices(symbol)
         return bars
 
     def WriteToFile(self, symbol, data):
@@ -143,13 +143,16 @@ class AlpacaHistoricalData(AlpacaHistorical):
             app.WriteToFile(symbol, data)
             fw.write(line)
         except Exception as e:
+            logging.error(f'AlpacaHistoricalData.getDataLine {symbol} - {e}')
             print(e)
 
     def Run(self, filename=None, isDebug=False):
+        logging.error('AlpacaHistoricalData.Run')
         filename = './data/symbols.csv' if filename == None else filename
         with open(filename, 'r') as f:
             lines = f.readlines()
             # print(lines)
+        logging.error(f'AlpacaHistoricalData.Run - lines {len(lines)}')
         with open(filename, "w") as fw:
             fw.write(self.CsvHeader + '\n')
             timeframe = RedisTimeFrame.DAILY

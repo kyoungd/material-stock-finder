@@ -3415,7 +3415,7 @@ MTBCO|CareCloud, Inc. - 8.75% Series B Cumulative Redeemable Perpetual Preferred
 MTBCP|CareCloud, Inc. - 11% Series A Cumulative Redeemable Perpetual Preferred Stock|G|N|N|100|N|N
 MTC|MMTec, Inc. - Common Shares|S|N|D|100|N|N
 MTCH|Match Group, Inc. - Common Stock|Q|N|N|100|N|N
-MTCR|Metacrine, Inc. - Common Stock|G|N|N|100|N|N
+MTCR|Metacrine, Inc. - Common Stock|G|N|D|100|N|N
 MTEK|Maris-Tech Ltd. - ordinary shares|S|N|N|100|N|N
 MTEKW|Maris-Tech Ltd. - Warrants|S|N|N|100|N|N
 MTEM|Molecular Templates, Inc. - Common Stock|Q|N|N|100|N|N
@@ -4830,7 +4830,7 @@ SWETU|Athlon Acquisition Corp. - Unit|S|N|N|100|N|N
 SWETW|Athlon Acquisition Corp. - Warrant|S|N|N|100|N|N
 SWIM|Latham Group, Inc. - Common Stock|Q|N|N|100|N|N
 SWIR|Sierra Wireless, Inc. - Common Stock|Q|N|N|100|N|N
-SWKH|SWK Holdings Corporation - Common Stock|S|N|N|100|N|N
+SWKH|SWK Holdings Corporation - Common Stock|S|N|D|100|N|N
 SWKS|Skyworks Solutions, Inc. - Common Stock|Q|N|N|100|N|N
 SWSS|Springwater Special Situations Corp. - Common stock|S|N|N|100|N|N
 SWSSU|Springwater Special Situations Corp. - Unit|S|N|N|100|N|N
@@ -5568,4 +5568,4 @@ ZXZZT|NASDAQ TEST STOCK|G|Y|N|100||N
 ZY|Zymergen Inc. - Common Stock|Q|N|N|100|N|N
 ZYNE|Zynerba Pharmaceuticals, Inc. - Common Stock|G|N|N|100|N|N
 ZYXI|Zynex, Inc. - Common Stock|Q|N|N|100|N|N
-File Creation Time: 0211202218:01|||||||
+File Creation Time: 0211202221:31|||||||
