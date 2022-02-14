@@ -19,7 +19,6 @@ class YahooDaily(AlpacaDaily):
 
     def getDataLine(self, app: AlpacaHistorical, symbol: str, db: MarketDataDb):
         try:
-            logging.info(f'YahooDaily.getDataLine: {symbol}')
             timeframe = RedisTimeFrame.DAILY
             if self.startdate is not None and self.enddate is not None:
                 data = app.CommodityPrices(
@@ -35,17 +34,20 @@ class YahooDaily(AlpacaDaily):
             print(e)
 
     def Run(self):
-        logging.info('YahooDaily.Run')
-        symbols = self.getSymbolFile()
-        symbolHistoricals, symbolSnapshots = self.db.StockSymbols(
-            symbols, self.datatype)
+        try:
+            symbols = self.getSymbolFile()
+            symbolHistoricals, symbolSnapshots = self.db.StockSymbols(
+                symbols, self.datatype)
 
-        if symbolHistoricals:
-            self.getHistorical(symbolHistoricals)
-        # there is no snapshot for crypto.  just write historical data
-        if symbolSnapshots:
-            self.getHistorical(symbolSnapshots)
-
+            if symbolHistoricals:
+                self.getHistorical(symbolHistoricals)
+            # there is no snapshot for crypto.  just write historical data
+            if symbolSnapshots:
+                self.getHistorical(symbolSnapshots)
+        except Exception as e:
+            logging.error(f'YahooDaily.Run: {e}')
+            print(e)
+    
     @staticmethod
     def All():
         logging.info('Running YahooDaily.All')

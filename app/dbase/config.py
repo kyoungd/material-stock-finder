@@ -34,5 +34,4 @@ def config(filename='./app/dbase/database.ini', section='postgresql'):
             'Section {0} not found in the {1} file'.format(section, filename))
 
     db1 = configWithEnvironmentVariables(db)
-    print(db1)
     return db1

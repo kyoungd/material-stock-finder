@@ -8,8 +8,12 @@ from util import RedisTimeFrame
 from . import config
 
 class MarketDataDb:
+    connection = None
+
     def __init__(self):
-        self.conn = self.db_connection()
+        if MarketDataDb.connection is None:
+            MarketDataDb.connection = self.db_connection()
+        self.conn = MarketDataDb.connection
 
     def db_connection(self):
         conn = None
@@ -49,6 +53,7 @@ class MarketDataDb:
 
     def ReadMarket(self, symbol:str, datatype:str=None, timeframe:str=None) -> tuple:
         try:
+            # logging.info(f'MarketDataDb.ReadMarket() - {symbol}')
             cur = self.conn.cursor()
             datatype = 'stock' if datatype is None else datatype
             timeframe = RedisTimeFrame.DAILY if timeframe is None else timeframe
@@ -85,20 +90,26 @@ class MarketDataDb:
     #         return False, None
 
     def AppendMarket(self, symbol: str, newdata:dict, datatype:str=None, timeframe:str=None, name:str=None) -> bool:
-        isOk, result = self.ReadMarket(symbol, datatype=datatype, timeframe=timeframe)
-        if isOk:
-            data = result[0]
-            if data[0]['t'] == newdata['t']:
-                pass
-            else:
-                firstItem = json.dumps(newdata)
-                combinedData = json.dumps([newdata, data[0]]) 
-                # firstItem:list = []
-                # firstItem.append(newdata)
-                # combinedData:list = firstItem + result[0]
-                id = result[3]
-                return self.UpdateData(id, combinedData)
-                # return self.WriteMarket(symbol, combinedData, datatype=datatype, timeframe=timeframe, name=name)
+        # logging.info(f'MarketDataDb.AppendMarket() - {symbol}')
+        try:
+            isOk, result = self.ReadMarket(symbol, datatype=datatype, timeframe=timeframe)
+            if isOk:
+                data = result[0]
+                if data[0]['t'] == newdata['t']:
+                    pass
+                else:
+                    firstItem = json.dumps(newdata)
+                    combinedData = json.dumps([newdata, data[0]]) 
+                    # firstItem:list = []
+                    # firstItem.append(newdata)
+                    # combinedData:list = firstItem + result[0]
+                    id = result[3]
+                    return self.UpdateData(id, combinedData)
+                    # return self.WriteMarket(symbol, combinedData, datatype=datatype, timeframe=timeframe, name=name)
+        except (Exception, psycopg2.DatabaseError) as error:
+            logging.error(f'MarketDataDb.AppendMarket() - {error}')
+            print(error)
+            return False
 
     def WriteMarket(self, symbol: str, data:list, datatype:str=None, timeframe:str=None, name:str=None) -> bool:
         try:
@@ -143,6 +154,7 @@ class MarketDataDb:
                 if '.' in symbol:
                     continue
                 else:
+                    logging.info(f'MarketDataDb.StockSymbols() - {symbol}')
                     isExist, _ = self.ReadMarket(symbol, datatype=datatype)
                     if isExist:
                         existingSymbols.append(symbol)

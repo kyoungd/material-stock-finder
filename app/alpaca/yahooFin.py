@@ -7,7 +7,7 @@ class YahooFin:
     @staticmethod
     def HistoricalPrices(symbol, timeframe=None):
         try:
-            logging.info(f'YahooFin.HistoricalPrices: {symbol}')
+            # logging.info(f'YahooFin.HistoricalPrices: {symbol}')
             timeframe = '1y' if timeframe is None else timeframe.lower()
             stock = yf.Ticker(symbol)
 

@@ -111,7 +111,7 @@ class AlpacaHistorical:
         return bars
 
     def CommodityPrices(self, symbol, timeframe, datatype=None, starttime=None, endtime=None):
-        logging.info(f'AlpacaHistorical.CommodityPrices {symbol} {timeframe} {datatype}')
+        # logging.info(f'AlpacaHistorical.CommodityPrices {symbol} {timeframe} {datatype}')
         bars = YahooFin.HistoricalPrices(symbol)
         return bars
 
@@ -147,7 +147,7 @@ class AlpacaHistoricalData(AlpacaHistorical):
             print(e)
 
     def Run(self, filename=None, isDebug=False):
-        logging.error('AlpacaHistoricalData.Run')
+        # logging.info('AlpacaHistoricalData.Run')
         filename = './data/symbols.csv' if filename == None else filename
         with open(filename, 'r') as f:
             lines = f.readlines()
