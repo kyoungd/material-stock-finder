@@ -68,9 +68,9 @@ if __name__ == "__main__":
     if isTagInOptions('--test', sys.argv):
         # Run()
         # AlpacaDaily.All()
-        YahooDaily.All()
+        # YahooDaily.All()
         # AlpacaCrypto.All()
-        # AtrCalculate.All()
+        AtrCalculate.All()
         # CorrelateAssets.All(isSendToServer=False, days=45, minAtr=5)
         # CorrelateAssets.All(isSendToServer=False, days=90, minAtr=5)
         # CorrelateAssets.All(isSendToServer=False, days=180, minAtr=5)

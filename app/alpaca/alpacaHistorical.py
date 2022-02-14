@@ -30,7 +30,7 @@ class TimePeriod(Enum):
 
 class AlpacaHistorical:
     ALPACA_URL = 'https://data.alpaca.markets/v2/stocks/%s/bars?start=%s&end=%s&timeframe=%s'
-    CRYPTO_URL = 'https://data.alpaca.markets/v1beta1/crypto/%sUSD/bars?start=%s&end=%s&timeframe=%s'
+    CRYPTO_URL = 'https://data.alpaca.markets/v1beta1/crypto/%sUSD/bars?start=%s&end=%s&timeframe=%s&exchanges=CBSE'
     CsvHeader = "Date, Open, High, Low, Close, Adj Close, Volume"
     conn: REST = None
 

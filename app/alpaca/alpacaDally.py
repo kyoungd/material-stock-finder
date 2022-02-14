@@ -39,18 +39,22 @@ class AlpacaDaily():
             logging.error(f'AlpacaDaily.getDataLine: {symbol} - {e}')
             print(e)
 
-    def getHistorical(self, symbols):
+    def getHistorical(self, symbols, isSerialRunOnly=None):
+        isSerialRunOnly = False if isSerialRunOnly is None else isSerialRunOnly
         logging.info('Running AlpacaDaily.getHistorical')
         app = AlpacaHistorical()
         lineCount = 0
         for symbol in symbols:
-            lineCount += 1
-            if lineCount % 10 == 0:
-                logging.info(f'{lineCount}/{len(symbols)}')
-            Thread(target=self.getDataLine, args=(app, symbol, self.db)).start()
-            while (threading.activeCount() > 10):
-                time.sleep(2)
-        if threading.activeCount() > 0:
+            if isSerialRunOnly:
+                self.getDataLine(app, symbol, self.db)
+            else:
+                lineCount += 1
+                if lineCount % 10 == 0:
+                    logging.info(f'{lineCount}/{len(symbols)}')
+                Thread(target=self.getDataLine, args=(app, symbol, self.db)).start()
+                while (threading.activeCount() > 10):
+                    time.sleep(2)
+        if not isSerialRunOnly and threading.activeCount() > 0:
             time.sleep(2)
 
     def Run(self):

@@ -1,6 +1,6 @@
 from threading import Thread
 import logging
-from dbase import MarketDataDb
+from dbase import MarketDataDb, SynchronizeMarketData
 from util import AlpacaAccess, RedisTimeFrame
 from .alpacaDally import AlpacaDaily
 from .alpacaHistorical import AlpacaHistorical
@@ -18,13 +18,17 @@ class AlpacaCrypto(AlpacaDaily):
     #
     def getDataLine(self, app: AlpacaHistorical, symbol:str, db: MarketDataDb):
         try:
+            logging.info(f'AlpacaCrypto.getDataLine: {symbol}')
             timeframe = RedisTimeFrame.DAILY
             if self.startdate is not None and self.enddate is not None:
                 data = app.CryptoPrices(
                     symbol, timeframe, starttime=self.startdate, endtime=self.enddate)
             else:
                 data = app.CryptoPrices(symbol, timeframe)
-            db.WriteMarket(symbol, data, datatype=self.datatype, timeframe=timeframe)
+            sync = SynchronizeMarketData(data, isCrypto=True)
+            mdata = sync.Run()
+            db.WriteMarket(symbol, mdata, datatype=self.datatype,
+                           timeframe=timeframe)
         except Exception as e:
             logging.error(f'AlpacaCrypto.getDataLine: {symbol} - {e}')
             print(e)
@@ -39,7 +43,7 @@ class AlpacaCrypto(AlpacaDaily):
             self.getHistorical(symbolHistoricals)
         # there is no snapshot for crypto.  just write historical data
         if symbolSnapshots:
-            self.getHistorical(symbolHistoricals)
+            self.getHistorical(symbolSnapshots)
 
     @staticmethod
     def All():
